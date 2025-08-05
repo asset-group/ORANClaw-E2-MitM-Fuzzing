@@ -1,0 +1,123 @@
+services:
+  # ----------------- gNB -------------------
+  # O-DU (RFSIM)
+  oai-du-rfsim:
+    profiles: [gnb-rfsim]
+    image: registry.gitlab.com/anonymous-org/software/oran-orchestration:oai-cu-du
+    restart: unless-stopped
+    privileged: true
+    command: ./configs/enable_pcap.sh
+    security_opt:
+      - seccomp:unconfined #optional
+    volumes:
+      - ./configs:/oai/cmake_targets/ran_build/build/configs
+      - ./libs/flexric:/usr/local/lib/flexric/
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: oai-cu-du
+      args:
+        OAI_TARGET: SIMU
+    depends_on:
+      oai-cu-cp:
+        condition: service_healthy
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.181
+      ue_rfsim_net:
+        ipv4_address: 192.168.70.180
+    healthcheck:
+      test: /bin/bash -c "pgrep nr-softmodem"
+      interval: 2s
+      timeout: 1s
+      retries: 20
+
+  # O-CU-CP
+  oai-cu-cp:
+    profiles: [gnb, gnb-rfsim]
+    image: registry.gitlab.com/anonymous-org/software/oran-orchestration:oai-cu-du
+    restart: unless-stopped
+    privileged: true
+    command: ./nr-softmodem -O configs/gnb-cucp.sa.f1.conf --sa
+    security_opt:
+      - seccomp:unconfined #optional
+    volumes:
+      - ./configs:/oai/cmake_targets/ran_build/build/configs
+      - ./libs/flexric:/usr/local/lib/flexric/
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.182
+    healthcheck:
+      test: /bin/bash -c "pgrep nr-softmodem"
+      interval: 2s
+      timeout: 1s
+      retries: 20
+
+  # O-CU-UP
+  oai-cu-up:
+    profiles: [gnb, gnb-rfsim]
+    image: registry.gitlab.com/anonymous-org/software/oran-orchestration:oai-cu-du
+    restart: unless-stopped
+    privileged: true
+    command: ./nr-cuup -O configs/gnb-cuup.sa.f1.conf --sa
+    security_opt:
+      - seccomp:unconfined #optional
+    volumes:
+      - ./configs:/oai/cmake_targets/ran_build/build/configs
+      - ./libs/flexric:/usr/local/lib/flexric/
+    depends_on:
+      oai-cu-cp:
+        condition: service_healthy
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.183
+    healthcheck:
+      test: /bin/bash -c "pgrep nr-cuup"
+      interval: 2s
+      timeout: 1s
+      retries: 5
+
+  # ----------------- UE RF Simulation -------------------
+  oai-ue-rfsimu-1: &oai-ue-rfsim
+    profiles: [gnb-rfsim]
+    image: registry.gitlab.com/anonymous-org/software/oran-orchestration:oai-cu-du
+    restart: unless-stopped
+    privileged: true
+    command: /bin/bash -c "iperf3 -s 0.0.0.0 -f K & ./nr-uesoftmodem 
+            -r 106 --numerology 1 --band 78 -C 3619200000 
+            --ssb 516 --rfsim -E 
+            --rfsimulator.serveraddr 192.168.70.180 
+            --uicc0.imsi 999700000000001 
+            --uicc0.key fec86ba6eb707ed08905757b1bb44b8f 
+            --uicc0.opc c42449363bbad02b66d16bc975d77cc1 
+            --uicc0.dnn internet"
+    security_opt:
+      - seccomp:unconfined #optional
+    volumes:
+      - ./configs:/oai/cmake_targets/ran_build/build/configs
+    depends_on:
+      oai-du-rfsim:
+        condition: service_healthy
+    networks:
+      - ue_rfsim_net
+
+  oai-ue-rfsimu-2:
+    <<: *oai-ue-rfsim
+    command: /bin/bash -c "iperf3 -s 0.0.0.0 -f K & ./nr-uesoftmodem 
+            -r 106 --numerology 1 --band 78 -C 3619200000 
+            --ssb 516 --rfsim -E 
+            --rfsimulator.serveraddr 192.168.70.180 
+            --uicc0.imsi 999700000000002 
+            --uicc0.key fec86ba6eb707ed08905757b1bb44b8f 
+            --uicc0.opc c42449363bbad02b66d16bc975d77cc1 
+            --uicc0.dnn internet"
+
+networks:
+  ue_rfsim_net:
+    driver: bridge
+    name: ue-rfsim-net
+    ipam:
+      config:
+        - subnet: 192.168.70.128/26
+    driver_opts:
+      com.docker.network.bridge.name: "ue-rfsim"

@@ -1,0 +1,763 @@
+No.     Source                Destination           Protocol Length Info
+    125 192.168.71.129        192.168.71.184        SCTP     82     INIT 
+
+Frame 125: 82 bytes on wire (656 bits), 82 bytes captured (656 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 41633 (41633), Dst Port: 36422 (36422)
+
+No.     Source                Destination           Protocol Length Info
+    126 192.168.71.184        192.168.71.129        SCTP     306    INIT_ACK 
+
+Frame 126: 306 bytes on wire (2448 bits), 306 bytes captured (2448 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1), Dst: 36:bb:34:68:59:5b (36:bb:34:68:59:5b)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.129
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 41633 (41633)
+
+No.     Source                Destination           Protocol Length Info
+    127 192.168.71.129        192.168.71.184        SCTP     278    COOKIE_ECHO 
+
+Frame 127: 278 bytes on wire (2224 bits), 278 bytes captured (2224 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 41633 (41633), Dst Port: 36422 (36422)
+
+No.     Source                Destination           Protocol Length Info
+    128 192.168.71.184        192.168.71.129        SCTP     50     COOKIE_ACK 
+
+Frame 128: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1), Dst: 36:bb:34:68:59:5b (36:bb:34:68:59:5b)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.129
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 41633 (41633)
+
+No.     Source                Destination           Protocol Length Info
+    292 192.168.71.185        192.168.71.129        SCTP     82     INIT 
+
+Frame 292: 82 bytes on wire (656 bits), 82 bytes captured (656 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 2e:5b:9f:ce:49:df (2e:5b:9f:ce:49:df), Dst: 36:bb:34:68:59:5b (36:bb:34:68:59:5b)
+Internet Protocol Version 4, Src: 192.168.71.185, Dst: 192.168.71.129
+Stream Control Transmission Protocol, Src Port: 52120 (52120), Dst Port: 36422 (36422)
+
+No.     Source                Destination           Protocol Length Info
+    293 192.168.71.129        192.168.71.185        SCTP     306    INIT_ACK 
+
+Frame 293: 306 bytes on wire (2448 bits), 306 bytes captured (2448 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 2e:5b:9f:ce:49:df (2e:5b:9f:ce:49:df)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.185
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 52120 (52120)
+
+No.     Source                Destination           Protocol Length Info
+    294 192.168.71.185        192.168.71.129        E2AP     786    COOKIE_ECHO 
+
+Frame 294: 786 bytes on wire (6288 bits), 786 bytes captured (6288 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 2e:5b:9f:ce:49:df (2e:5b:9f:ce:49:df), Dst: 36:bb:34:68:59:5b (36:bb:34:68:59:5b)
+Internet Protocol Version 4, Src: 192.168.71.185, Dst: 192.168.71.129
+Stream Control Transmission Protocol, Src Port: 52120 (52120), Dst Port: 36422 (36422)
+E2 Application Protocol
+    E2AP-PDU: initiatingMessage (0)
+        initiatingMessage
+            procedureCode: id-RICsubscriptionModification (14)
+            criticality: reject (0)
+            value
+                RICsubscriptionModificationRequest
+
+No.     Source                Destination           Protocol Length Info
+    295 192.168.71.129        192.168.71.185        SCTP     66     COOKIE_ACK SACK (Ack=0, Arwnd=106004) 
+
+Frame 295: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 2e:5b:9f:ce:49:df (2e:5b:9f:ce:49:df)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.185
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 52120 (52120)
+
+No.     Source                Destination           Protocol Length Info
+    296 192.168.71.129        192.168.71.184        E2AP     554    
+
+Frame 296: 554 bytes on wire (4432 bits), 554 bytes captured (4432 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 41633 (41633), Dst Port: 36422 (36422)
+E2 Application Protocol
+    E2AP-PDU: initiatingMessage (0)
+        initiatingMessage
+            procedureCode: id-RICsubscriptionModification (14)
+            criticality: reject (0)
+            value
+                RICsubscriptionModificationRequest
+
+No.     Source                Destination           Protocol Length Info
+    297 192.168.71.184        192.168.71.129        SCTP     62     SACK (Ack=0, Arwnd=106004) 
+
+Frame 297: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1), Dst: 36:bb:34:68:59:5b (36:bb:34:68:59:5b)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.129
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 41633 (41633)
+
+No.     Source                Destination           Protocol Length Info
+    298 192.168.71.184        192.168.71.129        SCTP     1514   DATA (TSN=0) (Message Fragment) 
+
+Frame 298: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1), Dst: 36:bb:34:68:59:5b (36:bb:34:68:59:5b)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.129
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 41633 (41633)
+
+No.     Source                Destination           Protocol Length Info
+    299 192.168.71.129        192.168.71.184        SCTP     62     SACK (Ack=0, Arwnd=105044) 
+
+Frame 299: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 41633 (41633), Dst Port: 36422 (36422)
+
+No.     Source                Destination           Protocol Length Info
+    300 192.168.71.184        192.168.71.129        E2AP     1002   [BoundErrorUnreassembled Packet]
+
+Frame 300: 1002 bytes on wire (8016 bits), 1002 bytes captured (8016 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1), Dst: 36:bb:34:68:59:5b (36:bb:34:68:59:5b)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.129
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 41633 (41633)
+E2 Application Protocol
+    E2AP-PDU: successfulOutcome (1)
+        successfulOutcome
+[BoundError Unreassembled Packet: E2AP]
+    [Expert Info (Note/Reassemble): Unreassembled fragment (change preferences to enable reassembly)]
+        [Unreassembled fragment (change preferences to enable reassembly)]
+        [Severity level: Note]
+        [Group: Reassemble]
+
+No.     Source                Destination           Protocol Length Info
+    301 192.168.71.129        192.168.71.185        SCTP     1514   DATA (TSN=0) (Message Fragment) 
+
+Frame 301: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 2e:5b:9f:ce:49:df (2e:5b:9f:ce:49:df)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.185
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 52120 (52120)
+
+No.     Source                Destination           Protocol Length Info
+    302 192.168.71.185        192.168.71.129        SCTP     62     SACK (Ack=0, Arwnd=105044) 
+
+Frame 302: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 2e:5b:9f:ce:49:df (2e:5b:9f:ce:49:df), Dst: 36:bb:34:68:59:5b (36:bb:34:68:59:5b)
+Internet Protocol Version 4, Src: 192.168.71.185, Dst: 192.168.71.129
+Stream Control Transmission Protocol, Src Port: 52120 (52120), Dst Port: 36422 (36422)
+
+No.     Source                Destination           Protocol Length Info
+    303 192.168.71.129        192.168.71.185        E2AP     1002   [BoundErrorUnreassembled Packet]
+
+Frame 303: 1002 bytes on wire (8016 bits), 1002 bytes captured (8016 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 2e:5b:9f:ce:49:df (2e:5b:9f:ce:49:df)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.185
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 52120 (52120)
+E2 Application Protocol
+    E2AP-PDU: successfulOutcome (1)
+        successfulOutcome
+[BoundError Unreassembled Packet: E2AP]
+    [Expert Info (Note/Reassemble): Unreassembled fragment (change preferences to enable reassembly)]
+        [Unreassembled fragment (change preferences to enable reassembly)]
+        [Severity level: Note]
+        [Group: Reassemble]
+
+No.     Source                Destination           Protocol Length Info
+    306 192.168.71.185        192.168.71.129        SCTP     62     SACK (Ack=1, Arwnd=106496) 
+
+Frame 306: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 2e:5b:9f:ce:49:df (2e:5b:9f:ce:49:df), Dst: 36:bb:34:68:59:5b (36:bb:34:68:59:5b)
+Internet Protocol Version 4, Src: 192.168.71.185, Dst: 192.168.71.129
+Stream Control Transmission Protocol, Src Port: 52120 (52120), Dst Port: 36422 (36422)
+
+No.     Source                Destination           Protocol Length Info
+    307 192.168.71.129        192.168.71.184        SCTP     62     SACK (Ack=1, Arwnd=106496) 
+
+Frame 307: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 41633 (41633), Dst Port: 36422 (36422)
+
+No.     Source                Destination           Protocol Length Info
+    322 192.168.71.185        192.168.71.129        E2AP     198    [Malformed Packet]
+
+Frame 322: 198 bytes on wire (1584 bits), 198 bytes captured (1584 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 2e:5b:9f:ce:49:df (2e:5b:9f:ce:49:df), Dst: 36:bb:34:68:59:5b (36:bb:34:68:59:5b)
+Internet Protocol Version 4, Src: 192.168.71.185, Dst: 192.168.71.129
+Stream Control Transmission Protocol, Src Port: 52120 (52120), Dst Port: 36422 (36422)
+E2 Application Protocol
+    E2AP-PDU: initiatingMessage (0)
+        initiatingMessage
+            procedureCode: id-RICsubscriptionModificationRequired (15)
+            criticality: reject (0)
+            value
+                RICsubscriptionModificationRequired
+                    protocolIEs: 5 items
+                        Item 0: id-RICsubscriptionStartTime
+                            ProtocolIE-Field
+                                id: id-RICsubscriptionStartTime (62)
+                                criticality: reject (0)
+                                value
+[Malformed Packet: E2AP]
+    [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
+        [Malformed Packet (Exception occurred)]
+        [Severity level: Error]
+        [Group: Malformed]
+
+No.     Source                Destination           Protocol Length Info
+    323 192.168.71.129        192.168.71.184        E2AP     202    [Malformed Packet]
+
+Frame 323: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 41633 (41633), Dst Port: 36422 (36422)
+E2 Application Protocol
+    E2AP-PDU: initiatingMessage (0)
+        initiatingMessage
+            procedureCode: id-RICsubscriptionModificationRequired (15)
+            criticality: reject (0)
+            value
+                RICsubscriptionModificationRequired
+                    protocolIEs: 5 items
+                        Item 0: id-RICsubscriptionStartTime
+                            ProtocolIE-Field
+                                id: id-RICsubscriptionStartTime (62)
+                                criticality: reject (0)
+                                value
+[Malformed Packet: E2AP]
+    [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
+        [Malformed Packet (Exception occurred)]
+        [Severity level: Error]
+        [Group: Malformed]
+
+No.     Source                Destination           Protocol Length Info
+    324 192.168.71.129        192.168.71.185        SCTP     62     SACK (Ack=1, Arwnd=106496) 
+
+Frame 324: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 2e:5b:9f:ce:49:df (2e:5b:9f:ce:49:df)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.185
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 52120 (52120)
+
+No.     Source                Destination           Protocol Length Info
+    325 192.168.71.184        192.168.71.129        SCTP     54     SHUTDOWN 
+
+Frame 325: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1), Dst: 36:bb:34:68:59:5b (36:bb:34:68:59:5b)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.129
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 41633 (41633)
+
+No.     Source                Destination           Protocol Length Info
+    326 192.168.71.129        192.168.71.184        SCTP     50     SHUTDOWN_ACK 
+
+Frame 326: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 41633 (41633), Dst Port: 36422 (36422)
+
+No.     Source                Destination           Protocol Length Info
+    327 192.168.71.184        192.168.71.129        SCTP     50     SHUTDOWN_COMPLETE 
+
+Frame 327: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1), Dst: 36:bb:34:68:59:5b (36:bb:34:68:59:5b)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.129
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 41633 (41633)
+
+No.     Source                Destination           Protocol Length Info
+    328 192.168.71.184        192.168.71.182        SCTP     54     SHUTDOWN 
+
+Frame 328: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1), Dst: da:66:d3:92:42:e8 (da:66:d3:92:42:e8)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 36421 (36421), Dst Port: 50318 (50318)
+
+No.     Source                Destination           Protocol Length Info
+    329 192.168.71.182        192.168.71.184        SCTP     50     SHUTDOWN_ACK 
+
+Frame 329: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: da:66:d3:92:42:e8 (da:66:d3:92:42:e8), Dst: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 50318 (50318), Dst Port: 36421 (36421)
+
+No.     Source                Destination           Protocol Length Info
+    330 192.168.71.184        192.168.71.183        SCTP     54     SHUTDOWN 
+
+Frame 330: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1), Dst: 3e:0a:a4:f4:3a:1f (3e:0a:a4:f4:3a:1f)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 36421 (36421), Dst Port: 35683 (35683)
+
+No.     Source                Destination           Protocol Length Info
+    331 192.168.71.183        192.168.71.184        SCTP     50     SHUTDOWN_ACK 
+
+Frame 331: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 3e:0a:a4:f4:3a:1f (3e:0a:a4:f4:3a:1f), Dst: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 35683 (35683), Dst Port: 36421 (36421)
+
+No.     Source                Destination           Protocol Length Info
+    332 192.168.71.184        192.168.71.181        SCTP     54     SHUTDOWN 
+
+Frame 332: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1), Dst: 56:d4:9f:5e:5b:c3 (56:d4:9f:5e:5b:c3)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.181
+Stream Control Transmission Protocol, Src Port: 36421 (36421), Dst Port: 34638 (34638)
+
+No.     Source                Destination           Protocol Length Info
+    333 192.168.71.181        192.168.71.184        SCTP     50     SHUTDOWN_ACK 
+
+Frame 333: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 56:d4:9f:5e:5b:c3 (56:d4:9f:5e:5b:c3), Dst: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1)
+Internet Protocol Version 4, Src: 192.168.71.181, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 34638 (34638), Dst Port: 36421 (36421)
+
+No.     Source                Destination           Protocol Length Info
+    334 192.168.71.184        192.168.71.182        SCTP     50     SHUTDOWN_COMPLETE 
+
+Frame 334: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1), Dst: da:66:d3:92:42:e8 (da:66:d3:92:42:e8)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 36421 (36421), Dst Port: 50318 (50318)
+
+No.     Source                Destination           Protocol Length Info
+    335 192.168.71.184        192.168.71.183        SCTP     50     SHUTDOWN_COMPLETE 
+
+Frame 335: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1), Dst: 3e:0a:a4:f4:3a:1f (3e:0a:a4:f4:3a:1f)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 36421 (36421), Dst Port: 35683 (35683)
+
+No.     Source                Destination           Protocol Length Info
+    336 192.168.71.184        192.168.71.181        SCTP     50     SHUTDOWN_COMPLETE 
+
+Frame 336: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 9e:5c:7b:fe:e9:a1 (9e:5c:7b:fe:e9:a1), Dst: 56:d4:9f:5e:5b:c3 (56:d4:9f:5e:5b:c3)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.181
+Stream Control Transmission Protocol, Src Port: 36421 (36421), Dst Port: 34638 (34638)
+
+No.     Source                Destination           Protocol Length Info
+    337 192.168.71.129        192.168.71.185        SCTP     54     SHUTDOWN 
+
+Frame 337: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 2e:5b:9f:ce:49:df (2e:5b:9f:ce:49:df)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.185
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 52120 (52120)
+
+No.     Source                Destination           Protocol Length Info
+    338 192.168.71.185        192.168.71.129        SCTP     50     SHUTDOWN_ACK 
+
+Frame 338: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 2e:5b:9f:ce:49:df (2e:5b:9f:ce:49:df), Dst: 36:bb:34:68:59:5b (36:bb:34:68:59:5b)
+Internet Protocol Version 4, Src: 192.168.71.185, Dst: 192.168.71.129
+Stream Control Transmission Protocol, Src Port: 52120 (52120), Dst Port: 36422 (36422)
+
+No.     Source                Destination           Protocol Length Info
+    339 192.168.71.129        192.168.71.185        SCTP     50     SHUTDOWN_COMPLETE 
+
+Frame 339: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 36:bb:34:68:59:5b (36:bb:34:68:59:5b), Dst: 2e:5b:9f:ce:49:df (2e:5b:9f:ce:49:df)
+Internet Protocol Version 4, Src: 192.168.71.129, Dst: 192.168.71.185
+Stream Control Transmission Protocol, Src Port: 36422 (36422), Dst Port: 52120 (52120)
+
+No.     Source                Destination           Protocol Length Info
+    366 192.168.71.183        192.168.71.182        SCTP     54     SHUTDOWN 
+
+Frame 366: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 3e:0a:a4:f4:3a:1f (3e:0a:a4:f4:3a:1f), Dst: da:66:d3:92:42:e8 (da:66:d3:92:42:e8)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 38199 (38199), Dst Port: 38462 (38462)
+
+No.     Source                Destination           Protocol Length Info
+    367 192.168.71.182        192.168.71.183        SCTP     50     SHUTDOWN_ACK 
+
+Frame 367: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: da:66:d3:92:42:e8 (da:66:d3:92:42:e8), Dst: 3e:0a:a4:f4:3a:1f (3e:0a:a4:f4:3a:1f)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 38462 (38462), Dst Port: 38199 (38199)
+
+No.     Source                Destination           Protocol Length Info
+    368 192.168.71.183        192.168.71.182        SCTP     50     SHUTDOWN_COMPLETE 
+
+Frame 368: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 3e:0a:a4:f4:3a:1f (3e:0a:a4:f4:3a:1f), Dst: da:66:d3:92:42:e8 (da:66:d3:92:42:e8)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 38199 (38199), Dst Port: 38462 (38462)
+
+No.     Source                Destination           Protocol Length Info
+    369 192.168.71.182        192.168.71.181        SCTP     54     SHUTDOWN 
+
+Frame 369: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 5g-oran, id 0
+Ethernet II, Src: da:66:d3:92:42:e8 (da:66:d3:92:42:e8), Dst: 56:d4:9f:5e:5b:c3 (56:d4:9f:5e:5b:c3)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.181
+Stream Control Transmission Protocol, Src Port: 38472 (38472), Dst Port: 51454 (51454)
+
+No.     Source                Destination           Protocol Length Info
+    370 192.168.71.181        192.168.71.182        SCTP     50     SHUTDOWN_ACK 
+
+Frame 370: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 56:d4:9f:5e:5b:c3 (56:d4:9f:5e:5b:c3), Dst: da:66:d3:92:42:e8 (da:66:d3:92:42:e8)
+Internet Protocol Version 4, Src: 192.168.71.181, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 51454 (51454), Dst Port: 38472 (38472)
+
+No.     Source                Destination           Protocol Length Info
+    371 192.168.71.182        192.168.71.181        SCTP     50     SHUTDOWN_COMPLETE 
+
+Frame 371: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: da:66:d3:92:42:e8 (da:66:d3:92:42:e8), Dst: 56:d4:9f:5e:5b:c3 (56:d4:9f:5e:5b:c3)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.181
+Stream Control Transmission Protocol, Src Port: 38472 (38472), Dst Port: 51454 (51454)
+
+No.     Source                Destination           Protocol Length Info
+    372 192.168.71.182        192.168.71.160        SCTP     54     SHUTDOWN 
+
+Frame 372: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 5g-oran, id 0
+Ethernet II, Src: da:66:d3:92:42:e8 (da:66:d3:92:42:e8), Dst: 0e:bf:dd:05:85:9f (0e:bf:dd:05:85:9f)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.160
+Stream Control Transmission Protocol, Src Port: 48758 (48758), Dst Port: 38412 (38412)
+
+No.     Source                Destination           Protocol Length Info
+    373 192.168.71.160        192.168.71.182        SCTP     50     SHUTDOWN_ACK 
+
+Frame 373: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 0e:bf:dd:05:85:9f (0e:bf:dd:05:85:9f), Dst: da:66:d3:92:42:e8 (da:66:d3:92:42:e8)
+Internet Protocol Version 4, Src: 192.168.71.160, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 38412 (38412), Dst Port: 48758 (48758)
+
+No.     Source                Destination           Protocol Length Info
+    374 192.168.71.182        192.168.71.160        SCTP     50     SHUTDOWN_COMPLETE 
+
+Frame 374: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: da:66:d3:92:42:e8 (da:66:d3:92:42:e8), Dst: 0e:bf:dd:05:85:9f (0e:bf:dd:05:85:9f)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.160
+Stream Control Transmission Protocol, Src Port: 48758 (48758), Dst Port: 38412 (38412)
+
+No.     Source                Destination           Protocol Length Info
+    412 192.168.71.183        192.168.71.182        SCTP     82     INIT 
+
+Frame 412: 82 bytes on wire (656 bits), 82 bytes captured (656 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 57405 (57405), Dst Port: 38462 (38462)
+
+No.     Source                Destination           Protocol Length Info
+    413 192.168.71.182        192.168.71.183        SCTP     50     ABORT 
+
+Frame 413: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 38462 (38462), Dst Port: 57405 (57405)
+
+No.     Source                Destination           Protocol Length Info
+    437 192.168.71.183        192.168.71.182        SCTP     82     INIT 
+
+Frame 437: 82 bytes on wire (656 bits), 82 bytes captured (656 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 49342 (49342), Dst Port: 38462 (38462)
+
+No.     Source                Destination           Protocol Length Info
+    438 192.168.71.182        192.168.71.183        SCTP     50     ABORT 
+
+Frame 438: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 38462 (38462), Dst Port: 49342 (49342)
+
+No.     Source                Destination           Protocol Length Info
+    441 192.168.71.183        192.168.71.184        SCTP     82     INIT 
+
+Frame 441: 82 bytes on wire (656 bits), 82 bytes captured (656 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2), Dst: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 36123 (36123), Dst Port: 36421 (36421)
+
+No.     Source                Destination           Protocol Length Info
+    442 192.168.71.184        192.168.71.183        SCTP     306    INIT_ACK 
+
+Frame 442: 306 bytes on wire (2448 bits), 306 bytes captured (2448 bits) on interface 5g-oran, id 0
+Ethernet II, Src: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65), Dst: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 36421 (36421), Dst Port: 36123 (36123)
+
+No.     Source                Destination           Protocol Length Info
+    443 192.168.71.183        192.168.71.184        E2AP|NGAP 1150   COOKIE_ECHO , E2setupRequest
+
+Frame 443: 1150 bytes on wire (9200 bits), 1150 bytes captured (9200 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2), Dst: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 36123 (36123), Dst Port: 36421 (36421)
+E2 Application Protocol
+    E2AP-PDU: initiatingMessage (0)
+        initiatingMessage
+            procedureCode: id-E2setup (1)
+            criticality: reject (0)
+            value
+                E2setupRequest
+[Malformed Packet: NGAP]
+    [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
+        [Malformed Packet (Exception occurred)]
+        [Severity level: Error]
+        [Group: Malformed]
+
+No.     Source                Destination           Protocol Length Info
+    444 192.168.71.184        192.168.71.183        SCTP     66     COOKIE_ACK SACK (Ack=0, Arwnd=105642) 
+
+Frame 444: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 5g-oran, id 0
+Ethernet II, Src: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65), Dst: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 36421 (36421), Dst Port: 36123 (36123)
+
+No.     Source                Destination           Protocol Length Info
+    445 192.168.71.184        192.168.71.183        E2AP     210    E2setupResponse
+
+Frame 445: 210 bytes on wire (1680 bits), 210 bytes captured (1680 bits) on interface 5g-oran, id 0
+Ethernet II, Src: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65), Dst: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 36421 (36421), Dst Port: 36123 (36123)
+E2 Application Protocol
+    E2AP-PDU: successfulOutcome (1)
+        successfulOutcome
+
+No.     Source                Destination           Protocol Length Info
+    446 192.168.71.183        192.168.71.184        SCTP     62     SACK (Ack=0, Arwnd=106349) 
+
+Frame 446: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2), Dst: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 36123 (36123), Dst Port: 36421 (36421)
+
+No.     Source                Destination           Protocol Length Info
+    449 192.168.71.182        192.168.71.160        SCTP     82     INIT 
+
+Frame 449: 82 bytes on wire (656 bits), 82 bytes captured (656 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: 0e:bf:dd:05:85:9f (0e:bf:dd:05:85:9f)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.160
+Stream Control Transmission Protocol, Src Port: 35606 (35606), Dst Port: 38412 (38412)
+
+No.     Source                Destination           Protocol Length Info
+    450 192.168.71.160        192.168.71.182        SCTP     306    INIT_ACK 
+
+Frame 450: 306 bytes on wire (2448 bits), 306 bytes captured (2448 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 0e:bf:dd:05:85:9f (0e:bf:dd:05:85:9f), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.160, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 38412 (38412), Dst Port: 35606 (35606)
+
+No.     Source                Destination           Protocol Length Info
+    451 192.168.71.182        192.168.71.160        SCTP     278    COOKIE_ECHO 
+
+Frame 451: 278 bytes on wire (2224 bits), 278 bytes captured (2224 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: 0e:bf:dd:05:85:9f (0e:bf:dd:05:85:9f)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.160
+Stream Control Transmission Protocol, Src Port: 35606 (35606), Dst Port: 38412 (38412)
+
+No.     Source                Destination           Protocol Length Info
+    452 192.168.71.160        192.168.71.182        SCTP     50     COOKIE_ACK 
+
+Frame 452: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 0e:bf:dd:05:85:9f (0e:bf:dd:05:85:9f), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.160, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 38412 (38412), Dst Port: 35606 (35606)
+
+No.     Source                Destination           Protocol Length Info
+    453 192.168.71.182        192.168.71.160        NGAP     122    NGSetupRequest
+
+Frame 453: 122 bytes on wire (976 bits), 122 bytes captured (976 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: 0e:bf:dd:05:85:9f (0e:bf:dd:05:85:9f)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.160
+Stream Control Transmission Protocol, Src Port: 35606 (35606), Dst Port: 38412 (38412)
+NG Application Protocol (NGSetupRequest)
+
+No.     Source                Destination           Protocol Length Info
+    454 192.168.71.160        192.168.71.182        SCTP     62     SACK (Ack=0, Arwnd=106438) 
+
+Frame 454: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 0e:bf:dd:05:85:9f (0e:bf:dd:05:85:9f), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.160, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 38412 (38412), Dst Port: 35606 (35606)
+
+No.     Source                Destination           Protocol Length Info
+    455 192.168.71.160        192.168.71.182        NGAP     118    NGSetupResponse
+
+Frame 455: 118 bytes on wire (944 bits), 118 bytes captured (944 bits) on interface 5g-oran, id 0
+Ethernet II, Src: 0e:bf:dd:05:85:9f (0e:bf:dd:05:85:9f), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.160, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 38412 (38412), Dst Port: 35606 (35606)
+NG Application Protocol (NGSetupResponse)
+
+No.     Source                Destination           Protocol Length Info
+    456 192.168.71.182        192.168.71.160        SCTP     62     SACK (Ack=0, Arwnd=106442) 
+
+Frame 456: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: 0e:bf:dd:05:85:9f (0e:bf:dd:05:85:9f)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.160
+Stream Control Transmission Protocol, Src Port: 35606 (35606), Dst Port: 38412 (38412)
+
+No.     Source                Destination           Protocol Length Info
+    480 192.168.71.183        192.168.71.182        SCTP     82     INIT 
+
+Frame 480: 82 bytes on wire (656 bits), 82 bytes captured (656 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 49051 (49051), Dst Port: 38462 (38462)
+
+No.     Source                Destination           Protocol Length Info
+    481 192.168.71.182        192.168.71.183        SCTP     306    INIT_ACK 
+
+Frame 481: 306 bytes on wire (2448 bits), 306 bytes captured (2448 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 38462 (38462), Dst Port: 49051 (49051)
+
+No.     Source                Destination           Protocol Length Info
+    482 192.168.71.183        192.168.71.182        SCTP     278    COOKIE_ECHO 
+
+Frame 482: 278 bytes on wire (2224 bits), 278 bytes captured (2224 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 49051 (49051), Dst Port: 38462 (38462)
+
+No.     Source                Destination           Protocol Length Info
+    483 192.168.71.182        192.168.71.183        SCTP     50     COOKIE_ACK 
+
+Frame 483: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 38462 (38462), Dst Port: 49051 (49051)
+
+No.     Source                Destination           Protocol Length Info
+    484 192.168.71.183        192.168.71.182        E1AP     114    GNB-CU-UP-E1SetupRequest
+
+Frame 484: 114 bytes on wire (912 bits), 114 bytes captured (912 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 49051 (49051), Dst Port: 38462 (38462)
+E1 Application Protocol
+
+No.     Source                Destination           Protocol Length Info
+    485 192.168.71.182        192.168.71.183        SCTP     62     SACK (Ack=0, Arwnd=106445) 
+
+Frame 485: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 38462 (38462), Dst Port: 49051 (49051)
+
+No.     Source                Destination           Protocol Length Info
+    486 192.168.71.182        192.168.71.183        E1AP     78     GNB-CU-UP-E1SetupResponse
+
+Frame 486: 78 bytes on wire (624 bits), 78 bytes captured (624 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 38462 (38462), Dst Port: 49051 (49051)
+E1 Application Protocol
+
+No.     Source                Destination           Protocol Length Info
+    487 192.168.71.183        192.168.71.182        SCTP     62     SACK (Ack=0, Arwnd=106483) 
+
+Frame 487: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 49051 (49051), Dst Port: 38462 (38462)
+
+No.     Source                Destination           Protocol Length Info
+    490 192.168.71.182        192.168.71.184        SCTP     82     INIT 
+
+Frame 490: 82 bytes on wire (656 bits), 82 bytes captured (656 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 48627 (48627), Dst Port: 36421 (36421)
+
+No.     Source                Destination           Protocol Length Info
+    491 192.168.71.184        192.168.71.182        SCTP     306    INIT_ACK 
+
+Frame 491: 306 bytes on wire (2448 bits), 306 bytes captured (2448 bits) on interface 5g-oran, id 0
+Ethernet II, Src: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 36421 (36421), Dst Port: 48627 (48627)
+
+No.     Source                Destination           Protocol Length Info
+    492 192.168.71.182        192.168.71.184        E2AP|NGAP 1098   COOKIE_ECHO , E2setupRequest
+
+Frame 492: 1098 bytes on wire (8784 bits), 1098 bytes captured (8784 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 48627 (48627), Dst Port: 36421 (36421)
+E2 Application Protocol
+    E2AP-PDU: initiatingMessage (0)
+        initiatingMessage
+            procedureCode: id-E2setup (1)
+            criticality: reject (0)
+            value
+                E2setupRequest
+[Malformed Packet: NGAP]
+    [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
+        [Malformed Packet (Exception occurred)]
+        [Severity level: Error]
+        [Group: Malformed]
+
+No.     Source                Destination           Protocol Length Info
+    493 192.168.71.184        192.168.71.182        SCTP     66     COOKIE_ACK SACK (Ack=0, Arwnd=105694) 
+
+Frame 493: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 5g-oran, id 0
+Ethernet II, Src: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 36421 (36421), Dst Port: 48627 (48627)
+
+No.     Source                Destination           Protocol Length Info
+    494 192.168.71.184        192.168.71.182        E2AP     210    E2setupResponse
+
+Frame 494: 210 bytes on wire (1680 bits), 210 bytes captured (1680 bits) on interface 5g-oran, id 0
+Ethernet II, Src: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 36421 (36421), Dst Port: 48627 (48627)
+E2 Application Protocol
+    E2AP-PDU: successfulOutcome (1)
+        successfulOutcome
+
+No.     Source                Destination           Protocol Length Info
+    495 192.168.71.182        192.168.71.184        SCTP     62     SACK (Ack=0, Arwnd=106349) 
+
+Frame 495: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 48627 (48627), Dst Port: 36421 (36421)
+
+No.     Source                Destination           Protocol Length Info
+    679 192.168.71.183        192.168.71.182        SCTP     54     SHUTDOWN 
+
+Frame 679: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 49051 (49051), Dst Port: 38462 (38462)
+
+No.     Source                Destination           Protocol Length Info
+    680 192.168.71.182        192.168.71.183        SCTP     50     SHUTDOWN_ACK 
+
+Frame 680: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed), Dst: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2)
+Internet Protocol Version 4, Src: 192.168.71.182, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 38462 (38462), Dst Port: 49051 (49051)
+
+No.     Source                Destination           Protocol Length Info
+    681 192.168.71.183        192.168.71.182        SCTP     50     SHUTDOWN_COMPLETE 
+
+Frame 681: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2), Dst: b2:c9:3d:d3:0d:ed (b2:c9:3d:d3:0d:ed)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.182
+Stream Control Transmission Protocol, Src Port: 49051 (49051), Dst Port: 38462 (38462)
+
+No.     Source                Destination           Protocol Length Info
+    682 192.168.71.183        192.168.71.184        SCTP     54     SHUTDOWN 
+
+Frame 682: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2), Dst: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 36123 (36123), Dst Port: 36421 (36421)
+
+No.     Source                Destination           Protocol Length Info
+    683 192.168.71.184        192.168.71.183        SCTP     50     SHUTDOWN_ACK 
+
+Frame 683: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65), Dst: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2)
+Internet Protocol Version 4, Src: 192.168.71.184, Dst: 192.168.71.183
+Stream Control Transmission Protocol, Src Port: 36421 (36421), Dst Port: 36123 (36123)
+
+No.     Source                Destination           Protocol Length Info
+    684 192.168.71.183        192.168.71.184        SCTP     50     SHUTDOWN_COMPLETE 
+
+Frame 684: 50 bytes on wire (400 bits), 50 bytes captured (400 bits) on interface 5g-oran, id 0
+Ethernet II, Src: b2:8b:3a:a4:3d:e2 (b2:8b:3a:a4:3d:e2), Dst: c6:cc:0f:ca:fa:65 (c6:cc:0f:ca:fa:65)
+Internet Protocol Version 4, Src: 192.168.71.183, Dst: 192.168.71.184
+Stream Control Transmission Protocol, Src Port: 36123 (36123), Dst Port: 36421 (36421)

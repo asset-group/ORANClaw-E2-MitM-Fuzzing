@@ -1,0 +1,14 @@
+Analysis:
+Your MITM proxy intercepted an E2AP RICsubscriptionModificationRequired message (Procedure Code 15) from the xApp towards the RIC.
+The MITM attempted mutation on the message. Crucially, it successfully mutated the gNB-CU-UP-ID field to a large, likely invalid value (from 3584 to 25497707729).
+The MITM logs show an "Error re-encoding ASN.1" related to the granulPeriod mutation attempt, but the message was still sent to the RIC (shown as [+] Successfully fuzzed message (137 bytes) and seen in Wireshark as [Malformed Packet]).
+The RIC received this message with the mutated, invalid gNB-CU-UP-ID.
+While processing the RICsubscriptionModificationRequired message, the RIC performed a check (valid_global_e2_node) on the provided E2 Node ID (which included the mutated gNB-CU-UP-ID).
+This check failed, triggering an assertion (Assertion \valid_global_e2_node(iapp, &e42_sr->id )' failed.) in the RIC'smsg_handler_iapp.c`.
+The assertion failure caused the nearRT-RIC process to crash (nearRT-RIC-1 exited with code 139).
+The RIC crash initiated cascade failures and SCTP shutdowns with all connected E2 Nodes (CU-UP, CU-CP, DU).
+Conclusion: The RIC crashed because it received an E2AP Subscription message containing an invalid E2 Node ID (due to the MITM modification), and its internal validation logic for this field was not robust, leading to a crash instead of a graceful error handling.
+Bullet Points for Slide:
+DoS - RIC Crash: The RIC (nearRT-RIC) crashed when processing a RIC Subscription message from an xApp (nearRT-RIC-1 exited with code 139).
+Invalid E2 Node Reference: This crash was triggered by the MITM modifying the gNB-CU-UP-ID field in the message, resulting in an invalid or unknown E2 Node ID being presented to the RIC's handler.
+Critical Validation Failure: The RIC failed an internal check (valid_global_e2_node) for the E2 Node ID, triggering an unhandled assertion and causing the critical RIC component to terminate instead of rejecting the malformed message.

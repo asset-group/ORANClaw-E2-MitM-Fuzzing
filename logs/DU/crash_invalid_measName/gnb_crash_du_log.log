@@ -1,0 +1,430 @@
+oai-du-rfsim-1     | UE 3efe: ulsch_rounds 109749/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 3efe: MAC:    TX        1352448 RX       12726231 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 4: TX             30 RX            660 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 2070500.570324 [NR_MAC] I Frame.Slot 768.0
+oai-du-rfsim-1     | UE RNTI 42d1 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE 42d1: dlsch_rounds 10996/1/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00000 MCS (0) 9
+oai-du-rfsim-1     | UE 42d1: ulsch_rounds 109765/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 42d1: MAC:    TX        1352571 RX       12727719 bytes
+oai-du-rfsim-1     | UE 42d1: LCID 1: TX            534 RX            306 bytes
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE 42d1: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-1-1  |     DL harq: 10996/1
+oai-ue-rfsimu-2-1  |     DL harq: 10996/0
+oai-du-rfsim-1     | UE 42d1: LCID 4: TX             30 RX            660 bytes
+oai-ue-rfsimu-1-1  |     Ul harq: 109766/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+oai-ue-rfsimu-2-1  |     Ul harq: 109763/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+oai-du-rfsim-1     | UE RNTI 3efe CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE 3efe: dlsch_rounds 10996/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00000 MCS (0) 9
+oai-du-rfsim-1     | UE 3efe: ulsch_rounds 109762/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 3efe: MAC:    TX        1352571 RX       12727739 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 4: TX             30 RX            660 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 2070501.111861 [NR_MAC] I Frame.Slot 896.0
+oai-du-rfsim-1     | UE RNTI 42d1 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE 42d1: dlsch_rounds 10997/1/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00000 MCS (0) 9
+oai-du-rfsim-1     | UE 42d1: ulsch_rounds 109777/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 42d1: MAC:    TX        1352694 RX       12729111 bytes
+oai-du-rfsim-1     | UE 42d1: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 42d1: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 42d1: LCID 4: TX             30 RX            660 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE RNTI 3efe CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-2-1  |     DL harq: 10998/0
+oai-ue-rfsimu-1-1  |     DL harq: 10997/1
+oai-du-rfsim-1     | UE 3efe: dlsch_rounds 10998/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00000 MCS (0) 9
+oai-ue-rfsimu-2-1  |     Ul harq: 109775/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+oai-ue-rfsimu-1-1  |     Ul harq: 109778/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+oai-du-rfsim-1     | UE 3efe: ulsch_rounds 109774/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 3efe: MAC:    TX        1352817 RX       12729131 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 4: TX             30 RX            660 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 2070501.646788 [NR_MAC] I Frame.Slot 0.0
+oai-du-rfsim-1     | UE RNTI 42d1 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE 42d1: dlsch_rounds 10998/1/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00000 MCS (0) 9
+oai-du-rfsim-1     | UE 42d1: ulsch_rounds 109790/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 42d1: MAC:    TX        1352817 RX       12730619 bytes
+oai-du-rfsim-1     | UE 42d1: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 42d1: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 42d1: LCID 4: TX             30 RX            660 bytes
+oai-du-rfsim-1     | UE RNTI 3efe CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE 3efe: dlsch_rounds 10999/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00000 MCS (0) 9
+oai-ue-rfsimu-2-1  |     DL harq: 10999/0
+oai-ue-rfsimu-1-1  |     DL harq: 10998/1
+oai-du-rfsim-1     | UE 3efe: ulsch_rounds 109787/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-ue-rfsimu-2-1  |     Ul harq: 109788/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+oai-ue-rfsimu-1-1  |     Ul harq: 109791/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+oai-du-rfsim-1     | UE 3efe: MAC:    TX        1352940 RX       12730639 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 4: TX             30 RX            660 bytes
+oai-du-rfsim-1     | 
+nearRT-RIC-1       | [iApp]: SUBSCRIPTION-REQUEST RAN_FUNC_ID 2 RIC_REQ_ID 1 tx 
+nearRT-RIC-1       | [iApp]: SUBSCRIPTION-REQUEST RAN_FUNC_ID 2 RIC_REQ_ID 2 tx 
+oai-du-rfsim-1     | 2070502.182382 [NR_MAC] I Frame.Slot 128.0
+oai-du-rfsim-1     | UE RNTI 42d1 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE 42d1: dlsch_rounds 11000/1/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00000 MCS (0) 9
+oai-du-rfsim-1     | UE 42d1: ulsch_rounds 109803/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 42d1: MAC:    TX        1353063 RX       12732127 bytes
+oai-du-rfsim-1     | UE 42d1: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 42d1: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 42d1: LCID 4: TX             30 RX            660 bytes
+oai-du-rfsim-1     | UE RNTI 3efe CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE 3efe: dlsch_rounds 11000/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00000 MCS (0) 9
+oai-ue-rfsimu-1-1  |     DL harq: 11000/1
+oai-ue-rfsimu-2-1  |     DL harq: 11000/0
+oai-du-rfsim-1     | UE 3efe: ulsch_rounds 109800/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-ue-rfsimu-1-1  |     Ul harq: 109804/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+oai-ue-rfsimu-2-1  |     Ul harq: 109801/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+oai-du-rfsim-1     | UE 3efe: MAC:    TX        1353063 RX       12732147 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 4: TX             30 RX            660 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 2070502.679384 [NR_MAC] I Frame.Slot 256.0
+oai-du-rfsim-1     | UE RNTI 42d1 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE 42d1: dlsch_rounds 11001/1/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00000 MCS (0) 9
+oai-du-rfsim-1     | UE 42d1: ulsch_rounds 109816/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 42d1: MAC:    TX        1353186 RX       12733635 bytes
+oai-du-rfsim-1     | UE 42d1: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 42d1: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 42d1: LCID 4: TX             30 RX            660 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE RNTI 3efe CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-2-1  |     DL harq: 11001/0
+oai-ue-rfsimu-1-1  |     DL harq: 11001/1
+oai-du-rfsim-1     | UE 3efe: dlsch_rounds 11001/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00000 MCS (0) 9
+oai-ue-rfsimu-2-1  |     Ul harq: 109814/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+oai-ue-rfsimu-1-1  |     Ul harq: 109817/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+oai-du-rfsim-1     | UE 3efe: ulsch_rounds 109813/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 3efe: MAC:    TX        1353186 RX       12733655 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 3efe: LCID 4: TX             30 RX            660 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | nr-softmodem: /oai/openair2/E2AP/RAN_FUNCTION/O-RAN/ran_func_kpm_subs.c:226: get_kpm_meas_value: Assertion `found_entry != NULL && "Unsupported KPM measurement name"' failed.
+oai-ue-rfsimu-2-1  | [HW]   Lost socket
+oai-ue-rfsimu-1-1  | [HW]   Lost socket
+nearRT-RIC-1       | [E2AP]: SCTP_SHUTDOWN_EVENT 
+oai-cu-cp-1        | [SCTP]   Received SCTP SHUTDOWN EVENT
+oai-ue-rfsimu-1-1  | mac 6 e6 4a 8c 
+oai-ue-rfsimu-2-1  | mac f2 d9 0 4c 
+nearRT-RIC-1       | [NEAR-RIC]: Removing E2 Node MCC 999 MNC 70 NB_ID 3584 
+oai-cu-cp-1        | [F1AP]   Received SCTP state 1 for assoc_id 4101, removing endpoint
+oai-ue-rfsimu-1-1  | mac 67 e a8 21 
+oai-ue-rfsimu-2-1  | mac fa 7f f8 af 
+oai-cu-up-1        | [E1AP]   releasing UE 1
+oai-cu-cp-1        | [RRC]   releasing DU ID 3584 (gNB-Eurecom-DU) on assoc_id 4101
+oai-cu-up-1        | [GTPU]   [93] Deleted all tunnels for ue id 1 (1 tunnels deleted)
+oai-cu-cp-1        | [NR_RRC]   2 UEs lost through DU disconnect
+oai-cu-up-1        | [GTPU]   [92] Deleted all tunnels for ue id 1 (1 tunnels deleted)
+oai-cu-cp-1        | [NR_RRC]   removed UE CU UE ID 1/RNTI 42d1 
+oai-cu-up-1        | [SDAP]   Successfully deleted SDAP entity for UE 1
+oai-cu-cp-1        | [NR_RRC]   [--] (cellID bc614e, UE ID 1 RNTI 42d1) Remove UE context
+oai-cu-up-1        | [E1AP]   releasing UE 2
+oai-cu-cp-1        | [RRC]   UE 1: received bearer release complete
+oai-cu-up-1        | [GTPU]   [93] Deleted all tunnels for ue id 2 (1 tunnels deleted)
+oai-cu-cp-1        | [NR_RRC]   removed UE CU UE ID 2/RNTI 3efe 
+oai-cu-up-1        | [GTPU]   [92] Deleted all tunnels for ue id 2 (1 tunnels deleted)
+oai-cu-cp-1        | [NR_RRC]   [--] (cellID bc614e, UE ID 2 RNTI 3efe) Remove UE context
+oai-cu-cp-1        | [RRC]   UE 2: received bearer release complete
+oai-ue-rfsimu-1-1 exited with code 0
+oai-ue-rfsimu-2-1 exited with code 0
+oai-ue-rfsimu-1-1  | [OPT]   OPT disabled
+oai-ue-rfsimu-1-1  | [HW]   Version: Branch: develop Abrev. Hash: ff58b5e Date: Wed Feb 12 06:55:05 2025 +0000
+oai-ue-rfsimu-1-1  | [UTIL]   Opened socket oaitun_ue1 with fd nas_sock_fd[0]=93
+oai-ue-rfsimu-1-1  | [PDCP]   UE pdcp will use tun interface
+oai-ue-rfsimu-1-1  | [SIM]   UICC simulation: IMSI=999700000000001, IMEISV=6754567890123413, Ki=fec86ba6eb707ed08905757b1bb44b8f, OPc=c42449363bbad02b66d16bc975d77cc1, DNN=internet, SST=0x01, SD=0xffffff
+oai-ue-rfsimu-1-1  | [NR_MAC]   [UE0] Initializing MAC
+oai-ue-rfsimu-1-1  | [NR_MAC]   Initializing dl and ul config_request. num_slots = 20
+oai-ue-rfsimu-1-1  | [RLC]   Activated srb0 for UE 0
+oai-ue-rfsimu-1-1  | [RLC]   SRB0 already exists for UE 0, do nothing
+oai-ue-rfsimu-1-1  | [PHY]   Set UE_fo_compensation 0, UE_scan_carrier 0, UE_no_timing_correction 0 
+oai-ue-rfsimu-1-1  | , chest-freq 0, chest-time 0
+oai-ue-rfsimu-1-1  | [PHY]   Set UE nb_rx_antenna 1, nb_tx_antenna 1, threequarter_fs 1, ssb_start_subcarrier 516
+oai-ue-rfsimu-1-1  | [PHY]   SA init parameters. DL freq 3619200000 UL offset 0 SSB numerology 1 N_RB_DL 106
+oai-ue-rfsimu-1-1  | [PHY]   Init: N_RB_DL 106, first_carrier_offset 900, nb_prefix_samples 108,nb_prefix_samples0 132, ofdm_symbol_size 1536
+oai-ue-rfsimu-1-1  | [PHY]   samples_per_subframe 46080/per second 46080000, wCP 43008
+oai-ue-rfsimu-1-1  | [UTIL]   threadCreate() for SYNC__actor: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-1-1  | [UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-1-1  | [UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-1-1  | [UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-1-1  | [UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-1-1  | [UTIL]   threadCreate() for UL__actor: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-1-1  | [PHY]   Initializing UE vars for gNB TXant 1, UE RXant 1
+oai-ue-rfsimu-2-1  | [OPT]   OPT disabled
+oai-ue-rfsimu-2-1  | [HW]   Version: Branch: develop Abrev. Hash: ff58b5e Date: Wed Feb 12 06:55:05 2025 +0000
+oai-ue-rfsimu-2-1  | [UTIL]   Opened socket oaitun_ue1 with fd nas_sock_fd[0]=93
+oai-ue-rfsimu-2-1  | [PDCP]   UE pdcp will use tun interface
+oai-ue-rfsimu-2-1  | [SIM]   UICC simulation: IMSI=999700000000002, IMEISV=6754567890123413, Ki=fec86ba6eb707ed08905757b1bb44b8f, OPc=c42449363bbad02b66d16bc975d77cc1, DNN=internet, SST=0x01, SD=0xffffff
+oai-ue-rfsimu-2-1  | [NR_MAC]   [UE0] Initializing MAC
+oai-ue-rfsimu-2-1  | [NR_MAC]   Initializing dl and ul config_request. num_slots = 20
+oai-ue-rfsimu-2-1  | [RLC]   Activated srb0 for UE 0
+oai-ue-rfsimu-2-1  | [RLC]   SRB0 already exists for UE 0, do nothing
+oai-ue-rfsimu-2-1  | [PHY]   Set UE_fo_compensation 0, UE_scan_carrier 0, UE_no_timing_correction 0 
+oai-ue-rfsimu-2-1  | , chest-freq 0, chest-time 0
+oai-ue-rfsimu-2-1  | [PHY]   Set UE nb_rx_antenna 1, nb_tx_antenna 1, threequarter_fs 1, ssb_start_subcarrier 516
+oai-ue-rfsimu-2-1  | [PHY]   SA init parameters. DL freq 3619200000 UL offset 0 SSB numerology 1 N_RB_DL 106
+oai-ue-rfsimu-2-1  | [PHY]   Init: N_RB_DL 106, first_carrier_offset 900, nb_prefix_samples 108,nb_prefix_samples0 132, ofdm_symbol_size 1536
+oai-ue-rfsimu-2-1  | [PHY]   samples_per_subframe 46080/per second 46080000, wCP 43008
+oai-ue-rfsimu-2-1  | [UTIL]   threadCreate() for SYNC__actor: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-2-1  | [UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-2-1  | [UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-2-1  | [UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-2-1  | [UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-2-1  | [UTIL]   threadCreate() for UL__actor: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-2-1  | [PHY]   Initializing UE vars for gNB TXant 1, UE RXant 1
+oai-ue-rfsimu-1-1  | [PHY]   prs_config configuration NOT found..!! Skipped configuring UE for the PRS reception
+oai-ue-rfsimu-2-1  | [PHY]   prs_config configuration NOT found..!! Skipped configuring UE for the PRS reception
+oai-ue-rfsimu-1-1  | [PHY]   UE 0 Setting N_TA_offset to 600 samples (UL Freq 3619200000, N_RB 106, mu 1)
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring card 0, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring card 1, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring card 2, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring card 3, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-2-1  | [PHY]   UE 0 Setting N_TA_offset to 600 samples (UL Freq 3619200000, N_RB 106, mu 1)
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring card 0, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring card 4, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring card 1, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring card 5, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring card 2, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring card 6, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring card 3, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring card 7, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-1-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring card 4, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring card 5, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring card 6, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring card 7, sample_rate 46080000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+oai-ue-rfsimu-2-1  | [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+oai-ue-rfsimu-1-1  | [PHY]   Intializing UE Threads for instance 0 ...
+oai-ue-rfsimu-1-1  | [UTIL]   threadCreate() for UEthread_0: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-2-1  | [PHY]   Intializing UE Threads for instance 0 ...
+oai-ue-rfsimu-2-1  | [UTIL]   threadCreate() for UEthread_0: creating thread with affinity ffffffff, priority 97
+oai-ue-rfsimu-1-1  | [UTIL]   threadCreate() for L1_UE_stats_0: creating thread with affinity ffffffff, priority 1
+oai-ue-rfsimu-2-1  | [UTIL]   threadCreate() for L1_UE_stats_0: creating thread with affinity ffffffff, priority 1
+oai-ue-rfsimu-1-1  | [HW]   Running as client: will connect to a rfsimulator server side
+oai-ue-rfsimu-1-1  | [NR_RRC]   create TASK_RRC_NRUE 
+oai-ue-rfsimu-1-1  | [UTIL]   threadCreate() for TASK_RRC_NRUE: creating thread with affinity ffffffff, priority 50
+oai-ue-rfsimu-1-1  | [HW]   [RRU] has loaded RFSIMULATOR device.
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Running as client: will connect to a rfsimulator server side
+oai-ue-rfsimu-2-1  | [NR_RRC]   create TASK_RRC_NRUE 
+oai-ue-rfsimu-2-1  | [UTIL]   threadCreate() for TASK_RRC_NRUE: creating thread with affinity ffffffff, priority 50
+oai-ue-rfsimu-2-1  | [HW]   [RRU] has loaded RFSIMULATOR device.
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [UTIL]   threadCreate() for TASK_NAS_NRUE: creating thread with affinity ffffffff, priority 50
+oai-ue-rfsimu-2-1  | [UTIL]   threadCreate() for TASK_NAS_NRUE: creating thread with affinity ffffffff, priority 50
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+nearRT-RIC-1       | [NEAR-RIC]: SUBSCRIPTION DELETE REQUEST tx RAN FUNC ID 2 RIC_REQ_ID 1033 
+nearRT-RIC-1       | [iApp]: RIC_SUBSCRIPTION_DELETE_REQUEST tx RIC_REQ_ID 1033 
+nearRT-RIC-1       | [iApp]: RIC_SUBSCRIPTION_DELETE_RESPONSE tx RAN_FUNC_ID 2 RIC_REQ_ID 1 
+nearRT-RIC-1       | nearRT-RIC: /flexric/src/ric/map_e2_node_sockaddr.c:154: find_map_e2_node_sad: Assertion `it != end && "E2 Node not found in the tree"' failed.
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+nearRT-RIC-1 exited with code 0
+nearRT-RIC-1       | [UTIL]: Setting the config -c file to ./configs/flexric.conf
+nearRT-RIC-1       | [UTIL]: Setting path -p for the shared libraries to /usr/local/lib/flexric/
+nearRT-RIC-1       | [NEAR-RIC]: nearRT-RIC IP Address = 192.168.71.184, PORT = 36421
+nearRT-RIC-1       | [NEAR-RIC]: Initializing 
+nearRT-RIC-1       | [NEAR-RIC]: Loading SM ID = 148 with def = GTP_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Loading SM ID = 145 with def = SLICE_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Loading SM ID = 142 with def = MAC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Loading SM ID = 2 with def = ORAN-E2SM-KPM 
+nearRT-RIC-1       | [NEAR-RIC]: Loading SM ID = 144 with def = PDCP_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Loading SM ID = 146 with def = TC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Loading SM ID = 143 with def = RLC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Loading SM ID = 3 with def = ORAN-E2SM-RC 
+nearRT-RIC-1       | [iApp]: Initializing ... 
+nearRT-RIC-1       | [iApp]: nearRT-RIC IP Address = 192.168.71.184, PORT = 36422
+nearRT-RIC-1       | [NEAR-RIC]: Initializing Task Manager with 2 threads 
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-cu-up-1        | 
+oai-cu-cp-1        | 
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-cu-up-1 exited with code 0
+oai-cu-cp-1 exited with code 0
+oai-cu-cp-1        | [UTIL]   running in SA mode (no --phy-test, --do-ra, --nsa option present)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-cu-up-1        | [E1AP]   Try to reconnect to CP
+oai-cu-up-1        | [SCTP]   Connect failed: Connection refused
+oai-cu-up-1        | [E1AP]   Lost connection (SCTP_STATE_UNREACHABLE) with CU-CP (assoc_id -1): trigger new E1 association
+nearRT-RIC-1       | [E2AP]: E2 SETUP-REQUEST rx from PLMN 999.70 Node ID 3584 RAN type ngran_gNB_CUUP ID 3584
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 2 with def = ORAN-E2SM-KPM 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 3 with def = ORAN-E2SM-RC 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 142 with def = MAC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 143 with def = RLC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 144 with def = PDCP_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 145 with def = SLICE_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 146 with def = TC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 148 with def = GTP_STATS_V0 
+oai-cu-cp-1        | [OPT]   OPT disabled
+oai-cu-cp-1        | [HW]   Version: Branch: develop Abrev. Hash: ff58b5e Date: Wed Feb 12 06:55:05 2025 +0000
+oai-cu-cp-1        | [GNB_APP]   Initialized RAN Context: RC.nb_nr_inst = 1, RC.nb_nr_macrlc_inst = 0, RC.nb_nr_L1_inst = 0, RC.nb_RU = 0, RC.nb_nr_CC[0] = 0
+oai-cu-cp-1        | [GNB_APP]   F1AP: gNB_CU_id[0] 3584
+oai-cu-cp-1        | [GNB_APP]   F1AP: gNB_CU_name[0] gNB-OAI
+oai-cu-cp-1        | [GNB_APP]   SDAP layer is disabled
+oai-cu-cp-1        | [GNB_APP]   Data Radio Bearer count 1
+oai-cu-cp-1        | [NR_RRC]   do_SIB23_NR, size 9
+oai-cu-cp-1        | [UTIL]   threadCreate() for TASK_SCTP: creating thread with affinity ffffffff, priority 50
+oai-cu-cp-1        | [X2AP]   X2AP is disabled.
+oai-cu-cp-1        | [UTIL]   threadCreate() for TASK_NGAP: creating thread with affinity ffffffff, priority 50
+oai-cu-cp-1        | [NGAP]   Starting NGAP layer
+oai-cu-cp-1        | [UTIL]   threadCreate() for TASK_GNB_APP: creating thread with affinity ffffffff, priority 50
+oai-cu-cp-1        | [NGAP]   Registered new gNB[0] and macro gNB id 3584
+oai-cu-cp-1        | [NGAP]   [gNB 0] check the amf registration state
+oai-cu-cp-1        | [UTIL]   threadCreate() for TASK_RRC_GNB: creating thread with affinity ffffffff, priority 50
+oai-cu-cp-1        | [NGAP]   Send NGSetupRequest to AMF
+oai-cu-cp-1        | [NGAP]   3584 -> 0000e000
+oai-cu-cp-1        | [UTIL]   threadCreate() for TASK_CU_F1: creating thread with affinity ffffffff, priority 50
+oai-cu-cp-1        | [NR_RRC]   Entering main loop of NR_RRC message task
+oai-cu-cp-1        | [NGAP]   servedGUAMIs.list.count 1
+oai-cu-cp-1        | [NGAP]   PLMNSupportList.list.count 1
+oai-cu-cp-1        | [NGAP]   PLMNSupportList.list.count 1
+oai-cu-cp-1        | [NGAP]   Received NGSetupResponse from AMF
+oai-cu-cp-1        | [F1AP]   Starting F1AP at CU
+oai-cu-cp-1        | [UTIL]   threadCreate() for TASK_CUCP_E1: creating thread with affinity ffffffff, priority 50
+oai-cu-cp-1        | [F1AP]   F1AP_CU_SCTP_REQ(create socket) for 192.168.71.182 len 15
+oai-cu-cp-1        | [F1AP]   In F1AP connection, don't start GTP-U, as we have also E1AP
+oai-cu-cp-1        | [E1AP]   Starting E1AP at CU CP
+oai-cu-cp-1        | [GTPU]   Configuring GTPu
+oai-cu-cp-1        | [GTPU]   SA mode 
+oai-cu-cp-1        | [GNB_APP]   [gNB 0] Received NGAP_REGISTER_GNB_CNF: associated AMF 1
+oai-cu-cp-1        | [E1AP]   E1AP_CUCP_SCTP_REQ(create socket) for 192.168.71.182 len 15
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-cu-up-1        | [E1AP]   Try to reconnect to CP
+oai-cu-up-1        | [GTPU]   Initializing UDP for local address 192.168.71.183 with port 2153
+oai-cu-cp-1        | [NR_RRC]   Accepting new CU-UP ID 3584 name gNB-OAI (assoc_id 4141)
+oai-cu-up-1        | [GTPU]   Created gtpu instance id: 96
+oai-cu-up-1        | [GTPU]   Configuring GTPu address : 192.168.71.183, port : 2152
+oai-cu-up-1        | [GTPU]   Initializing UDP for local address 192.168.71.183 with port 2152
+oai-cu-up-1        | [GTPU]   Created gtpu instance id: 97
+oai-cu-up-1        | [E1AP]   E1 connection established (SCTP_STATE_ESTABLISHED)
+nearRT-RIC-1       | [E2AP]: E2 SETUP-REQUEST rx from PLMN 999.70 Node ID 3584 RAN type ngran_gNB_CUCP
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 2 with def = ORAN-E2SM-KPM 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 3 with def = ORAN-E2SM-RC 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 142 with def = MAC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 143 with def = RLC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 144 with def = PDCP_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 145 with def = SLICE_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 146 with def = TC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 148 with def = GTP_STATS_V0 
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-1-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-1-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+oai-ue-rfsimu-2-1  | [HW]   Trying to connect to 192.168.70.180:4043
+oai-ue-rfsimu-2-1  | [HW]   connect() to 192.168.70.180:4043 failed, errno(111)
+

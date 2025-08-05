@@ -1,0 +1,387 @@
+e rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.2, nb symbols 11.1)
+oai-ue-rfsimu-1-1  |     Ul harq: 118/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.2, nb symbols 11.1)
+oai-du-rfsim-1     | UE 806d: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 806d: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 806d: LCID 4: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE RNTI f293 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE f293: dlsch_rounds 24/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.02824 MCS (0) 9
+oai-du-rfsim-1     | UE f293: ulsch_rounds 117/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE f293: MAC:    TX           3015 RX          11723 bytes
+oai-du-rfsim-1     | UE f293: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE f293: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE f293: LCID 4: TX              0 RX              0 bytes
+oai-du-rfsim-1     | 
+nearRT-RIC-1       | [iApp]: SUBSCRIPTION-REQUEST RAN_FUNC_ID 2 RIC_REQ_ID 1 tx 
+nearRT-RIC-1       | [iApp]: SUBSCRIPTION-REQUEST RAN_FUNC_ID 2 RIC_REQ_ID 2 tx 
+oai-du-rfsim-1     | 1207272.347429 [NR_MAC] I Frame.Slot 384.0
+oai-du-rfsim-1     | UE RNTI 806d CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE 806d: dlsch_rounds 25/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.02542 MCS (0) 9
+oai-du-rfsim-1     | UE 806d: ulsch_rounds 130/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE 806d: MAC:    TX           3138 RX          13231 bytes
+oai-ue-rfsimu-2-1  |     DL harq: 26/0
+oai-ue-rfsimu-1-1  |     DL harq: 25/0
+oai-du-rfsim-1     | UE 806d: LCID 1: TX            534 RX            306 bytes
+oai-ue-rfsimu-2-1  |     Ul harq: 131/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.3)
+oai-ue-rfsimu-1-1  |     Ul harq: 131/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.3)
+oai-du-rfsim-1     | UE 806d: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 806d: LCID 4: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE RNTI f293 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE f293: dlsch_rounds 26/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.02288 MCS (0) 9
+oai-du-rfsim-1     | UE f293: ulsch_rounds 130/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE f293: MAC:    TX           3261 RX          13231 bytes
+oai-du-rfsim-1     | UE f293: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE f293: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE f293: LCID 4: TX              0 RX              0 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207272.820497 [NR_MAC] I Frame.Slot 512.0
+oai-du-rfsim-1     | UE RNTI 806d CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE 806d: dlsch_rounds 27/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.02059 MCS (0) 9
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE 806d: ulsch_rounds 146/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-ue-rfsimu-2-1  |     DL harq: 28/0
+oai-ue-rfsimu-1-1  |     DL harq: 27/0
+oai-du-rfsim-1     | UE 806d: MAC:    TX           3384 RX          14725 bytes
+oai-ue-rfsimu-2-1  |     Ul harq: 146/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.2)
+oai-ue-rfsimu-1-1  |     Ul harq: 147/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.2)
+oai-du-rfsim-1     | UE 806d: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 806d: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 806d: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | UE RNTI f293 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE f293: dlsch_rounds 28/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.01853 MCS (0) 9
+oai-du-rfsim-1     | UE f293: ulsch_rounds 145/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE f293: MAC:    TX           3507 RX          14609 bytes
+oai-du-rfsim-1     | UE f293: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE f293: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE f293: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207272.888361 [HW] W No longer waiting for clients to catch up, starting to produce samples
+oai-cu-up-1        | 
+oai-cu-up-1        | Assertion (0) failed!
+oai-cu-up-1        | In capture_sst_sd() /oai/openair2/E2AP/RAN_FUNCTION/O-RAN/ran_func_kpm.c:177
+oai-cu-up-1        | test condition value 0 impossible
+oai-cu-up-1        | 
+oai-cu-up-1        | Exiting execution
+oai-cu-up-1        | CMDLINE: "./nr-cuup" "-O" "configs/gnb-cuup.sa.f1.conf" "--sa" 
+oai-cu-up-1        | [CONFIG] function config_libconfig_init returned 0
+oai-cu-up-1        | After RCconfig_NR_E2agent /usr/local/lib/flexric/ 192.168.71.184 
+oai-cu-up-1        | [E2 NODE]: mcc = 999 mnc = 70 mnc_digit = 2 nb_id = 3584 
+oai-cu-up-1        | [E2 NODE]: Args 192.168.71.184 /usr/local/lib/flexric/ 
+oai-cu-up-1        | [E2 AGENT]: nearRT-RIC IP Address = 192.168.71.184, PORT = 36421, RAN type = ngran_gNB_CUUP, nb_id = 3584, cu_du_id = 3584
+oai-cu-up-1        | [E2 AGENT]: Initializing ... 
+oai-cu-up-1        | [E2 AGENT]: Opening plugin from path = /usr/local/lib/flexric/libtc_sm.so 
+oai-cu-up-1        | [E2 AGENT]: Opening plugin from path = /usr/local/lib/flexric/libmac_sm.so 
+oai-cu-up-1        | [E2 AGENT]: Opening plugin from path = /usr/local/lib/flexric/libgtp_sm.so 
+oai-cu-up-1        | [E2 AGENT]: Opening plugin from path = /usr/local/lib/flexric/libkpm_sm.so 
+oai-cu-up-1        | [E2 AGENT]: Opening plugin from path = /usr/local/lib/flexric/librlc_sm.so 
+oai-cu-up-1        | [E2 AGENT]: Opening plugin from path = /usr/local/lib/flexric/librc_sm.so 
+oai-cu-up-1        | [E2 AGENT]: Opening plugin from path = /usr/local/lib/flexric/libslice_sm.so 
+oai-cu-up-1        | [E2 AGENT]: Opening plugin from path = /usr/local/lib/flexric/libpdcp_sm.so 
+oai-cu-up-1        | TYPE <CTRL-C> TO TERMINATE
+oai-cu-up-1        | [E2-AGENT]: E2 SETUP-REQUEST tx 
+oai-cu-up-1        | [E2-AGENT]: E2 SETUP RESPONSE rx
+oai-cu-up-1        | [E2-AGENT]: Transaction ID E2 SETUP-REQUEST 0 E2 SETUP-RESPONSE 0 
+oai-cu-up-1        | [E2 AGENT]: RIC_SUBSCRIPTION_REQUEST rx RAN_FUNC_ID 2 RIC_REQ_ID 1021
+oai-cu-up-1        | [E2-AGENT]: RIC_SUBSCRIPTION_REQUEST rx
+oai-cu-cp-1        | [SCTP]   Received SCTP SHUTDOWN EVENT
+oai-cu-cp-1        | [E1AP]   Lost connection (SCTP_STATE_SHUTDOWN) with CU-UP (assoc_id 4592)
+nearRT-RIC-1       | [E2AP]: SCTP_SHUTDOWN_EVENT 
+oai-cu-cp-1        | [NR_RRC]   Received E1 connection loss indication on RRC
+nearRT-RIC-1       | [NEAR-RIC]: Removing E2 Node MCC 999 MNC 70 NB_ID 3584 
+oai-cu-cp-1        | [NR_RRC]   CU-UP 4592 of UE 1 is gone
+oai-cu-cp-1        | [NR_RRC]   CU-UP 4592 of UE 2 is gone
+oai-cu-cp-1        | [NR_RRC]   releasing CU-UP gNB-OAI on assoc_id 4592
+oai-du-rfsim-1     | 1207273.287830 [NR_MAC] I Frame.Slot 640.0
+oai-du-rfsim-1     | UE RNTI 806d CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE 806d: dlsch_rounds 29/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.01668 MCS (0) 9
+oai-du-rfsim-1     | UE 806d: ulsch_rounds 159/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE 806d: MAC:    TX           3630 RX          16233 bytes
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-2-1  |     DL harq: 29/0
+oai-du-rfsim-1     | UE 806d: LCID 1: TX            534 RX            306 bytes
+oai-ue-rfsimu-1-1  |     Ul harq: 160/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-ue-rfsimu-2-1  |     Ul harq: 159/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-du-rfsim-1     | UE 806d: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 806d: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | UE RNTI f293 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE f293: dlsch_rounds 29/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.01668 MCS (0) 9
+oai-du-rfsim-1     | UE f293: ulsch_rounds 158/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE f293: MAC:    TX           3630 RX          16117 bytes
+oai-du-rfsim-1     | UE f293: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE f293: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE f293: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207273.301683 [HW] W No longer waiting for clients to catch up, starting to produce samples
+oai-cu-up-1 exited with code 139
+oai-cu-cp-1        | [NR_RRC]   Accepting new CU-UP ID 3584 name gNB-OAI (assoc_id 4604)
+oai-cu-cp-1        | [NR_RRC]   remove E1-unassociated UE context ID 1
+oai-du-rfsim-1     | 1207273.647617 [MAC] I F1 Reset initiated by CU
+oai-cu-cp-1        | [NR_RRC]   remove E1-unassociated UE context ID 2
+oai-du-rfsim-1     | 1207273.647634 [RLC] W Remove UE 32877
+oai-cu-cp-1        | [NR_RRC]   removed UE CU UE ID 1/RNTI 806d 
+oai-du-rfsim-1     | 1207273.647716 [NR_MAC] I Remove NR rnti 0x806d
+oai-cu-cp-1        | [NR_RRC]   [--] (cellID bc614e, UE ID 1 RNTI 806d) Remove UE context
+oai-du-rfsim-1     | 1207273.647744 [GTPU] I [95] Deleted all tunnels for ue id 32877 (1 tunnels deleted)
+oai-cu-cp-1        | [NR_RRC]   removed UE CU UE ID 2/RNTI f293 
+oai-du-rfsim-1     | 1207273.647748 [RLC] W Remove UE 62099
+oai-cu-cp-1        | [NR_RRC]   [--] (cellID bc614e, UE ID 2 RNTI f293) Remove UE context
+oai-du-rfsim-1     | 1207273.647812 [NR_MAC] I Remove NR rnti 0xf293
+oai-cu-cp-1        | [NR_RRC]   trigger F1 reset on DU 4596 due to E1 connection loss
+oai-du-rfsim-1     | 1207273.647817 [GTPU] I [95] Deleted all tunnels for ue id 62099 (1 tunnels deleted)
+oai-cu-cp-1        | [NR_RRC]   received F1AP reset acknowledgement
+oai-cu-cp-1        | [NR_RRC]   [gNB 0] In NGAP_UE_CONTEXT_RELEASE_COMMAND: unknown UE from gNB_ue_ngap_id (1)
+oai-cu-cp-1        | [NR_RRC]   [gNB 0] In NGAP_UE_CONTEXT_RELEASE_COMMAND: unknown UE from gNB_ue_ngap_id (2)
+oai-du-rfsim-1     | 1207273.841559 [NR_MAC] I Frame.Slot 768.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-du-rfsim-1     | 1207274.361214 [NR_MAC] I Frame.Slot 896.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+nearRT-RIC-1       | [E2AP]: E2 SETUP-REQUEST rx from PLMN 999.70 Node ID 3584 RAN type ngran_gNB_CUUP ID 3584
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 2 with def = ORAN-E2SM-KPM 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 3 with def = ORAN-E2SM-RC 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 142 with def = MAC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 143 with def = RLC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 144 with def = PDCP_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 145 with def = SLICE_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 146 with def = TC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 148 with def = GTP_STATS_V0 
+oai-du-rfsim-1     | 1207274.858829 [NR_MAC] I Frame.Slot 0.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-du-rfsim-1     | 1207275.362313 [NR_MAC] I Frame.Slot 128.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-du-rfsim-1     | 1207275.837790 [NR_MAC] I Frame.Slot 256.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-du-rfsim-1     | 1207276.294811 [NR_MAC] I Frame.Slot 384.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-du-rfsim-1     | 1207276.757724 [NR_MAC] I Frame.Slot 512.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-du-rfsim-1     | 1207277.213309 [NR_MAC] I Frame.Slot 640.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-du-rfsim-1     | 1207277.667970 [NR_MAC] I Frame.Slot 768.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-du-rfsim-1     | 1207278.117109 [NR_MAC] I Frame.Slot 896.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-du-rfsim-1     | 1207278.580991 [NR_MAC] I Frame.Slot 0.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-du-rfsim-1     | 1207279.047721 [NR_MAC] I Frame.Slot 128.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-du-rfsim-1     | 1207279.489642 [NR_MAC] I Frame.Slot 256.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-du-rfsim-1     | 1207279.933240 [NR_MAC] I Frame.Slot 384.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-du-rfsim-1     | 1207280.401537 [NR_MAC] I Frame.Slot 512.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-du-rfsim-1     | 1207280.847516 [NR_MAC] I Frame.Slot 640.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 30/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 167/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.4)
+oai-ue-rfsimu-1-1  |     DL harq: 29/0
+oai-ue-rfsimu-1-1  |     Ul harq: 168/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.5)
+oai-ue-rfsimu-2-1  | [NR_MAC]   [UE 0] SR not served! SR counter 64 reached sr_MaxTransmissions 64
+oai-ue-rfsimu-2-1  | [NR_MAC]   Triggering new RA procedure for UE with RNTI f293
+oai-ue-rfsimu-1-1  | [NR_MAC]   [UE 0] SR not served! SR counter 64 reached sr_MaxTransmissions 64
+oai-ue-rfsimu-2-1  | [MAC]   Initialization of 4-Step CBRA procedure
+oai-ue-rfsimu-1-1  | [NR_MAC]   Triggering new RA procedure for UE with RNTI 806d
+oai-ue-rfsimu-2-1  | [NR_MAC]   PRACH scheduler: Selected RO Frame 655, Slot 19, Symbol 0, Fdm 0
+oai-ue-rfsimu-1-1  | [MAC]   Initialization of 4-Step CBRA procedure
+oai-ue-rfsimu-2-1  | [PHY]   PRACH [UE 0] in frame.slot 655.19, placing PRACH in position 1804, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 8, first_nonzero_root_idx 0, preambleIndex = 33
+oai-du-rfsim-1     | 1207280.909814 [NR_PHY] A [RAPROC] 655.19 Initiating RA procedure with preamble 33, energy 56.4 dB (I0 0, thres 200), delay 0 start symbol 0 freq index 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   PRACH scheduler: Selected RO Frame 655, Slot 19, Symbol 0, Fdm 0
+oai-ue-rfsimu-2-1  | [NR_MAC]   [UE 0][RAPROC][RA-RNTI 0005] Got BI RAR subPDU 267 ms
+oai-du-rfsim-1     | 1207280.909939 [NR_MAC] A 655.19 UE RA-RNTI 010b TC-RNTI 1b82: Activating RA process index 0
+oai-ue-rfsimu-1-1  | [PHY]   PRACH [UE 0] in frame.slot 655.19, placing PRACH in position 1804, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 11, first_nonzero_root_idx 0, preambleIndex = 45
+oai-ue-rfsimu-2-1  | [NR_MAC]   [UE 0][RAPROC][RA-RNTI 010b] Got RAPID RAR subPDU
+oai-du-rfsim-1     | 1207280.910265 [NR_MAC] I UE 1b82: Msg3 scheduled at 656.17 (656.7 TDA 3)
+oai-ue-rfsimu-1-1  | [NR_MAC]   [UE 0][RAPROC][RA-RNTI 0005] Got BI RAR subPDU 267 ms
+oai-ue-rfsimu-2-1  | [NR_MAC]   [UE 0][RAPROC][656.7] Found RAR with the intended RAPID 33
+oai-du-rfsim-1     | 1207280.910274 [NR_MAC] A UE 1b82: 656.7 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, CoreSetType 0, preamble_index(RAPID) 33, timing_offset = 0 (estimated distance 0.0 [m])
+oai-ue-rfsimu-1-1  | [NR_MAC]   [UE 0][RAPROC][RA-RNTI 010b] Got RAPID RAR subPDU
+oai-ue-rfsimu-2-1  | [PHY]   RAR-Msg2 decoded
+oai-du-rfsim-1     | 1207280.910291 [NR_MAC] A 656.7 Send RAR to RA-RNTI 010b
+oai-ue-rfsimu-1-1  | [NR_MAC]   [UE 0][RAPROC][656.7] Received RAR preamble (33) doesn't match the intended RAPID (45)
+oai-ue-rfsimu-2-1  | [NR_MAC]   [RAPROC][656.17] RA-Msg3 transmitted
+oai-du-rfsim-1     | 1207280.913704 [NR_MAC] I Adding new UE context with RNTI 0x1b82
+oai-ue-rfsimu-1-1  | [PHY]   RAR-Msg2 decoded
+oai-du-rfsim-1     | 1207280.913761 [NR_MAC] A  656.17 PUSCH with TC_RNTI 0x1b82 received correctly
+oai-du-rfsim-1     | 1207280.913775 [NR_MAC] W No UE found with C-RNTI f293, ignoring Msg3 to have UE come back with new RA attempt
+oai-du-rfsim-1     | 1207280.913778 [NR_MAC] W Call to del rnti f293, but not existing
+oai-du-rfsim-1     | 1207280.913784 [NR_MAC] W Unexpected ULSCH HARQ PID 0 (have -1) for RNTI 0x1b82
+oai-ue-rfsimu-1-1  | [MAC]   [UE 0][664:9] RAR reception failed 
+oai-ue-rfsimu-1-1  | [NR_MAC]   PRACH scheduler: Selected RO Frame 665, Slot 19, Symbol 0, Fdm 0
+oai-ue-rfsimu-1-1  | [PHY]   PRACH [UE 0] in frame.slot 665.19, placing PRACH in position 1804, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 1, first_nonzero_root_idx 0, preambleIndex = 4
+oai-du-rfsim-1     | 1207280.952894 [NR_PHY] A [RAPROC] 665.19 Initiating RA procedure with preamble 4, energy 54.0 dB (I0 7, thres 200), delay 0 start symbol 0 freq index 0
+oai-du-rfsim-1     | 1207280.953047 [NR_MAC] A 665.19 UE RA-RNTI 010b TC-RNTI 008c: Activating RA process index 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   [UE 0][RAPROC][RA-RNTI 0005] Got BI RAR subPDU 267 ms
+oai-du-rfsim-1     | 1207280.953371 [NR_MAC] I UE 008c: Msg3 scheduled at 666.17 (666.7 TDA 3)
+oai-ue-rfsimu-1-1  | [NR_MAC]   [UE 0][RAPROC][RA-RNTI 010b] Got RAPID RAR subPDU
+oai-du-rfsim-1     | 1207280.953381 [NR_MAC] A UE 008c: 666.7 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, CoreSetType 0, preamble_index(RAPID) 4, timing_offset = 0 (estimated distance 0.0 [m])
+oai-ue-rfsimu-1-1  | [NR_MAC]   [UE 0][RAPROC][666.7] Found RAR with the intended RAPID 4
+oai-du-rfsim-1     | 1207280.953399 [NR_MAC] A 666.7 Send RAR to RA-RNTI 010b
+oai-ue-rfsimu-1-1  | [MAC]   received TA command 31
+oai-du-rfsim-1     | 1207280.956629 [RLC] W Remove UE 7042
+oai-ue-rfsimu-1-1  | [PHY]   RAR-Msg2 decoded
+oai-du-rfsim-1     | 1207280.956638 [RLC] W Warning: ue 7042 not found
+oai-ue-rfsimu-1-1  | [NR_MAC]   [RAPROC][666.17] RA-Msg3 transmitted
+oai-du-rfsim-1     | 1207280.956644 [NR_MAC] I Remove NR rnti 0x1b82
+oai-du-rfsim-1     | 1207280.956906 [NR_MAC] I Adding new UE context with RNTI 0x008c
+oai-du-rfsim-1     | 1207280.956933 [NR_MAC] A  666.17 PUSCH with TC_RNTI 0x008c received correctly
+oai-du-rfsim-1     | 1207280.956939 [NR_MAC] W No UE found with C-RNTI 806d, ignoring Msg3 to have UE come back with new RA attempt
+oai-du-rfsim-1     | 1207280.956941 [NR_MAC] W Call to del rnti 806d, but not existing
+oai-du-rfsim-1     | 1207280.956945 [NR_MAC] W Unexpected ULSCH HARQ PID 0 (have -1) for RNTI 0x008c
+oai-du-rfsim-1     | 1207280.996663 [RLC] W Remove UE 140
+oai-du-rfsim-1     | 1207280.996674 [RLC] W Warning: ue 140 not found
+oai-du-rfsim-1     | 1207280.996681 [NR_MAC] I Remove NR rnti 0x008c
+oai-du-rfsim-1     | 1207281.310044 [NR_MAC] I Frame.Slot 768.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207281.750160 [NR_MAC] I Frame.Slot 896.0
+oai-du-rfsim-1     | 
+nearRT-RIC-1       | [NEAR-RIC]: SUBSCRIPTION DELETE REQUEST tx RAN FUNC ID 2 RIC_REQ_ID 1021 
+nearRT-RIC-1       | [iApp]: RIC_SUBSCRIPTION_DELETE_REQUEST tx RIC_REQ_ID 1021 
+nearRT-RIC-1       | [iApp]: RIC_SUBSCRIPTION_DELETE_RESPONSE tx RAN_FUNC_ID 2 RIC_REQ_ID 1 
+nearRT-RIC-1       | [NEAR-RIC]: SUBSCRIPTION DELETE REQUEST tx RAN FUNC ID 2 RIC_REQ_ID 1022 
+nearRT-RIC-1       | [iApp]: RIC_SUBSCRIPTION_DELETE_REQUEST tx RIC_REQ_ID 1022 
+nearRT-RIC-1       | [iApp]: RIC_SUBSCRIPTION_DELETE_RESPONSE tx RAN_FUNC_ID 2 RIC_REQ_ID 2 
+oai-du-rfsim-1     | 1207282.193924 [NR_MAC] I Frame.Slot 0.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207282.662072 [NR_MAC] I Frame.Slot 128.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207283.096716 [NR_MAC] I Frame.Slot 256.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207283.551732 [NR_MAC] I Frame.Slot 384.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207283.990095 [NR_MAC] I Frame.Slot 512.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207284.451637 [NR_MAC] I Frame.Slot 640.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207284.865684 [NR_MAC] I Frame.Slot 768.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207285.265579 [NR_MAC] I Frame.Slot 896.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207285.691933 [NR_MAC] I Frame.Slot 0.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207286.083076 [NR_MAC] I Frame.Slot 128.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207286.498137 [NR_MAC] I Frame.Slot 256.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207286.939852 [NR_MAC] I Frame.Slot 384.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207287.400794 [NR_MAC] I Frame.Slot 512.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207287.862991 [NR_MAC] I Frame.Slot 640.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207288.343303 [NR_MAC] I Frame.Slot 768.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207288.817120 [NR_MAC] I Frame.Slot 896.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207289.326027 [NR_MAC] I Frame.Slot 0.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207289.808478 [NR_MAC] I Frame.Slot 128.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207290.253073 [NR_MAC] I Frame.Slot 256.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207290.691792 [NR_MAC] I Frame.Slot 384.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207291.106362 [NR_MAC] I Frame.Slot 512.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207291.546594 [NR_MAC] I Frame.Slot 640.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207291.970023 [NR_MAC] I Frame.Slot 768.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207292.402445 [NR_MAC] I Frame.Slot 896.0
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 1207292.838989 [NR_MAC] I Frame.Slot 0.0

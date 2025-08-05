@@ -1,0 +1,7 @@
+
+asn1/asn1c/
+
+venv/
+vakt-ble-defender
+/asn1/*.o
+*.pcapng

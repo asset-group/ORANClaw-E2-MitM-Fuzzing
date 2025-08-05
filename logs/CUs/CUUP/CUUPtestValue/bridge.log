@@ -1,0 +1,132 @@
+python3 client_server.py
+==================================================
+            SCTP MITM Proxy - Starting   
+==================================================
+[+] Started tshark capture
+[+] Connected to RIC at 192.168.71.184:36422
+[*] Listening for xApp on 192.168.71.129:36422...
+[*] Fuzzing enabled: True (Probability: 20.0%)
+[*] Waiting for new xApp connection...
+Capturing on '5g-oran'
+84 [+] Accepted xApp connection from ('192.168.71.185', 59330)
+[TX] [xApp --> RIC]
+[DEBUG]Length: 492 bytes
+[*] ProcedureCode: 0xe
+[DEBUG] Message Type: E42setup
+[DEBUG] Overhead: 0.26 ms
+--------------------------------------------------
+[RX] [xApp <-- RIC]
+[DEBUG]Length: 2389 bytes
+[*] ProcedureCode: 0xe
+[DEBUG] Response Type: E42setup
+[DEBUG] Overhead: 0.36 ms
+--------------------------------------------------
+103 [TX] [xApp --> RIC]
+[DEBUG]Length: 134 bytes
+[*] ProcedureCode: 0xf
+[DEBUG] Message Type: E42RICsubscription
+[*] ProcedureCode: 0xf
+[*] Processing E42RICsubscription message (134 bytes)
+Before decoding:
+000f008081000005003e000200070003000c0499f9075000000e00200e00001d00050000010000000500020002001e005500030803e7000013004b4000004700010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7
+Converted to JSON:
+{
+  "initiatingMessage": {
+    "procedureCode": 15,
+    "criticality": "reject",
+    "value": {
+      "protocolIEs": [
+        {
+          "id": 62,
+          "criticality": "reject",
+          "value": 7
+        },
+        {
+          "id": 3,
+          "criticality": "reject",
+          "value": {
+            "gNB": {
+              "global-gNB-ID": {
+                "plmn-id": "99f907",
+                "gnb-id": {
+                  "gnb-ID": {
+                    "value": "00000e00",
+                    "length": 32
+                  }
+                }
+              },
+              "gNB-CU-UP-ID": 3584
+            }
+          }
+        },
+        {
+          "id": 29,
+          "criticality": "reject",
+          "value": {
+            "ricRequestorID": 1,
+            "ricInstanceID": 0
+          }
+        },
+        {
+          "id": 5,
+          "criticality": "reject",
+          "value": 2
+        },
+        {
+          "id": 30,
+          "criticality": "reject",
+          "value": {
+            "ricEventTriggerDefinition": "0803e7",
+            "ricAction-ToBeSetup-List": [
+              {
+                "id": 19,
+                "criticality": "reject",
+                "value": {
+                  "ricActionID": 0,
+                  "ricActionType": "report",
+                  "ricActionDefinition": "00010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+[*] Selected fuzzing strategy: asn1
+[*] Found 3 potential ASN.1 encoded fields.
+[*] ASN.1 fields: [{'path': 'initiatingMessage.value.protocolIEs[1].value.gNB.global-gNB-ID.gnb-id.gnb-ID.value', 'hex': '00000e00'}, {'path': 'initiatingMessage.value.protocolIEs[4].value.ricEventTriggerDefinition', 'hex': '0803e7'}, {'path': 'initiatingMessage.value.protocolIEs[4].value.ricAction-ToBeSetup-List[0].value.ricActionDefinition', 'hex': '00010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7'}]
+[*] Attempting to decode ASN.1 content for E2SM-KPM with hex: 00010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7
+[+] Successfully decoded initiatingMessage.value.protocolIEs[4].value.ricAction-ToBeSetup-List[0].value.ricActionDefinition as E2SM-KPM-ActionDefinition
+[+] ASN.1 decoded: {'asn1_spec': <asn1tools.compiler.Specification object at 0x748c6859daf0>, 'asn1_name': 'E2SM-KPM', 'definition': 'E2SM-KPM-ActionDefinition', 'decoded': {'ric-Style-Type': 4, 'actionDefinition-formats': ('actionDefinition-Format4', {'matchingUeCondList': [{'testCondInfo': {'testType': ('sNSSAI', 'true'), 'testExpr': 'equal', 'testValue': ('valueOctS', b'\x01')}}], 'subscriptionInfo': {'measInfoList': [{'measType': ('measName', 'DRB.PdcpSduVolumeDL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}, {'measType': ('measName', 'DRB.PdcpSduVolumeUL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}], 'granulPeriod': 1000}})}}
+[DEBUG] Available fields in E2SM-KPM-ActionDefinition: ['ric-Style-Type', 'actionDefinition-formats', 'actionDefinition-Format4', 'matchingUeCondList', 'testCondInfo', 'testType', 'sNSSAI', 'testExpr', 'testValue', 'valueOctS', 'subscriptionInfo', 'measInfoList', 'measType', 'measName', 'labelInfoList', 'measLabel', 'noLabel', 'measType', 'measName', 'labelInfoList', 'measLabel', 'noLabel', 'granulPeriod']
+[DEBUG] ASN.1 targeting fields: ['testValue']
+[DEBUG] Constraints for testValue: {'asn1_type': 'TestCond-Value', 'type_name': 'testValue', 'max': 5, 'root_index_to_member': {'0': {'name': 'valueInt', 'constraints': {'asn1_type': 'INTEGER', 'type_name': 'valueInt', 'min': None, 'max': None, 'number_of_bits': None, 'number_of_indefinite_bits': None, 'optional': False, 'default': None, 'tag': [2, 0]}}, '1': {'name': 'valueEnum', 'constraints': {'asn1_type': 'INTEGER', 'type_name': 'valueEnum', 'min': None, 'max': None, 'number_of_bits': None, 'number_of_indefinite_bits': None, 'optional': False, 'default': None, 'tag': [2, 1]}}, '2': {'name': 'valueBool', 'constraints': {'asn1_type': 'BOOLEAN', 'type_name': 'valueBool', 'boolean_values': [True, False], 'optional': False, 'default': None, 'tag': [2, 2]}}, '3': {'name': 'valueBitS', 'constraints': {'asn1_type': 'BIT STRING', 'type_name': 'valueBitS', 'min': None, 'max': None, 'number_of_bits': None, 'optional': False, 'default': None, 'tag': [2, 3]}}, '4': {'name': 'valueOctS', 'constraints': {'asn1_type': 'OCTET STRING', 'type_name': 'valueOctS', 'min': None, 'max': None, 'number_of_bits': None, 'optional': False, 'default': None, 'tag': [2, 4]}}, '5': {'name': 'valuePrtS', 'constraints': {'asn1_type': 'PrintableString', 'type_name': 'valuePrtS', 'min': None, 'max': None, 'alphabet': "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 '()+,-./:=?", 'number_of_bits': None, 'optional': False, 'default': None, 'tag': [2, 5]}}}, 'root_name_to_index': {'valueInt': 0, 'valueEnum': 1, 'valueBool': 2, 'valueBitS': 3, 'valueOctS': 4, 'valuePrtS': 5}, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 2]}
+[!] Received field_name as a dictionary, using its keys directly.
+Received constraint: {'asn1_type': 'TestCond-Value', 'type_name': 'testValue', 'max': 5, 'root_index_to_member': {'0': {'name': 'valueInt', 'constraints': {'asn1_type': 'INTEGER', 'type_name': 'valueInt', 'min': None, 'max': None, 'number_of_bits': None, 'number_of_indefinite_bits': None, 'optional': False, 'default': None, 'tag': [2, 0]}}, '1': {'name': 'valueEnum', 'constraints': {'asn1_type': 'INTEGER', 'type_name': 'valueEnum', 'min': None, 'max': None, 'number_of_bits': None, 'number_of_indefinite_bits': None, 'optional': False, 'default': None, 'tag': [2, 1]}}, '2': {'name': 'valueBool', 'constraints': {'asn1_type': 'BOOLEAN', 'type_name': 'valueBool', 'boolean_values': [True, False], 'optional': False, 'default': None, 'tag': [2, 2]}}, '3': {'name': 'valueBitS', 'constraints': {'asn1_type': 'BIT STRING', 'type_name': 'valueBitS', 'min': None, 'max': None, 'number_of_bits': None, 'optional': False, 'default': None, 'tag': [2, 3]}}, '4': {'name': 'valueOctS', 'constraints': {'asn1_type': 'OCTET STRING', 'type_name': 'valueOctS', 'min': None, 'max': None, 'number_of_bits': None, 'optional': False, 'default': None, 'tag': [2, 4]}}, '5': {'name': 'valuePrtS', 'constraints': {'asn1_type': 'PrintableString', 'type_name': 'valuePrtS', 'min': None, 'max': None, 'alphabet': "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 '()+,-./:=?", 'number_of_bits': None, 'optional': False, 'default': None, 'tag': [2, 5]}}}, 'root_name_to_index': {'valueInt': 0, 'valueEnum': 1, 'valueBool': 2, 'valueBitS': 3, 'valueOctS': 4, 'valuePrtS': 5}, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 2]}
+CHOICE type detected: ['valueInt', 'valueEnum', 'valueBool', 'valueBitS', 'valueOctS', 'valuePrtS']
+Chosen CHOICE value: valueInt
+Generating value for CHOICE field 'valueInt' with constraint: {'asn1_type': 'INTEGER', 'type_name': 'valueInt', 'min': None, 'max': None, 'number_of_bits': None, 'number_of_indefinite_bits': None, 'optional': False, 'default': None, 'tag': [2, 0]}
+Received constraint: {'asn1_type': 'INTEGER', 'type_name': 'valueInt', 'min': None, 'max': None, 'number_of_bits': None, 'number_of_indefinite_bits': None, 'optional': False, 'default': None, 'tag': [2, 0]}
+INTEGER: No min/max constraints found, using default range 1-100
+[DEBUG] Generated new value for testValue: ('valueInt', 26)
+[DEBUG] Applying mutation: testValue -> ('valueInt', 26)
+[DEBUG] ASN.1 content var: {'ric-Style-Type': 4, 'actionDefinition-formats': ('actionDefinition-Format4', {'matchingUeCondList': [{'testCondInfo': {'testType': ('sNSSAI', 'true'), 'testExpr': 'equal', 'testValue': ('valueOctS', b'\x01')}}], 'subscriptionInfo': {'measInfoList': [{'measType': ('measName', 'DRB.PdcpSduVolumeDL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}, {'measType': ('measName', 'DRB.PdcpSduVolumeUL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}], 'granulPeriod': 1000}})}
+[DEBUG] Found field testValue at this level, old value: ('valueOctS', b'\x01')
+[DEBUG] Successfully updated testValue to ('valueInt', 26)
+[+] Mutated field 'testValue' to ('valueInt', 26) in E2SM-KPM-ActionDefinition
+[DEBUG] ASN.1 content after mutation: {'ric-Style-Type': 4, 'actionDefinition-formats': ('actionDefinition-Format4', {'matchingUeCondList': [{'testCondInfo': {'testType': ('sNSSAI', 'true'), 'testExpr': 'equal', 'testValue': ('valueInt', 26)}}], 'subscriptionInfo': {'measInfoList': [{'measType': ('measName', 'DRB.PdcpSduVolumeDL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}, {'measType': ('measName', 'DRB.PdcpSduVolumeUL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}], 'granulPeriod': 1000}})}
+[DEBUG] Mutated fields: ['testValue']
+[+] Successfully re-encoded and updated initiatingMessage.value.protocolIEs[4].value.ricAction-ToBeSetup-List[0].value.ricActionDefinition
+[+] Successfully fuzzed message (134 bytes)
+[+] Encoded again:
+000f008081000005003e000200070003000c0499f9075000000e00200e00001d00050000010000000500020002001e005500030803e7000013004b4000004700010480420000003840010000011a00000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7
+[DEBUG] Overhead: 18.44 ms
+--------------------------------------------------
+[RX] [xApp <-- RIC]
+[DEBUG]Length: 38 bytes
+[*] ProcedureCode: 0x8
+[DEBUG] Response Type: RICsubscription
+[DEBUG] Overhead: 0.16 ms
+--------------------------------------------------

@@ -1,0 +1,222 @@
+services:
+  mongo:
+    profiles: [core]
+    image: mongo
+    environment:
+      MONGO_INITDB_DATABASE: open5gs
+    volumes:
+      - ./subscribers:/data/db
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.159
+    healthcheck:
+        test: /bin/bash -c "pgrep mongod"
+        interval: 2s
+        timeout: 1s
+        retries: 5
+
+  nrf:
+    profiles: [core]
+    image: gradiant/open5gs:2.7.0
+    command: open5gs-nrfd
+    restart: on-failure
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.164
+    depends_on:
+      - mongo
+    healthcheck:
+        test: /bin/bash -c "pgrep open5gs-nrfd"
+        interval: 2s
+        timeout: 1s
+        retries: 5
+
+  scp:
+    profiles: [core]
+    image: gradiant/open5gs:2.7.0
+    command: open5gs-scpd
+    environment:
+      DB_URI: mongodb://mongo/open5gs
+    restart: on-failure
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.171
+    depends_on:
+      - nrf
+    healthcheck:
+        test: /bin/bash -c "pgrep open5gs-scpd"
+        interval: 2s
+        timeout: 1s
+        retries: 5
+
+  upf:
+    profiles: [core]
+    image: gradiant/open5gs:2.7.0
+    tty: true
+    command:
+      - iperf3 -s 0.0.0.0 -f M & sed -i 's/sleep\ 10/sleep\ 1/g' /entrypoint.sh && /entrypoint.sh open5gs-upfd
+    cap_add:
+      - all
+    privileged: true
+    restart: on-failure
+    ports:
+      - 2152:2152
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.175
+    depends_on:
+      - scp
+    entrypoint: ['/bin/bash', '-c']   
+    healthcheck:
+        test: /bin/bash -c "pgrep open5gs-upfd"
+        interval: 1s
+        timeout: 0.5s
+        retries: 10
+
+  smf:
+    profiles: [core]
+    image: gradiant/open5gs:2.7.0
+    command: open5gs-smfd
+    restart: on-failure
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.172
+    depends_on:
+      upf:
+        condition: service_healthy
+
+  pcrf:
+    profiles: [core]
+    image: gradiant/open5gs:2.7.0
+    command: open5gs-pcrfd
+    environment:
+      DB_URI: mongodb://mongo/open5gs
+    restart: on-failure
+    depends_on:
+      - smf
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.177
+
+  amf:
+    profiles: [core]
+    image: gradiant/open5gs:2.7.0
+    command:
+      - open5gs-amfd
+    restart: on-failure
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.160
+    depends_on:
+      - smf
+    healthcheck:
+        test: /bin/bash -c "pgrep open5gs-amfd"
+        interval: 2s
+        timeout: 1s
+        retries: 5
+
+  ausf:
+    profiles: [core]
+    image: gradiant/open5gs:2.7.0
+    command:
+      - open5gs-ausfd
+    restart: on-failure
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.161
+    depends_on:
+      - amf
+
+  udm:
+    profiles: [core]
+    image: gradiant/open5gs:2.7.0
+    restart: on-failure
+    command:
+      - open5gs-udmd
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.173
+    depends_on:
+      - ausf
+
+  pcf:
+    profiles: [core]
+    image: gradiant/open5gs:2.7.0
+    command:
+      - open5gs-pcfd
+    environment:
+      DB_URI: mongodb://mongo/open5gs
+    restart: on-failure
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.166
+    depends_on:
+      - udm
+
+  nssf:
+    profiles: [core]
+    image: gradiant/open5gs:2.7.0
+    command: open5gs-nssfd
+    restart: on-failure
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.165
+    depends_on:
+      - pcf
+
+  bsf:
+    profiles: [core]
+    image: gradiant/open5gs:2.7.0
+    command:
+      - open5gs-bsfd
+    restart: on-failure
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.162
+    depends_on:
+      - nssf
+
+  udr:
+    profiles: [core]
+    image: gradiant/open5gs:2.7.0
+    restart: on-failure
+    environment:
+      DB_URI: mongodb://mongo/open5gs
+    command:
+      - sed -i 's/sleep\ 10/sleep\ 1/g' /entrypoint.sh && /entrypoint.sh open5gs-udrd
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.174
+    depends_on:
+      - bsf
+    entrypoint: ['/bin/bash', '-c']  
+    healthcheck:
+        test: /bin/bash -c "pgrep open5gs-udrd"
+        interval: 2s
+        timeout: 1s
+        retries: 5
+
+  webui:
+    profiles: [core]
+    image: gradiant/open5gs-webui:2.7.0
+    restart: on-failure
+    environment:
+      DB_URI: mongodb://mongo/open5gs
+      NODE_ENV: debug
+    ports:
+      - 3333:9999
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.176
+    depends_on:
+      - mongo
+
+networks:
+  core_net:
+    driver: bridge
+    name: 5g-oran-net
+    ipam:
+      config:
+        - subnet: 192.168.71.128/26
+    driver_opts:
+      com.docker.network.bridge.name: "5g-oran"

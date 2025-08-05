@@ -1,0 +1,619 @@
+  3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347323.971951 [NR_MAC] I Frame.Slot 128.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 34/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00985 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 207/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           4245 RX          22163 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 34/0
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-ue-rfsimu-2-1  |     DL harq: 34/0
+oai-ue-rfsimu-1-1  |     Ul harq: 208/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.9)
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-2-1  |     Ul harq: 210/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.8)
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 34/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00985 MCS (0) 9
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 209/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           4245 RX          22125 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347324.432636 [NR_MAC] I Frame.Slot 256.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 35/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00886 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 220/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           4368 RX          23671 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-1-1  |     DL harq: 35/0
+oai-ue-rfsimu-2-1  |     DL harq: 35/0
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-ue-rfsimu-1-1  |     Ul harq: 221/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.0)
+oai-ue-rfsimu-2-1  |     Ul harq: 222/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.9)
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 35/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00886 MCS (0) 9
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 221/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           4368 RX          23517 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347324.883880 [NR_MAC] I Frame.Slot 384.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 36/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00798 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 232/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           4491 RX          25063 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-ue-rfsimu-1-1  |     DL harq: 36/0
+oai-ue-rfsimu-2-1  |     DL harq: 36/0
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-1-1  |     Ul harq: 234/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.1)
+oai-ue-rfsimu-2-1  |     Ul harq: 235/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 11.9)
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 36/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00798 MCS (0) 9
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 234/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           4491 RX          25025 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347325.410454 [NR_MAC] I Frame.Slot 512.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 38/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00646 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 245/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           4737 RX          26571 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 38/0
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-1-1  |     DL harq: 38/0
+oai-ue-rfsimu-2-1  |     Ul harq: 248/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.0)
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 38/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00646 MCS (0) 9
+oai-ue-rfsimu-1-1  |     Ul harq: 246/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.1)
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 247/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           4737 RX          26533 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347325.865501 [NR_MAC] I Frame.Slot 640.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 39/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00581 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 258/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           4860 RX          28079 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-ue-rfsimu-2-1  |     DL harq: 39/0
+oai-ue-rfsimu-1-1  |     DL harq: 39/0
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-2-1  |     Ul harq: 261/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.0)
+oai-ue-rfsimu-1-1  |     Ul harq: 259/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.2)
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 39/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00581 MCS (0) 9
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 260/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           4860 RX          28041 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347326.319366 [NR_MAC] I Frame.Slot 768.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 40/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00523 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 271/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           4983 RX          29587 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-2-1  |     DL harq: 40/0
+oai-ue-rfsimu-1-1  |     DL harq: 40/0
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 40/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00523 MCS (0) 9
+oai-ue-rfsimu-2-1  |     Ul harq: 274/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.1)
+oai-ue-rfsimu-1-1  |     Ul harq: 272/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.2)
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 273/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           4983 RX          29549 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347326.777434 [NR_MAC] I Frame.Slot 896.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 41/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00471 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 284/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           5106 RX          31095 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 41/0
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-1-1  |     DL harq: 41/0
+oai-ue-rfsimu-2-1  |     Ul harq: 286/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.1)
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 41/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00471 MCS (0) 9
+oai-ue-rfsimu-1-1  |     Ul harq: 285/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.2)
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 285/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           5106 RX          30941 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347327.255782 [NR_MAC] I Frame.Slot 0.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 43/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00382 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 296/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           5352 RX          32487 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 43/0
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-2-1  |     DL harq: 43/0
+oai-ue-rfsimu-1-1  |     Ul harq: 298/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.3)
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 43/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00382 MCS (0) 9
+oai-ue-rfsimu-2-1  |     Ul harq: 299/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.2)
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 298/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           5352 RX          32449 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347327.718591 [NR_MAC] I Frame.Slot 128.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 44/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00343 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 309/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           5475 RX          33995 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 44/0
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-ue-rfsimu-1-1  |     DL harq: 44/0
+oai-ue-rfsimu-2-1  |     Ul harq: 312/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.2)
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-1-1  |     Ul harq: 310/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.3)
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 44/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00343 MCS (0) 9
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 311/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           5475 RX          33957 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+nearRT-RIC-1       | [iApp]: E42 SETUP-REQUEST rx
+nearRT-RIC-1       | [iApp]: E42 SETUP-RESPONSE tx
+oai-du-rfsim-1     | 3347328.187456 [NR_MAC] I Frame.Slot 256.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 45/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00309 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 322/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           5598 RX          35503 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-2-1  |     DL harq: 45/0
+oai-ue-rfsimu-1-1  |     DL harq: 45/0
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 45/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00309 MCS (0) 9
+oai-ue-rfsimu-2-1  |     Ul harq: 325/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.2)
+oai-ue-rfsimu-1-1  |     Ul harq: 323/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.3)
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 324/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           5598 RX          35465 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347328.634261 [NR_MAC] I Frame.Slot 384.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 47/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00250 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 335/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           5844 RX          37011 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-ue-rfsimu-2-1  |     DL harq: 47/0
+oai-ue-rfsimu-1-1  |     DL harq: 47/0
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-2-1  |     Ul harq: 338/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     Ul harq: 336/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.3)
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 47/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00250 MCS (0) 9
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 337/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           5844 RX          36973 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347329.139190 [NR_MAC] I Frame.Slot 512.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 48/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00225 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 348/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           5967 RX          38519 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 48/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00225 MCS (0) 9
+oai-ue-rfsimu-1-1  |     DL harq: 48/0
+oai-ue-rfsimu-2-1  |     DL harq: 48/0
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 349/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-ue-rfsimu-1-1  |     Ul harq: 349/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.4)
+oai-ue-rfsimu-2-1  |     Ul harq: 350/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.3)
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           5967 RX          38365 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347329.596395 [NR_MAC] I Frame.Slot 640.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 49/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00203 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 360/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           6090 RX          39911 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-ue-rfsimu-2-1  |     DL harq: 49/0
+oai-ue-rfsimu-1-1  |     DL harq: 49/0
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-2-1  |     Ul harq: 363/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     Ul harq: 362/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.4)
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 49/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00203 MCS (0) 9
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 362/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           6090 RX          39873 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347330.067223 [NR_MAC] I Frame.Slot 768.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 50/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00182 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 373/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           6213 RX          41419 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              3 RX             54 bytes
+oai-ue-rfsimu-2-1  |     DL harq: 50/0
+oai-ue-rfsimu-1-1  |     DL harq: 50/0
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-2-1  |     Ul harq: 376/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     Ul harq: 374/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.4)
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 50/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00182 MCS (0) 9
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 375/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           6213 RX          41381 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              3 RX             69 bytes
+oai-du-rfsim-1     | 
+nearRT-RIC-1       | [iApp]: SUBSCRIPTION-REQUEST RAN_FUNC_ID 2 RIC_REQ_ID 1 tx 
+nearRT-RIC-1       | [iApp]: SUBSCRIPTION-REQUEST RAN_FUNC_ID 2 RIC_REQ_ID 2 tx 
+oai-du-rfsim-1     | 3347330.537563 [NR_MAC] I Frame.Slot 896.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 53/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00133 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 390/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           6582 RX          43029 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              6 RX            123 bytes
+oai-ue-rfsimu-2-1  |     DL harq: 53/0
+oai-ue-rfsimu-1-1  |     DL harq: 53/0
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-2-1  |     Ul harq: 392/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     Ul harq: 391/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.3)
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 53/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00133 MCS (0) 9
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 391/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           6582 RX          42875 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              6 RX            138 bytes
+oai-du-rfsim-1     | 
+oai-du-rfsim-1     | 3347331.007392 [NR_MAC] I Frame.Slot 0.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 54/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00120 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 403/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           6705 RX          44537 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-ue-rfsimu-2-1  |     DL harq: 54/0
+oai-ue-rfsimu-1-1  |     DL harq: 54/0
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              6 RX            123 bytes
+oai-ue-rfsimu-2-1  |     Ul harq: 405/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     Ul harq: 404/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 54/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00120 MCS (0) 9
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 404/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           6705 RX          44383 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              6 RX            138 bytes
+oai-du-rfsim-1     | 
+oai-cu-up-1        | nr-cuup: /oai/openair2/E2AP/RAN_FUNCTION/O-RAN/ran_func_kpm_subs.c:226: get_kpm_meas_value: Assertion `found_entry != NULL && "Unsupported KPM measurement name"' failed.
+nearRT-RIC-1       | [E2AP]: SCTP_SHUTDOWN_EVENT 
+nearRT-RIC-1       | [NEAR-RIC]: Removing E2 Node MCC 999 MNC 70 NB_ID 3584 
+oai-cu-cp-1        | [SCTP]   Received SCTP SHUTDOWN EVENT
+oai-cu-cp-1        | [E1AP]   Lost connection (SCTP_STATE_SHUTDOWN) with CU-UP (assoc_id 7439)
+oai-cu-cp-1        | [NR_RRC]   Received E1 connection loss indication on RRC
+oai-cu-cp-1        | [NR_RRC]   CU-UP 7439 of UE 1 is gone
+oai-cu-cp-1        | [NR_RRC]   CU-UP 7439 of UE 2 is gone
+oai-cu-cp-1        | [NR_RRC]   releasing CU-UP gNB-OAI on assoc_id 7439
+oai-cu-up-1        | 
+oai-du-rfsim-1     | 3347331.395902 [HW] W No longer waiting for clients to catch up, starting to produce samples
+oai-cu-up-1 exited with code 139
+oai-du-rfsim-1     | 3347331.548711 [NR_MAC] I Frame.Slot 128.0
+oai-du-rfsim-1     | UE RNTI cef5 CU-UE-ID 1 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-du-rfsim-1     | UE cef5: dlsch_rounds 55/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00108 MCS (0) 9
+oai-du-rfsim-1     | UE cef5: ulsch_rounds 415/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-du-rfsim-1     | UE cef5: MAC:    TX           6828 RX          45929 bytes
+oai-du-rfsim-1     | UE cef5: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE cef5: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE cef5: LCID 4: TX              6 RX            123 bytes
+oai-du-rfsim-1     | UE RNTI 0a52 CU-UE-ID 2 in-sync PH 48 dB PCMAX 20 dBm, average RSRP -44 (16 meas)
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-du-rfsim-1     | UE 0a52: dlsch_rounds 55/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.00108 MCS (0) 9
+oai-ue-rfsimu-2-1  |     DL harq: 55/0
+oai-ue-rfsimu-1-1  |     DL harq: 55/0
+oai-du-rfsim-1     | UE 0a52: ulsch_rounds 416/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 5  SNR 51.0 dB
+oai-ue-rfsimu-2-1  |     Ul harq: 417/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.1, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     Ul harq: 416/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | UE 0a52: MAC:    TX           6828 RX          45775 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 1: TX            534 RX            306 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 2: TX              0 RX              0 bytes
+oai-du-rfsim-1     | UE 0a52: LCID 4: TX              6 RX            138 bytes
+oai-du-rfsim-1     | 
+oai-cu-cp-1        | [NR_RRC]   Accepting new CU-UP ID 3584 name gNB-OAI (assoc_id 7451)
+oai-cu-cp-1        | [NR_RRC]   remove E1-unassociated UE context ID 1
+oai-du-rfsim-1     | 3347331.724780 [MAC] I F1 Reset initiated by CU
+oai-cu-cp-1        | [NR_RRC]   remove E1-unassociated UE context ID 2
+oai-du-rfsim-1     | 3347331.724792 [RLC] W Remove UE 52981
+oai-cu-cp-1        | [NR_RRC]   removed UE CU UE ID 1/RNTI cef5 
+oai-du-rfsim-1     | 3347331.724911 [NR_MAC] I Remove NR rnti 0xcef5
+oai-cu-cp-1        | [NR_RRC]   [--] (cellID bc614e, UE ID 1 RNTI cef5) Remove UE context
+oai-du-rfsim-1     | 3347331.724948 [GTPU] I [95] Deleted all tunnels for ue id 52981 (1 tunnels deleted)
+oai-cu-cp-1        | [NR_RRC]   removed UE CU UE ID 2/RNTI 0a52 
+oai-du-rfsim-1     | 3347331.724954 [RLC] W Remove UE 2642
+oai-cu-cp-1        | [NR_RRC]   [--] (cellID bc614e, UE ID 2 RNTI 0a52) Remove UE context
+oai-du-rfsim-1     | 3347331.725081 [NR_MAC] I Remove NR rnti 0x0a52
+oai-cu-cp-1        | [NR_RRC]   trigger F1 reset on DU 7445 due to E1 connection loss
+oai-du-rfsim-1     | 3347331.725090 [GTPU] I [95] Deleted all tunnels for ue id 2642 (1 tunnels deleted)
+oai-cu-cp-1        | [NR_RRC]   received F1AP reset acknowledgement
+oai-du-rfsim-1     | 3347331.725193 [NR_MAC] E handle_nr_uci_pucch_0_1(): unknown RNTI cef5 in PUCCH UCI
+oai-cu-cp-1        | [NR_RRC]   [gNB 0] In NGAP_UE_CONTEXT_RELEASE_COMMAND: unknown UE from gNB_ue_ngap_id (1)
+oai-du-rfsim-1     | 3347331.725202 [NR_MAC] E handle_nr_uci_pucch_0_1(): unknown RNTI 0a52 in PUCCH UCI
+oai-cu-cp-1        | [NR_RRC]   [gNB 0] In NGAP_UE_CONTEXT_RELEASE_COMMAND: unknown UE from gNB_ue_ngap_id (2)
+oai-du-rfsim-1     | 3347332.094704 [NR_MAC] I Frame.Slot 256.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | 3347332.612605 [NR_MAC] I Frame.Slot 384.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+nearRT-RIC-1       | [E2AP]: E2 SETUP-REQUEST rx from PLMN 999.70 Node ID 3584 RAN type ngran_gNB_CUUP ID 3584
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 2 with def = ORAN-E2SM-KPM 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 3 with def = ORAN-E2SM-RC 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 142 with def = MAC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 143 with def = RLC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 144 with def = PDCP_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 145 with def = SLICE_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 146 with def = TC_STATS_V0 
+nearRT-RIC-1       | [NEAR-RIC]: Accepting RAN function ID 148 with def = GTP_STATS_V0 
+oai-du-rfsim-1     | 3347333.143689 [NR_MAC] I Frame.Slot 512.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | 3347333.654547 [NR_MAC] I Frame.Slot 640.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | 3347334.117535 [NR_MAC] I Frame.Slot 768.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | 3347334.581924 [NR_MAC] I Frame.Slot 896.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | 3347335.050829 [NR_MAC] I Frame.Slot 0.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | 3347335.519171 [NR_MAC] I Frame.Slot 128.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | 3347336.014353 [NR_MAC] I Frame.Slot 256.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | 3347336.466617 [NR_MAC] I Frame.Slot 384.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-du-rfsim-1     | 3347336.909025 [NR_MAC] I Frame.Slot 512.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | 3347337.383226 [NR_MAC] I Frame.Slot 640.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-du-rfsim-1     | 3347337.864714 [NR_MAC] I Frame.Slot 768.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-du-rfsim-1     | 3347338.309374 [NR_MAC] I Frame.Slot 896.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | 3347338.768471 [NR_MAC] I Frame.Slot 0.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | 3347339.263567 [NR_MAC] I Frame.Slot 128.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 128.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-du-rfsim-1     | 3347339.727996 [NR_MAC] I Frame.Slot 256.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 256.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+nearRT-RIC-1       | [NEAR-RIC]: SUBSCRIPTION DELETE REQUEST tx RAN FUNC ID 2 RIC_REQ_ID 1021 
+nearRT-RIC-1       | [iApp]: RIC_SUBSCRIPTION_DELETE_REQUEST tx RIC_REQ_ID 1021 
+nearRT-RIC-1       | [iApp]: RIC_SUBSCRIPTION_DELETE_RESPONSE tx RAN_FUNC_ID 2 RIC_REQ_ID 1 
+nearRT-RIC-1       | [NEAR-RIC]: SUBSCRIPTION DELETE REQUEST tx RAN FUNC ID 2 RIC_REQ_ID 1022 
+nearRT-RIC-1       | [iApp]: RIC_SUBSCRIPTION_DELETE_REQUEST tx RIC_REQ_ID 1022 
+nearRT-RIC-1       | [iApp]: RIC_SUBSCRIPTION_DELETE_RESPONSE tx RAN_FUNC_ID 2 RIC_REQ_ID 2 
+oai-du-rfsim-1     | 3347340.218364 [NR_MAC] I Frame.Slot 384.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 384.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-du-rfsim-1     | 3347340.665911 [NR_MAC] I Frame.Slot 512.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 512.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | 3347341.124381 [NR_MAC] I Frame.Slot 640.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 640.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-du-rfsim-1     | 3347341.591708 [NR_MAC] I Frame.Slot 768.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 768.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-du-rfsim-1     | 3347342.122435 [NR_MAC] I Frame.Slot 896.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 896.8, cumulated bad DCI 0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-du-rfsim-1     | 3347342.620707 [NR_MAC] I Frame.Slot 0.0
+oai-du-rfsim-1     | 
+oai-ue-rfsimu-2-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  | [NR_MAC]   UE 0 stats sfn: 0.8, cumulated bad DCI 0
+oai-ue-rfsimu-2-1  |     Ul harq: 421/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.3)
+oai-ue-rfsimu-1-1  |     DL harq: 56/0
+oai-ue-rfsimu-1-1  |     Ul harq: 420/0 avg code rate 0.7, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.4)
+Gracefully stopping... (press Ctrl+C again to force)
+[+] Stopping 6/6
+ ✔ Container oran-orchestration-nearRT-RIC-1       Sto...                                            10.2s 
+ ✔ Container oran-orchestration-oai-ue-rfsimu-2-1  Stopped                                           10.3s 
+ ✔ Container oran-orchestration-oai-ue-rfsimu-1-1  Stopped                                           10.3s 
+ ✔ Container oran-orchestration-oai-cu-up-1        Stop...                                            0.2s 
+ ✔ Container oran-orchestration-oai-du-rfsim-1     S...                                              10.9s 
+ ✔ Container oran-orchestration-oai-cu-cp-1        Stop...                

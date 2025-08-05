@@ -1,0 +1,1416 @@
+[36m==================================================[0m
+[0m[36m            SCTP MITM Proxy - Starting   [0m
+[0m[36m==================================================[0m
+[0m[32m[+] Started tshark capture[0m
+[0m[32m[+] Connected to RIC at 192.168.71.184:36422[0m
+[0m[33m[*] Listening for xApp on 192.168.71.129:36422...[0m
+[0m[36m[*] Fuzzing enabled: True (Probability: 20.0%)[0m
+[0m[33m[*] Waiting for new xApp connection...[0m
+Capturing on '5g-oran'
+[0m[32m[+] Accepted xApp connection from ('192.168.71.185', 37890)[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.40 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 2389 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Response Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.20 ms[0m
+[0m[33m--------------------------------------------------[0m
+14 [0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 134 bytes[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[93m[DEBUG] Message Type: E42RICsubscription[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[36m[*] Processing E42RICsubscription message (134 bytes)[0m
+[0m[32mBefore decoding:
+000f008081000005003e000200070003000c0499f9075000000e00200e00001d00050000010000000500020002001e005500030803e7000013004b4000004700010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7[0m
+[0m[32mConverted to JSON:[0m
+[0m{
+  "initiatingMessage": {
+    "procedureCode": 15,
+    "criticality": "reject",
+    "value": {
+      "protocolIEs": [
+        {
+          "id": 62,
+          "criticality": "reject",
+          "value": 7
+        },
+        {
+          "id": 3,
+          "criticality": "reject",
+          "value": {
+            "gNB": {
+              "global-gNB-ID": {
+                "plmn-id": "99f907",
+                "gnb-id": {
+                  "gnb-ID": {
+                    "value": "00000e00",
+                    "length": 32
+                  }
+                }
+              },
+              "gNB-CU-UP-ID": 3584
+            }
+          }
+        },
+        {
+          "id": 29,
+          "criticality": "reject",
+          "value": {
+            "ricRequestorID": 1,
+            "ricInstanceID": 0
+          }
+        },
+        {
+          "id": 5,
+          "criticality": "reject",
+          "value": 2
+        },
+        {
+          "id": 30,
+          "criticality": "reject",
+          "value": {
+            "ricEventTriggerDefinition": "0803e7",
+            "ricAction-ToBeSetup-List": [
+              {
+                "id": 19,
+                "criticality": "reject",
+                "value": {
+                  "ricActionID": 0,
+                  "ricActionType": "report",
+                  "ricActionDefinition": "00010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}[0m
+[0m[36m[*] Selected fuzzing strategy: json[0m
+[0m[36m[DEBUG] Selected JSON fields to mutate: ['length'][0m
+[0m[36m[DEBUG] Generated new value for length: None[0m
+[0m[34m[*] No mutations applied to JSON fields.[0m
+[0m[34m[*] No mutations applied to this message.[0m
+[0m[96m[DEBUG] Overhead: 17.82 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 38 bytes[0m
+[0m[*] ProcedureCode: 0x8[0m
+[0m[93m[DEBUG] Response Type: RICsubscription[0m
+[0m[96m[DEBUG] Overhead: 0.23 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 178 bytes[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[93m[DEBUG] Message Type: E42RICsubscription[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[36m[*] Processing E42RICsubscription message (178 bytes)[0m
+[0m[32mBefore decoding:
+000f0080ad000005003e000200070003000c0299f9075000000e00200e00001d00050000020000000500020002001e00808000030803e7000013007640000072000104806d0000003840010004010100000401004452422e526c6353647544656c6179446c0120000000a04452422e5545546870446c0120000000a04452422e5545546870556c0120000000b05252552e507262546f74446c0120000000b05252552e507262546f74556c012000004003e7[0m
+[0m[32mConverted to JSON:[0m
+[0m{
+  "initiatingMessage": {
+    "procedureCode": 15,
+    "criticality": "reject",
+    "value": {
+      "protocolIEs": [
+        {
+          "id": 62,
+          "criticality": "reject",
+          "value": 7
+        },
+        {
+          "id": 3,
+          "criticality": "reject",
+          "value": {
+            "gNB": {
+              "global-gNB-ID": {
+                "plmn-id": "99f907",
+                "gnb-id": {
+                  "gnb-ID": {
+                    "value": "00000e00",
+                    "length": 32
+                  }
+                }
+              },
+              "gNB-DU-ID": 3584
+            }
+          }
+        },
+        {
+          "id": 29,
+          "criticality": "reject",
+          "value": {
+            "ricRequestorID": 2,
+            "ricInstanceID": 0
+          }
+        },
+        {
+          "id": 5,
+          "criticality": "reject",
+          "value": 2
+        },
+        {
+          "id": 30,
+          "criticality": "reject",
+          "value": {
+            "ricEventTriggerDefinition": "0803e7",
+            "ricAction-ToBeSetup-List": [
+              {
+                "id": 19,
+                "criticality": "reject",
+                "value": {
+                  "ricActionID": 0,
+                  "ricActionType": "report",
+                  "ricActionDefinition": "000104806d0000003840010004010100000401004452422e526c6353647544656c6179446c0120000000a04452422e5545546870446c0120000000a04452422e5545546870556c0120000000b05252552e507262546f74446c0120000000b05252552e507262546f74556c012000004003e7"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}[0m
+[0m[36m[*] Selected fuzzing strategy: json[0m
+[0m[36m[DEBUG] Selected JSON fields to mutate: ['id'][0m
+[0m[DEBUG] Processing ID field: id[0m
+[0m[36m[*] Found protocol IE match for Cause in constraints[0m
+[0m[36m[DEBUG] Generated new value for id: 87[0m
+[0m[31m[+] Mutated initiatingMessage.value.protocolIEs[1].id: 3 -> 87[0m
+[0m[32m[*] Successfully mutated 1 JSON fields[0m
+[0m[32m[+] Successfully fuzzed message (282 bytes)[0m
+[0m[32m[+] Encoded again:
+000f008115000005003e00020007005700747b22674e42223a7b22676c6f62616c2d674e422d4944223a7b22706c6d6e2d6964223a22393966393037222c22676e622d6964223a7b22676e622d4944223a7b2276616c7565223a223030303030653030222c226c656e677468223a33327d7d7d2c22674e422d44552d4944223a333538347d7d001d00050000020000000500020002001e00808000030803e7000013007640000072000104806d0000003840010004010100000401004452422e526c6353647544656c6179446c0120000000a04452422e5545546870446c0120000000a04452422e5545546870556c0120000000b05252552e507262546f74446c0120000000b05252552e507262546f74556c012000004003e7[0m
+[0m[96m[DEBUG] Overhead: 21.55 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 0 bytes[0m
+[0m[93m[DEBUG] Response Type: None[0m
+15 36 39 54 [0m[33m[*] Cleaning up xApp connection.[0m
+57 
+[0m[32m[+] Stopped tshark capture[0m
+[0m[36m[*] Session ended. Analyzing captured data...[0m
+[0m[33m[*] Generating state machine[0m
+[0m[32m[+] State machine generated successfully.[0m
+[0m[33m[*] Generating diff between current session and baseline Model[0m
+[0m[33m[*] Running wdmapper diff command with baseline State Machine...[0m
+[0m[32m[+] Diff generated successfully.[0m
+[0m[35m==================================================[0m
+[0m[35m            Cost Function Summary            [0m
+[0m[35m==================================================[0m
+[0m[DEBUG] Added states: 11[0m
+[0m[DEBUG] Removed states: 10[0m
+[0m[DEBUG] State changes: 21[0m
+[0m[DEBUG] Number of mutated fields: 1[0m
+[0m[COST] Session cost: 210.54[0m
+[0m[COST] State changes: 21[0m
+[0m[COST] Transitions: 41[0m
+[0m[32m[+] Session ID: 2025-06-06_14-00-26[0m
+[0m[35m==================================================[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[32m[+] xApp session cleanup completed[0m
+[0m[33m[*] Waiting for new xApp connection...[0m
+[0m[32m[+] Accepted xApp connection from ('192.168.71.185', 38379)[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[31m[!] Connection to RIC lost during send. Reconnecting...[0m
+[0m[31m[-] Error during xApp->RIC forwarding: [Errno 32] Broken pipe[0m
+[0m[31m[-] Connection broken: [Errno 32] Broken pipe[0m
+[0m[33m[*] Attempting to reconnect to RIC...
+[0m
+[0m[32m[+] Reconnected to RIC at 192.168.71.184:36422[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 0 bytes[0m
+[0m[93m[DEBUG] Response Type: None[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[36m[*] Session ended. Analyzing captured data...[0m
+[0m[33m[*] Generating state machine[0m
+[0m[32m[+] State machine generated successfully.[0m
+[0m[33m[*] Generating diff between current session and baseline Model[0m
+[0m[33m[*] Running wdmapper diff command with baseline State Machine...[0m
+[0m[32m[+] Diff generated successfully.[0m
+[0m[35m==================================================[0m
+[0m[35m            Cost Function Summary            [0m
+[0m[35m==================================================[0m
+[0m[DEBUG] Added states: 11[0m
+[0m[DEBUG] Removed states: 10[0m
+[0m[DEBUG] State changes: 21[0m
+[0m[DEBUG] Number of mutated fields: 1[0m
+[0m[COST] Session cost: 210.54[0m
+[0m[COST] State changes: 21[0m
+[0m[COST] Transitions: 41[0m
+[0m[32m[+] Session ID: 2025-06-06_14-00-26[0m
+[0m[35m==================================================[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[32m[+] xApp session cleanup completed[0m
+[0m[33m[*] Waiting for new xApp connection...[0m
+[0m[32m[+] Accepted xApp connection from ('192.168.71.185', 38379)[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[31m[!] Connection to RIC lost during send. Reconnecting...[0m
+[0m[31m[-] Error during xApp->RIC forwarding: [Errno 32] Broken pipe[0m
+[0m[31m[-] Connection broken: [Errno 32] Broken pipe[0m
+[0m[33m[*] Attempting to reconnect to RIC...
+[0m
+[0m[32m[+] Reconnected to RIC at 192.168.71.184:36422[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.14 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.08 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.09 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 809 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Response Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.11 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 809 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Response Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.08 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 809 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Response Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.07 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[33m[!] Timeout waiting for packets. Continuing...[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 0 bytes[0m
+[0m[93m[DEBUG] Message Type: None[0m
+[0m[36m[*] Processing None message (0 bytes)[0m
+[0m[32mBefore decoding:
+[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[36m[*] Session ended. Analyzing captured data...[0m
+[0m[33m[*] Generating state machine[0m
+[0m[32m[+] State machine generated successfully.[0m
+[0m[33m[*] Generating diff between current session and baseline Model[0m
+[0m[33m[*] Running wdmapper diff command with baseline State Machine...[0m
+[0m[32m[+] Diff generated successfully.[0m
+[0m[35m==================================================[0m
+[0m[35m            Cost Function Summary            [0m
+[0m[35m==================================================[0m
+[0m[DEBUG] Added states: 11[0m
+[0m[DEBUG] Removed states: 10[0m
+[0m[DEBUG] State changes: 21[0m
+[0m[DEBUG] Number of mutated fields: 1[0m
+[0m[COST] Session cost: 210.54[0m
+[0m[COST] State changes: 21[0m
+[0m[COST] Transitions: 41[0m
+[0m[32m[+] Session ID: 2025-06-06_14-00-26[0m
+[0m[35m==================================================[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[32m[+] xApp session cleanup completed[0m
+[0m[33m[*] Waiting for new xApp connection...[0m
+[0m[32m[+] Accepted xApp connection from ('192.168.71.185', 35767)[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.23 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 2389 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Response Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.26 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 134 bytes[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[93m[DEBUG] Message Type: E42RICsubscription[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[36m[*] Processing E42RICsubscription message (134 bytes)[0m
+[0m[32mBefore decoding:
+000f008081000005003e0002000a0003000c0499f9075000000e00200e00001d00050000010000000500020002001e005500030803e7000013004b4000004700010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7[0m
+[0m[32mConverted to JSON:[0m
+[0m{
+  "initiatingMessage": {
+    "procedureCode": 15,
+    "criticality": "reject",
+    "value": {
+      "protocolIEs": [
+        {
+          "id": 62,
+          "criticality": "reject",
+          "value": 10
+        },
+        {
+          "id": 3,
+          "criticality": "reject",
+          "value": {
+            "gNB": {
+              "global-gNB-ID": {
+                "plmn-id": "99f907",
+                "gnb-id": {
+                  "gnb-ID": {
+                    "value": "00000e00",
+                    "length": 32
+                  }
+                }
+              },
+              "gNB-CU-UP-ID": 3584
+            }
+          }
+        },
+        {
+          "id": 29,
+          "criticality": "reject",
+          "value": {
+            "ricRequestorID": 1,
+            "ricInstanceID": 0
+          }
+        },
+        {
+          "id": 5,
+          "criticality": "reject",
+          "value": 2
+        },
+        {
+          "id": 30,
+          "criticality": "reject",
+          "value": {
+            "ricEventTriggerDefinition": "0803e7",
+            "ricAction-ToBeSetup-List": [
+              {
+                "id": 19,
+                "criticality": "reject",
+                "value": {
+                  "ricActionID": 0,
+                  "ricActionType": "report",
+                  "ricActionDefinition": "00010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}[0m
+[0m[36m[*] Selected fuzzing strategy: asn1[0m
+[0m[36m[*] Found 3 potential ASN.1 encoded fields.[0m
+[0m[36m[*] ASN.1 fields: [{'path': 'initiatingMessage.value.protocolIEs[1].value.gNB.global-gNB-ID.gnb-id.gnb-ID.value', 'hex': '00000e00'}, {'path': 'initiatingMessage.value.protocolIEs[4].value.ricEventTriggerDefinition', 'hex': '0803e7'}, {'path': 'initiatingMessage.value.protocolIEs[4].value.ricAction-ToBeSetup-List[0].value.ricActionDefinition', 'hex': '00010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7'}][0m
+[0m[36m[*] Attempting to decode ASN.1 content for E2SM-KPM with hex: 00010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7[0m
+[0m[32m[+] Successfully decoded initiatingMessage.value.protocolIEs[4].value.ricAction-ToBeSetup-List[0].value.ricActionDefinition as E2SM-KPM-ActionDefinition[0m
+[0m[32m[+] ASN.1 decoded: {'asn1_spec': <asn1tools.compiler.Specification object at 0x7d728037b410>, 'asn1_name': 'E2SM-KPM', 'definition': 'E2SM-KPM-ActionDefinition', 'decoded': {'ric-Style-Type': 4, 'actionDefinition-formats': ('actionDefinition-Format4', {'matchingUeCondList': [{'testCondInfo': {'testType': ('sNSSAI', 'true'), 'testExpr': 'equal', 'testValue': ('valueOctS', b'\x01')}}], 'subscriptionInfo': {'measInfoList': [{'measType': ('measName', 'DRB.PdcpSduVolumeDL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}, {'measType': ('measName', 'DRB.PdcpSduVolumeUL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}], 'granulPeriod': 1000}})}}[0m
+[0m[36m[DEBUG] Available fields in E2SM-KPM-ActionDefinition: ['ric-Style-Type', 'actionDefinition-formats', 'actionDefinition-Format4', 'matchingUeCondList', 'testCondInfo', 'testType', 'sNSSAI', 'testExpr', 'testValue', 'valueOctS', 'subscriptionInfo', 'measInfoList', 'measType', 'measName', 'labelInfoList', 'measLabel', 'noLabel', 'measType', 'measName', 'labelInfoList', 'measLabel', 'noLabel', 'granulPeriod'][0m
+[0m[36m[DEBUG] ASN.1 targeting fields: ['measLabel'][0m
+[0m[36m[DEBUG] Constraints for measLabel: {'asn1_type': 'MeasurementLabel', 'type_name': 'measLabel', 'members': {'noLabel': {'asn1_type': 'ENUMERATED', 'type_name': 'noLabel', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 0]}, 'plmnID': {'asn1_type': 'PLMNIdentity', 'type_name': 'plmnID', 'min': 3, 'max': 3, 'number_of_bits': 0, 'optional': True, 'default': None, 'tag': [2, 1]}, 'sliceID': {'asn1_type': 'S-NSSAI', 'type_name': 'sliceID', 'members': {'sST': {'asn1_type': 'SST', 'type_name': 'sST', 'min': 1, 'max': 1, 'number_of_bits': 0, 'optional': False, 'default': None, 'tag': [2, 0]}, 'sD': {'asn1_type': 'SD', 'type_name': 'sD', 'min': 3, 'max': 3, 'number_of_bits': 0, 'optional': True, 'default': None, 'tag': [2, 1]}}, 'optional': True, 'default': None, 'tag': [2, 2]}, 'fiveQI': {'asn1_type': 'FiveQI', 'type_name': 'fiveQI', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 3]}, 'qFI': {'asn1_type': 'QosFlowIdentifier', 'type_name': 'qFI', 'min': 0, 'max': 63, 'number_of_bits': 6, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 4]}, 'qCI': {'asn1_type': 'QCI', 'type_name': 'qCI', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 5]}, 'qCImax': {'asn1_type': 'QCI', 'type_name': 'qCImax', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 6]}, 'qCImin': {'asn1_type': 'QCI', 'type_name': 'qCImin', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 7]}, 'aRPmax': {'asn1_type': 'INTEGER', 'type_name': 'aRPmax', 'min': 1, 'max': 15, 'number_of_bits': 4, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 8]}, 'aRPmin': {'asn1_type': 'INTEGER', 'type_name': 'aRPmin', 'min': 1, 'max': 15, 'number_of_bits': 4, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 9]}, 'bitrateRange': {'asn1_type': 'INTEGER', 'type_name': 'bitrateRange', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 10]}, 'layerMU-MIMO': {'asn1_type': 'INTEGER', 'type_name': 'layerMU-MIMO', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 11]}, 'sUM': {'asn1_type': 'ENUMERATED', 'type_name': 'sUM', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 12]}, 'distBinX': {'asn1_type': 'INTEGER', 'type_name': 'distBinX', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 13]}, 'distBinY': {'asn1_type': 'INTEGER', 'type_name': 'distBinY', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 14]}, 'distBinZ': {'asn1_type': 'INTEGER', 'type_name': 'distBinZ', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 15]}, 'preLabelOverride': {'asn1_type': 'ENUMERATED', 'type_name': 'preLabelOverride', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 16]}, 'startEndInd': {'asn1_type': 'ENUMERATED', 'type_name': 'startEndInd', 'root_data_to_value': {'start': 0, 'end': 1}, 'optional': True, 'default': None, 'tag': [2, 17]}, 'min': {'asn1_type': 'ENUMERATED', 'type_name': 'min', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 18]}, 'max': {'asn1_type': 'ENUMERATED', 'type_name': 'max', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 19]}, 'avg': {'asn1_type': 'ENUMERATED', 'type_name': 'avg', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 20]}}, 'optional': False, 'default': None, 'tag': [2, 0], '_value': 0}[0m
+[0m[33m[!] Received field_name as a dictionary, using its keys directly.[0m
+[0mReceived constraint:[0m [0m{'asn1_type': 'MeasurementLabel', 'type_name': 'measLabel', 'members': {'noLabel': {'asn1_type': 'ENUMERATED', 'type_name': 'noLabel', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 0]}, 'plmnID': {'asn1_type': 'PLMNIdentity', 'type_name': 'plmnID', 'min': 3, 'max': 3, 'number_of_bits': 0, 'optional': True, 'default': None, 'tag': [2, 1]}, 'sliceID': {'asn1_type': 'S-NSSAI', 'type_name': 'sliceID', 'members': {'sST': {'asn1_type': 'SST', 'type_name': 'sST', 'min': 1, 'max': 1, 'number_of_bits': 0, 'optional': False, 'default': None, 'tag': [2, 0]}, 'sD': {'asn1_type': 'SD', 'type_name': 'sD', 'min': 3, 'max': 3, 'number_of_bits': 0, 'optional': True, 'default': None, 'tag': [2, 1]}}, 'optional': True, 'default': None, 'tag': [2, 2]}, 'fiveQI': {'asn1_type': 'FiveQI', 'type_name': 'fiveQI', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 3]}, 'qFI': {'asn1_type': 'QosFlowIdentifier', 'type_name': 'qFI', 'min': 0, 'max': 63, 'number_of_bits': 6, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 4]}, 'qCI': {'asn1_type': 'QCI', 'type_name': 'qCI', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 5]}, 'qCImax': {'asn1_type': 'QCI', 'type_name': 'qCImax', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 6]}, 'qCImin': {'asn1_type': 'QCI', 'type_name': 'qCImin', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 7]}, 'aRPmax': {'asn1_type': 'INTEGER', 'type_name': 'aRPmax', 'min': 1, 'max': 15, 'number_of_bits': 4, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 8]}, 'aRPmin': {'asn1_type': 'INTEGER', 'type_name': 'aRPmin', 'min': 1, 'max': 15, 'number_of_bits': 4, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 9]}, 'bitrateRange': {'asn1_type': 'INTEGER', 'type_name': 'bitrateRange', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 10]}, 'layerMU-MIMO': {'asn1_type': 'INTEGER', 'type_name': 'layerMU-MIMO', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 11]}, 'sUM': {'asn1_type': 'ENUMERATED', 'type_name': 'sUM', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 12]}, 'distBinX': {'asn1_type': 'INTEGER', 'type_name': 'distBinX', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 13]}, 'distBinY': {'asn1_type': 'INTEGER', 'type_name': 'distBinY', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 14]}, 'distBinZ': {'asn1_type': 'INTEGER', 'type_name': 'distBinZ', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 15]}, 'preLabelOverride': {'asn1_type': 'ENUMERATED', 'type_name': 'preLabelOverride', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 16]}, 'startEndInd': {'asn1_type': 'ENUMERATED', 'type_name': 'startEndInd', 'root_data_to_value': {'start': 0, 'end': 1}, 'optional': True, 'default': None, 'tag': [2, 17]}, 'min': {'asn1_type': 'ENUMERATED', 'type_name': 'min', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 18]}, 'max': {'asn1_type': 'ENUMERATED', 'type_name': 'max', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 19]}, 'avg': {'asn1_type': 'ENUMERATED', 'type_name': 'avg', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 20]}}, 'optional': False, 'default': None, 'tag': [2, 0], '_value': 0}[0m
+[0mNo applicable constraint handler found. Returning None.[0m
+[0m[36m[DEBUG] Generated new value for measLabel: None[0m
+[0m[34m[*] No mutations applied to this message.[0m
+[0m[96m[DEBUG] Overhead: 17.87 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 38 bytes[0m
+[0m[*] ProcedureCode: 0x8[0m
+[0m[93m[DEBUG] Response Type: RICsubscription[0m
+[0m[96m[DEBUG] Overhead: 0.26 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 178 bytes[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[93m[DEBUG] Message Type: E42RICsubscription[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[36m[*] Processing E42RICsubscription message (178 bytes)[0m
+[0m[32mBefore decoding:
+000f0080ad000005003e0002000a0003000c0299f9075000000e00200e00001d00050000020000000500020002001e00808000030803e7000013007640000072000104806d0000003840010004010100000401004452422e526c6353647544656c6179446c0120000000a04452422e5545546870446c0120000000a04452422e5545546870556c0120000000b05252552e507262546f74446c0120000000b05252552e507262546f74556c012000004003e7[0m
+[0m[32mConverted to JSON:[0m
+[0m{
+  "initiatingMessage": {
+    "procedureCode": 15,
+    "criticality": "reject",
+    "value": {
+      "protocolIEs": [
+        {
+          "id": 62,
+          "criticality": "reject",
+          "value": 10
+        },
+        {
+          "id": 3,
+          "criticality": "reject",
+          "value": {
+            "gNB": {
+              "global-gNB-ID": {
+                "plmn-id": "99f907",
+                "gnb-id": {
+                  "gnb-ID": {
+                    "value": "00000e00",
+                    "length": 32
+                  }
+                }
+              },
+              "gNB-DU-ID": 3584
+            }
+          }
+        },
+        {
+          "id": 29,
+          "criticality": "reject",
+          "value": {
+            "ricRequestorID": 2,
+            "ricInstanceID": 0
+          }
+        },
+        {
+          "id": 5,
+          "criticality": "reject",
+          "value": 2
+        },
+        {
+          "id": 30,
+          "criticality": "reject",
+          "value": {
+            "ricEventTriggerDefinition": "0803e7",
+            "ricAction-ToBeSetup-List": [
+              {
+                "id": 19,
+                "criticality": "reject",
+                "value": {
+                  "ricActionID": 0,
+                  "ricActionType": "report",
+                  "ricActionDefinition": "000104806d0000003840010004010100000401004452422e526c6353647544656c6179446c0120000000a04452422e5545546870446c0120000000a04452422e5545546870556c0120000000b05252552e507262546f74446c0120000000b05252552e507262546f74556c012000004003e7"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}[0m
+[0m[36m[*] Selected fuzzing strategy: asn1[0m
+[0m[36m[*] Found 3 potential ASN.1 encoded fields.[0m
+[0m[36m[*] ASN.1 fields: [{'path': 'initiatingMessage.value.protocolIEs[1].value.gNB.global-gNB-ID.gnb-id.gnb-ID.value', 'hex': '00000e00'}, {'path': 'initiatingMessage.value.protocolIEs[4].value.ricEventTriggerDefinition', 'hex': '0803e7'}, {'path': 'initiatingMessage.value.protocolIEs[4].value.ricAction-ToBeSetup-List[0].value.ricActionDefinition', 'hex': '000104806d0000003840010004010100000401004452422e526c6353647544656c6179446c0120000000a04452422e5545546870446c0120000000a04452422e5545546870556c0120000000b05252552e507262546f74446c0120000000b05252552e507262546f74556c012000004003e7'}][0m
+[0m[36m[*] Attempting to decode ASN.1 content for E2SM-KPM with hex: 000104806d0000003840010004010100000401004452422e526c6353647544656c6179446c0120000000a04452422e5545546870446c0120000000a04452422e5545546870556c0120000000b05252552e507262546f74446c0120000000b05252552e507262546f74556c012000004003e7[0m
+[0m[32m[+] Successfully decoded initiatingMessage.value.protocolIEs[4].value.ricAction-ToBeSetup-List[0].value.ricActionDefinition as E2SM-KPM-ActionDefinition[0m
+[0m[32m[+] ASN.1 decoded: {'asn1_spec': <asn1tools.compiler.Specification object at 0x7d728037b410>, 'asn1_name': 'E2SM-KPM', 'definition': 'E2SM-KPM-ActionDefinition', 'decoded': {'ric-Style-Type': 4, 'actionDefinition-formats': ('actionDefinition-Format4', {'matchingUeCondList': [{'testCondInfo': {'testType': ('sNSSAI', 'true'), 'testExpr': 'equal', 'testValue': ('valueOctS', b'\x01')}}], 'subscriptionInfo': {'measInfoList': [{'measType': ('measName', 'DRB.RlcSduDelayDl'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}, {'measType': ('measName', 'DRB.UEThpDl'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}, {'measType': ('measName', 'DRB.UEThpUl'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}, {'measType': ('measName', 'RRU.PrbTotDl'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}, {'measType': ('measName', 'RRU.PrbTotUl'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}], 'granulPeriod': 1000}})}}[0m
+[0m[36m[DEBUG] Available fields in E2SM-KPM-ActionDefinition: ['ric-Style-Type', 'actionDefinition-formats', 'actionDefinition-Format4', 'matchingUeCondList', 'testCondInfo', 'testType', 'sNSSAI', 'testExpr', 'testValue', 'valueOctS', 'subscriptionInfo', 'measInfoList', 'measType', 'measName', 'labelInfoList', 'measLabel', 'noLabel', 'measType', 'measName', 'labelInfoList', 'measLabel', 'noLabel', 'measType', 'measName', 'labelInfoList', 'measLabel', 'noLabel', 'measType', 'measName', 'labelInfoList', 'measLabel', 'noLabel', 'measType', 'measName', 'labelInfoList', 'measLabel', 'noLabel', 'granulPeriod'][0m
+[0m[36m[DEBUG] ASN.1 targeting fields: ['measLabel'][0m
+[0m[36m[DEBUG] Constraints for measLabel: {'asn1_type': 'MeasurementLabel', 'type_name': 'measLabel', 'members': {'noLabel': {'asn1_type': 'ENUMERATED', 'type_name': 'noLabel', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 0]}, 'plmnID': {'asn1_type': 'PLMNIdentity', 'type_name': 'plmnID', 'min': 3, 'max': 3, 'number_of_bits': 0, 'optional': True, 'default': None, 'tag': [2, 1]}, 'sliceID': {'asn1_type': 'S-NSSAI', 'type_name': 'sliceID', 'members': {'sST': {'asn1_type': 'SST', 'type_name': 'sST', 'min': 1, 'max': 1, 'number_of_bits': 0, 'optional': False, 'default': None, 'tag': [2, 0]}, 'sD': {'asn1_type': 'SD', 'type_name': 'sD', 'min': 3, 'max': 3, 'number_of_bits': 0, 'optional': True, 'default': None, 'tag': [2, 1]}}, 'optional': True, 'default': None, 'tag': [2, 2]}, 'fiveQI': {'asn1_type': 'FiveQI', 'type_name': 'fiveQI', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 3]}, 'qFI': {'asn1_type': 'QosFlowIdentifier', 'type_name': 'qFI', 'min': 0, 'max': 63, 'number_of_bits': 6, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 4]}, 'qCI': {'asn1_type': 'QCI', 'type_name': 'qCI', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 5]}, 'qCImax': {'asn1_type': 'QCI', 'type_name': 'qCImax', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 6]}, 'qCImin': {'asn1_type': 'QCI', 'type_name': 'qCImin', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 7]}, 'aRPmax': {'asn1_type': 'INTEGER', 'type_name': 'aRPmax', 'min': 1, 'max': 15, 'number_of_bits': 4, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 8]}, 'aRPmin': {'asn1_type': 'INTEGER', 'type_name': 'aRPmin', 'min': 1, 'max': 15, 'number_of_bits': 4, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 9]}, 'bitrateRange': {'asn1_type': 'INTEGER', 'type_name': 'bitrateRange', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 10]}, 'layerMU-MIMO': {'asn1_type': 'INTEGER', 'type_name': 'layerMU-MIMO', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 11]}, 'sUM': {'asn1_type': 'ENUMERATED', 'type_name': 'sUM', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 12]}, 'distBinX': {'asn1_type': 'INTEGER', 'type_name': 'distBinX', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 13]}, 'distBinY': {'asn1_type': 'INTEGER', 'type_name': 'distBinY', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 14]}, 'distBinZ': {'asn1_type': 'INTEGER', 'type_name': 'distBinZ', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 15]}, 'preLabelOverride': {'asn1_type': 'ENUMERATED', 'type_name': 'preLabelOverride', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 16]}, 'startEndInd': {'asn1_type': 'ENUMERATED', 'type_name': 'startEndInd', 'root_data_to_value': {'start': 0, 'end': 1}, 'optional': True, 'default': None, 'tag': [2, 17]}, 'min': {'asn1_type': 'ENUMERATED', 'type_name': 'min', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 18]}, 'max': {'asn1_type': 'ENUMERATED', 'type_name': 'max', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 19]}, 'avg': {'asn1_type': 'ENUMERATED', 'type_name': 'avg', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 20]}}, 'optional': False, 'default': None, 'tag': [2, 0], '_value': 0}[0m
+[0m[33m[!] Received field_name as a dictionary, using its keys directly.[0m
+[0mReceived constraint:[0m [0m{'asn1_type': 'MeasurementLabel', 'type_name': 'measLabel', 'members': {'noLabel': {'asn1_type': 'ENUMERATED', 'type_name': 'noLabel', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 0]}, 'plmnID': {'asn1_type': 'PLMNIdentity', 'type_name': 'plmnID', 'min': 3, 'max': 3, 'number_of_bits': 0, 'optional': True, 'default': None, 'tag': [2, 1]}, 'sliceID': {'asn1_type': 'S-NSSAI', 'type_name': 'sliceID', 'members': {'sST': {'asn1_type': 'SST', 'type_name': 'sST', 'min': 1, 'max': 1, 'number_of_bits': 0, 'optional': False, 'default': None, 'tag': [2, 0]}, 'sD': {'asn1_type': 'SD', 'type_name': 'sD', 'min': 3, 'max': 3, 'number_of_bits': 0, 'optional': True, 'default': None, 'tag': [2, 1]}}, 'optional': True, 'default': None, 'tag': [2, 2]}, 'fiveQI': {'asn1_type': 'FiveQI', 'type_name': 'fiveQI', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 3]}, 'qFI': {'asn1_type': 'QosFlowIdentifier', 'type_name': 'qFI', 'min': 0, 'max': 63, 'number_of_bits': 6, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 4]}, 'qCI': {'asn1_type': 'QCI', 'type_name': 'qCI', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 5]}, 'qCImax': {'asn1_type': 'QCI', 'type_name': 'qCImax', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 6]}, 'qCImin': {'asn1_type': 'QCI', 'type_name': 'qCImin', 'min': 0, 'max': 255, 'number_of_bits': 8, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 7]}, 'aRPmax': {'asn1_type': 'INTEGER', 'type_name': 'aRPmax', 'min': 1, 'max': 15, 'number_of_bits': 4, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 8]}, 'aRPmin': {'asn1_type': 'INTEGER', 'type_name': 'aRPmin', 'min': 1, 'max': 15, 'number_of_bits': 4, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 9]}, 'bitrateRange': {'asn1_type': 'INTEGER', 'type_name': 'bitrateRange', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 10]}, 'layerMU-MIMO': {'asn1_type': 'INTEGER', 'type_name': 'layerMU-MIMO', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 11]}, 'sUM': {'asn1_type': 'ENUMERATED', 'type_name': 'sUM', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 12]}, 'distBinX': {'asn1_type': 'INTEGER', 'type_name': 'distBinX', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 13]}, 'distBinY': {'asn1_type': 'INTEGER', 'type_name': 'distBinY', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 14]}, 'distBinZ': {'asn1_type': 'INTEGER', 'type_name': 'distBinZ', 'min': 1, 'max': 65535, 'number_of_bits': 16, 'number_of_indefinite_bits': None, 'optional': True, 'default': None, 'tag': [2, 15]}, 'preLabelOverride': {'asn1_type': 'ENUMERATED', 'type_name': 'preLabelOverride', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 16]}, 'startEndInd': {'asn1_type': 'ENUMERATED', 'type_name': 'startEndInd', 'root_data_to_value': {'start': 0, 'end': 1}, 'optional': True, 'default': None, 'tag': [2, 17]}, 'min': {'asn1_type': 'ENUMERATED', 'type_name': 'min', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 18]}, 'max': {'asn1_type': 'ENUMERATED', 'type_name': 'max', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 19]}, 'avg': {'asn1_type': 'ENUMERATED', 'type_name': 'avg', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 20]}}, 'optional': False, 'default': None, 'tag': [2, 0], '_value': 0}[0m
+[0mNo applicable constraint handler found. Returning None.[0m
+[0m[36m[DEBUG] Generated new value for measLabel: None[0m
+[0m[34m[*] No mutations applied to this message.[0m
+[0m[96m[DEBUG] Overhead: 14.67 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 38 bytes[0m
+[0m[*] ProcedureCode: 0x8[0m
+[0m[93m[DEBUG] Response Type: RICsubscription[0m
+[0m[96m[DEBUG] Overhead: 0.23 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.21 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 354 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.15 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.37 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.42 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.20 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.33 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.24 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.47 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.21 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.21 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.30 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.15 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.34 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.29 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.18 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.16 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.20 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.33 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.24 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.15 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 28 bytes[0m
+[0m[*] ProcedureCode: 0x10[0m
+[0m[93m[DEBUG] Message Type: E42RICsubscriptionDelete[0m
+[0m[*] ProcedureCode: 0x10[0m
+[0m[36m[*] Processing E42RICsubscriptionDelete message (28 bytes)[0m
+[0m[32mBefore decoding:
+00100018000003003e0002000a001d00050000010000000500020002[0m
+[0m[32mConverted to JSON:[0m
+[0m{
+  "initiatingMessage": {
+    "procedureCode": 16,
+    "criticality": "reject",
+    "value": {
+      "protocolIEs": [
+        {
+          "id": 62,
+          "criticality": "reject",
+          "value": 10
+        },
+        {
+          "id": 29,
+          "criticality": "reject",
+          "value": {
+            "ricRequestorID": 1,
+            "ricInstanceID": 0
+          }
+        },
+        {
+          "id": 5,
+          "criticality": "reject",
+          "value": 2
+        }
+      ]
+    }
+  }
+}[0m
+[0m[36m[*] Selected fuzzing strategy: asn1[0m
+[0m[36m[*] Found 0 potential ASN.1 encoded fields.[0m
+[0m[36m[*] ASN.1 fields: [][0m
+[0m[33m[!] No potential ASN.1 encoded fields found.[0m
+[0m[34m[*] No mutations applied to this message.[0m
+[0m[96m[DEBUG] Overhead: 4.80 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 22 bytes[0m
+[0m[*] ProcedureCode: 0x9[0m
+[0m[93m[DEBUG] Response Type: RICsubscriptionDelete[0m
+[0m[96m[DEBUG] Overhead: 0.15 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 28 bytes[0m
+[0m[*] ProcedureCode: 0x10[0m
+[0m[93m[DEBUG] Message Type: E42RICsubscriptionDelete[0m
+[0m[*] ProcedureCode: 0x10[0m
+[0m[36m[*] Processing E42RICsubscriptionDelete message (28 bytes)[0m
+[0m[32mBefore decoding:
+00100018000003003e0002000a001d00050000020000000500020002[0m
+[0m[32mConverted to JSON:[0m
+[0m{
+  "initiatingMessage": {
+    "procedureCode": 16,
+    "criticality": "reject",
+    "value": {
+      "protocolIEs": [
+        {
+          "id": 62,
+          "criticality": "reject",
+          "value": 10
+        },
+        {
+          "id": 29,
+          "criticality": "reject",
+          "value": {
+            "ricRequestorID": 2,
+            "ricInstanceID": 0
+          }
+        },
+        {
+          "id": 5,
+          "criticality": "reject",
+          "value": 2
+        }
+      ]
+    }
+  }
+}[0m
+[0m[36m[*] Selected fuzzing strategy: asn1[0m
+[0m[36m[*] Found 0 potential ASN.1 encoded fields.[0m
+[0m[36m[*] ASN.1 fields: [][0m
+[0m[33m[!] No potential ASN.1 encoded fields found.[0m
+[0m[34m[*] No mutations applied to this message.[0m
+[0m[96m[DEBUG] Overhead: 4.57 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 22 bytes[0m
+[0m[*] ProcedureCode: 0x9[0m
+[0m[93m[DEBUG] Response Type: RICsubscriptionDelete[0m
+[0m[96m[DEBUG] Overhead: 0.25 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 0 bytes[0m
+[0m[93m[DEBUG] Message Type: None[0m
+[0m[36m[*] Processing None message (0 bytes)[0m
+[0m[32mBefore decoding:
+[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[36m[*] Session ended. Analyzing captured data...[0m
+[0m[33m[*] Generating state machine[0m
+[0m[32m[+] State machine generated successfully.[0m
+[0m[33m[*] Generating diff between current session and baseline Model[0m
+[0m[33m[*] Running wdmapper diff command with baseline State Machine...[0m
+[0m[32m[+] Diff generated successfully.[0m
+[0m[35m==================================================[0m
+[0m[35m            Cost Function Summary            [0m
+[0m[35m==================================================[0m
+[0m[DEBUG] Added states: 11[0m
+[0m[DEBUG] Removed states: 10[0m
+[0m[DEBUG] State changes: 21[0m
+[0m[DEBUG] Number of mutated fields: 1[0m
+[0m[COST] Session cost: 210.54[0m
+[0m[COST] State changes: 21[0m
+[0m[COST] Transitions: 41[0m
+[0m[32m[+] Session ID: 2025-06-06_14-00-26[0m
+[0m[35m==================================================[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[32m[+] xApp session cleanup completed[0m
+[0m[33m[*] Waiting for new xApp connection...[0m
+[0m[32m[+] Accepted xApp connection from ('192.168.71.185', 51751)[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.17 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 2389 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Response Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.13 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 134 bytes[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[93m[DEBUG] Message Type: E42RICsubscription[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[36m[*] Processing E42RICsubscription message (134 bytes)[0m
+[0m[32mBefore decoding:
+000f008081000005003e0002000b0003000c0499f9075000000e00200e00001d00050000010000000500020002001e005500030803e7000013004b4000004700010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7[0m
+[0m[32mConverted to JSON:[0m
+[0m{
+  "initiatingMessage": {
+    "procedureCode": 15,
+    "criticality": "reject",
+    "value": {
+      "protocolIEs": [
+        {
+          "id": 62,
+          "criticality": "reject",
+          "value": 11
+        },
+        {
+          "id": 3,
+          "criticality": "reject",
+          "value": {
+            "gNB": {
+              "global-gNB-ID": {
+                "plmn-id": "99f907",
+                "gnb-id": {
+                  "gnb-ID": {
+                    "value": "00000e00",
+                    "length": 32
+                  }
+                }
+              },
+              "gNB-CU-UP-ID": 3584
+            }
+          }
+        },
+        {
+          "id": 29,
+          "criticality": "reject",
+          "value": {
+            "ricRequestorID": 1,
+            "ricInstanceID": 0
+          }
+        },
+        {
+          "id": 5,
+          "criticality": "reject",
+          "value": 2
+        },
+        {
+          "id": 30,
+          "criticality": "reject",
+          "value": {
+            "ricEventTriggerDefinition": "0803e7",
+            "ricAction-ToBeSetup-List": [
+              {
+                "id": 19,
+                "criticality": "reject",
+                "value": {
+                  "ricActionID": 0,
+                  "ricActionType": "report",
+                  "ricActionDefinition": "00010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}[0m
+[0m[36m[*] Selected fuzzing strategy: both[0m
+[0m[36m[*] Found 3 potential ASN.1 encoded fields.[0m
+[0m[36m[*] ASN.1 fields: [{'path': 'initiatingMessage.value.protocolIEs[1].value.gNB.global-gNB-ID.gnb-id.gnb-ID.value', 'hex': '00000e00'}, {'path': 'initiatingMessage.value.protocolIEs[4].value.ricEventTriggerDefinition', 'hex': '0803e7'}, {'path': 'initiatingMessage.value.protocolIEs[4].value.ricAction-ToBeSetup-List[0].value.ricActionDefinition', 'hex': '00010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7'}][0m
+[0m[36m[*] Attempting to decode ASN.1 content for E2SM-KPM with hex: 00010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7[0m
+[0m[32m[+] Successfully decoded initiatingMessage.value.protocolIEs[4].value.ricAction-ToBeSetup-List[0].value.ricActionDefinition as E2SM-KPM-ActionDefinition[0m
+[0m[32m[+] ASN.1 decoded: {'asn1_spec': <asn1tools.compiler.Specification object at 0x7d728037b410>, 'asn1_name': 'E2SM-KPM', 'definition': 'E2SM-KPM-ActionDefinition', 'decoded': {'ric-Style-Type': 4, 'actionDefinition-formats': ('actionDefinition-Format4', {'matchingUeCondList': [{'testCondInfo': {'testType': ('sNSSAI', 'true'), 'testExpr': 'equal', 'testValue': ('valueOctS', b'\x01')}}], 'subscriptionInfo': {'measInfoList': [{'measType': ('measName', 'DRB.PdcpSduVolumeDL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}, {'measType': ('measName', 'DRB.PdcpSduVolumeUL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}], 'granulPeriod': 1000}})}}[0m
+[0m[36m[DEBUG] Available fields in E2SM-KPM-ActionDefinition: ['ric-Style-Type', 'actionDefinition-formats', 'actionDefinition-Format4', 'matchingUeCondList', 'testCondInfo', 'testType', 'sNSSAI', 'testExpr', 'testValue', 'valueOctS', 'subscriptionInfo', 'measInfoList', 'measType', 'measName', 'labelInfoList', 'measLabel', 'noLabel', 'measType', 'measName', 'labelInfoList', 'measLabel', 'noLabel', 'granulPeriod'][0m
+[0m[36m[DEBUG] ASN.1 targeting fields: ['noLabel'][0m
+[0m[36m[DEBUG] Constraints for noLabel: {'asn1_type': 'ENUMERATED', 'type_name': 'noLabel', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 0]}[0m
+[0m[33m[!] Received field_name as a dictionary, using its keys directly.[0m
+[0mReceived constraint:[0m [0m{'asn1_type': 'ENUMERATED', 'type_name': 'noLabel', 'root_data_to_value': {'true': 0}, 'optional': True, 'default': None, 'tag': [2, 0]}[0m
+[0mEnumerated constraint with root_data_to_value:[0m [0m['true'][0m
+[0mChosen enumerated value:[0m [0mtrue[0m
+[0m[36m[DEBUG] Generated new value for noLabel: true[0m
+[0m[DEBUG] Applying mutation: noLabel -> true[0m
+[0m[DEBUG] ASN.1 content var: {'ric-Style-Type': 4, 'actionDefinition-formats': ('actionDefinition-Format4', {'matchingUeCondList': [{'testCondInfo': {'testType': ('sNSSAI', 'true'), 'testExpr': 'equal', 'testValue': ('valueOctS', b'\x01')}}], 'subscriptionInfo': {'measInfoList': [{'measType': ('measName', 'DRB.PdcpSduVolumeDL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}, {'measType': ('measName', 'DRB.PdcpSduVolumeUL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}], 'granulPeriod': 1000}})}[0m
+[0m[DEBUG] Found field noLabel at this level, old value: true[0m
+[0m[DEBUG] Successfully updated noLabel to true[0m
+[0m[32m[+] Mutated field 'noLabel' to true in E2SM-KPM-ActionDefinition[0m
+[0m[36m[DEBUG] ASN.1 content after mutation: {'ric-Style-Type': 4, 'actionDefinition-formats': ('actionDefinition-Format4', {'matchingUeCondList': [{'testCondInfo': {'testType': ('sNSSAI', 'true'), 'testExpr': 'equal', 'testValue': ('valueOctS', b'\x01')}}], 'subscriptionInfo': {'measInfoList': [{'measType': ('measName', 'DRB.PdcpSduVolumeDL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}, {'measType': ('measName', 'DRB.PdcpSduVolumeUL'), 'labelInfoList': [{'measLabel': {'noLabel': 'true'}}]}], 'granulPeriod': 1000}})}[0m
+[0m[36m[DEBUG] Mutated fields: ['noLabel'][0m
+[0m[32m[+] Successfully re-encoded and updated initiatingMessage.value.protocolIEs[4].value.ricAction-ToBeSetup-List[0].value.ricActionDefinition[0m
+[0m[32m[+] Successfully fuzzed message (134 bytes)[0m
+[0m[32m[+] Encoded again:
+000f008081000005003e0002000b0003000c0499f9075000000e00200e00001d00050000010000000500020002001e005500030803e7000013004b4000004700010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7[0m
+[0m[96m[DEBUG] Overhead: 98.67 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 38 bytes[0m
+[0m[*] ProcedureCode: 0x8[0m
+[0m[93m[DEBUG] Response Type: RICsubscription[0m
+[0m[96m[DEBUG] Overhead: 0.38 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 178 bytes[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[93m[DEBUG] Message Type: E42RICsubscription[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[36m[*] Processing E42RICsubscription message (178 bytes)[0m
+[0m[32mBefore decoding:
+000f0080ad000005003e0002000b0003000c0299f9075000000e00200e00001d00050000020000000500020002001e00808000030803e7000013007640000072000104806d0000003840010004010100000401004452422e526c6353647544656c6179446c0120000000a04452422e5545546870446c0120000000a04452422e5545546870556c0120000000b05252552e507262546f74446c0120000000b05252552e507262546f74556c012000004003e7[0m
+[0m[32mConverted to JSON:[0m
+[0m{
+  "initiatingMessage": {
+    "procedureCode": 15,
+    "criticality": "reject",
+    "value": {
+      "protocolIEs": [
+        {
+          "id": 62,
+          "criticality": "reject",
+          "value": 11
+        },
+        {
+          "id": 3,
+          "criticality": "reject",
+          "value": {
+            "gNB": {
+              "global-gNB-ID": {
+                "plmn-id": "99f907",
+                "gnb-id": {
+                  "gnb-ID": {
+                    "value": "00000e00",
+                    "length": 32
+                  }
+                }
+              },
+              "gNB-DU-ID": 3584
+            }
+          }
+        },
+        {
+          "id": 29,
+          "criticality": "reject",
+          "value": {
+            "ricRequestorID": 2,
+            "ricInstanceID": 0
+          }
+        },
+        {
+          "id": 5,
+          "criticality": "reject",
+          "value": 2
+        },
+        {
+          "id": 30,
+          "criticality": "reject",
+          "value": {
+            "ricEventTriggerDefinition": "0803e7",
+            "ricAction-ToBeSetup-List": [
+              {
+                "id": 19,
+                "criticality": "reject",
+                "value": {
+                  "ricActionID": 0,
+                  "ricActionType": "report",
+                  "ricActionDefinition": "000104806d0000003840010004010100000401004452422e526c6353647544656c6179446c0120000000a04452422e5545546870446c0120000000a04452422e5545546870556c0120000000b05252552e507262546f74446c0120000000b05252552e507262546f74556c012000004003e7"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}[0m
+[0m[36m[*] Selected fuzzing strategy: json[0m
+[0m[36m[DEBUG] Selected JSON fields to mutate: ['value'][0m
+[0m[36m[DEBUG] Generated new value for value: None[0m
+[0m[34m[*] No mutations applied to JSON fields.[0m
+[0m[34m[*] No mutations applied to this message.[0m
+[0m[96m[DEBUG] Overhead: 16.72 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 38 bytes[0m
+[0m[*] ProcedureCode: 0x8[0m
+[0m[93m[DEBUG] Response Type: RICsubscription[0m
+[0m[96m[DEBUG] Overhead: 0.20 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.22 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 354 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.26 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.28 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.26 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.20 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.40 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.18 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.23 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.26 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.38 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 218 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.24 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 314 bytes[0m
+[0m[*] ProcedureCode: 0x5[0m
+[0m[93m[DEBUG] Response Type: RICindication[0m
+[0m[96m[DEBUG] Overhead: 0.29 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 0 bytes[0m
+[0m[93m[DEBUG] Response Type: None[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[36m[*] Session ended. Analyzing captured data...[0m
+[0m[33m[*] Generating state machine[0m
+[0m[32m[+] State machine generated successfully.[0m
+[0m[33m[*] Generating diff between current session and baseline Model[0m
+[0m[33m[*] Running wdmapper diff command with baseline State Machine...[0m
+[0m[32m[+] Diff generated successfully.[0m
+[0m[35m==================================================[0m
+[0m[35m            Cost Function Summary            [0m
+[0m[35m==================================================[0m
+[0m[DEBUG] Added states: 11[0m
+[0m[DEBUG] Removed states: 10[0m
+[0m[DEBUG] State changes: 21[0m
+[0m[DEBUG] Number of mutated fields: 1[0m
+[0m[COST] Session cost: 210.54[0m
+[0m[COST] State changes: 21[0m
+[0m[COST] Transitions: 41[0m
+[0m[32m[+] Session ID: 2025-06-06_14-00-26[0m
+[0m[35m==================================================[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[32m[+] xApp session cleanup completed[0m
+[0m[33m[*] Waiting for new xApp connection...[0m
+[0m[32m[+] Accepted xApp connection from ('192.168.71.185', 51751)[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 28 bytes[0m
+[0m[*] ProcedureCode: 0x10[0m
+[0m[93m[DEBUG] Message Type: E42RICsubscriptionDelete[0m
+[0m[*] ProcedureCode: 0x10[0m
+[0m[36m[*] Processing E42RICsubscriptionDelete message (28 bytes)[0m
+[0m[32mBefore decoding:
+00100018000003003e0002000b001d00050000010000000500020002[0m
+[0m[32mConverted to JSON:[0m
+[0m{
+  "initiatingMessage": {
+    "procedureCode": 16,
+    "criticality": "reject",
+    "value": {
+      "protocolIEs": [
+        {
+          "id": 62,
+          "criticality": "reject",
+          "value": 11
+        },
+        {
+          "id": 29,
+          "criticality": "reject",
+          "value": {
+            "ricRequestorID": 1,
+            "ricInstanceID": 0
+          }
+        },
+        {
+          "id": 5,
+          "criticality": "reject",
+          "value": 2
+        }
+      ]
+    }
+  }
+}[0m
+[0m[36m[*] Selected fuzzing strategy: asn1[0m
+[0m[36m[*] Found 0 potential ASN.1 encoded fields.[0m
+[0m[36m[*] ASN.1 fields: [][0m
+[0m[33m[!] No potential ASN.1 encoded fields found.[0m
+[0m[34m[*] No mutations applied to this message.[0m
+[0m[31m[!] Connection to RIC lost during send. Reconnecting...[0m
+[0m[31m[-] Error during xApp->RIC forwarding: [Errno 32] Broken pipe[0m
+[0m[31m[-] Connection broken: [Errno 32] Broken pipe[0m
+[0m[33m[*] Attempting to reconnect to RIC...
+[0m
+[0m[32m[+] Reconnected to RIC at 192.168.71.184:36422[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 0 bytes[0m
+[0m[93m[DEBUG] Message Type: None[0m
+[0m[36m[*] Processing None message (0 bytes)[0m
+[0m[32mBefore decoding:
+[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[36m[*] Session ended. Analyzing captured data...[0m
+[0m[33m[*] Generating state machine[0m
+[0m[32m[+] State machine generated successfully.[0m
+[0m[33m[*] Generating diff between current session and baseline Model[0m
+[0m[33m[*] Running wdmapper diff command with baseline State Machine...[0m
+[0m[32m[+] Diff generated successfully.[0m
+[0m[35m==================================================[0m
+[0m[35m            Cost Function Summary            [0m
+[0m[35m==================================================[0m
+[0m[DEBUG] Added states: 11[0m
+[0m[DEBUG] Removed states: 10[0m
+[0m[DEBUG] State changes: 21[0m
+[0m[DEBUG] Number of mutated fields: 1[0m
+[0m[COST] Session cost: 210.54[0m
+[0m[COST] State changes: 21[0m
+[0m[COST] Transitions: 41[0m
+[0m[32m[+] Session ID: 2025-06-06_14-00-26[0m
+[0m[35m==================================================[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[32m[+] xApp session cleanup completed[0m
+[0m[33m[*] Waiting for new xApp connection...[0m
+[0m[32m[+] Accepted xApp connection from ('192.168.71.185', 36518)[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[31m[!] Connection to RIC lost during send. Reconnecting...[0m
+[0m[31m[-] Error during xApp->RIC forwarding: [Errno 32] Broken pipe[0m
+[0m[31m[-] Connection broken: [Errno 32] Broken pipe[0m
+[0m[33m[*] Attempting to reconnect to RIC...
+[0m
+[0m[32m[+] Reconnected to RIC at 192.168.71.184:36422[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.23 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.21 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.18 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.10 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.07 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.05 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[31m[!] SCTP recv failed: [Errno 104] Connection reset by peer[0m
+[0m[31m[-] Error during RIC->xApp forwarding: [Errno 104] Connection reset by peer[0m
+[0m[31m[-] Exception in proxy_traffic loop: [Errno 104] Connection reset by peer[0m
+Traceback (most recent call last):
+[0m[0m  File "/media/p3rplex/data6/Backup_ubuntu22/oran-orchestration/asn1/client_server.py", line 1515, in proxy_traffic
+    fromaddr2, flags2, msg2, notif2 = self.ric_client.sctp_recv(65535)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0m[0m  File "/home/p3rplex/.local/lib/python3.12/site-packages/sctp.py", line 1239, in sctp_recv
+    (fromaddr, flags, msg, _notif) = _sctp.sctp_recv_msg(self._sk.fileno(), maxlen)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0m[0mConnectionResetError: [Errno 104] Connection reset by peer
+[0m[0m[33m[*] Attempting to reconnect to RIC...
+[0m
+[0m[31m[!] Reconnection to RIC failed: [Errno 111] Connection refused. Retrying in 3 seconds...[0m
+[0m[32m[+] Reconnected to RIC at 192.168.71.184:36422[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.12 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.11 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 809 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Response Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.14 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 809 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Response Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.10 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 0 bytes[0m
+[0m[93m[DEBUG] Response Type: None[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[36m[*] Session ended. Analyzing captured data...[0m
+[0m[33m[*] Generating state machine[0m
+[0m[32m[+] State machine generated successfully.[0m
+[0m[33m[*] Generating diff between current session and baseline Model[0m
+[0m[33m[*] Running wdmapper diff command with baseline State Machine...[0m
+[0m[32m[+] Diff generated successfully.[0m
+[0m[35m==================================================[0m
+[0m[35m            Cost Function Summary            [0m
+[0m[35m==================================================[0m
+[0m[DEBUG] Added states: 11[0m
+[0m[DEBUG] Removed states: 10[0m
+[0m[DEBUG] State changes: 21[0m
+[0m[DEBUG] Number of mutated fields: 1[0m
+[0m[COST] Session cost: 210.54[0m
+[0m[COST] State changes: 21[0m
+[0m[COST] Transitions: 41[0m
+[0m[32m[+] Session ID: 2025-06-06_14-00-26[0m
+[0m[35m==================================================[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[32m[+] xApp session cleanup completed[0m
+[0m[33m[*] Waiting for new xApp connection...[0m
+[0m[32m[+] Accepted xApp connection from ('192.168.71.185', 53945)[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[31m[!] Connection to RIC lost during send. Reconnecting...[0m
+[0m[31m[-] Error during xApp->RIC forwarding: [Errno 32] Broken pipe[0m
+[0m[31m[-] Connection broken: [Errno 32] Broken pipe[0m
+[0m[33m[*] Attempting to reconnect to RIC...
+[0m
+[0m[32m[+] Reconnected to RIC at 192.168.71.184:36422[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.28 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 2389 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Response Type: E42setup[0m
+[0m[96m[DEBUG] Overhead: 0.23 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 134 bytes[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[93m[DEBUG] Message Type: E42RICsubscription[0m
+[0m[*] ProcedureCode: 0xf[0m
+[0m[36m[*] Processing E42RICsubscription message (134 bytes)[0m
+[0m[32mBefore decoding:
+000f008081000005003e000200070003000c0499f9075000000e00200e00001d00050000010000000500020002001e005500030803e7000013004b4000004700010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7[0m
+[0m[32mConverted to JSON:[0m
+[0m{
+  "initiatingMessage": {
+    "procedureCode": 15,
+    "criticality": "reject",
+    "value": {
+      "protocolIEs": [
+        {
+          "id": 62,
+          "criticality": "reject",
+          "value": 7
+        },
+        {
+          "id": 3,
+          "criticality": "reject",
+          "value": {
+            "gNB": {
+              "global-gNB-ID": {
+                "plmn-id": "99f907",
+                "gnb-id": {
+                  "gnb-ID": {
+                    "value": "00000e00",
+                    "length": 32
+                  }
+                }
+              },
+              "gNB-CU-UP-ID": 3584
+            }
+          }
+        },
+        {
+          "id": 29,
+          "criticality": "reject",
+          "value": {
+            "ricRequestorID": 1,
+            "ricInstanceID": 0
+          }
+        },
+        {
+          "id": 5,
+          "criticality": "reject",
+          "value": 2
+        },
+        {
+          "id": 30,
+          "criticality": "reject",
+          "value": {
+            "ricEventTriggerDefinition": "0803e7",
+            "ricAction-ToBeSetup-List": [
+              {
+                "id": 19,
+                "criticality": "reject",
+                "value": {
+                  "ricActionID": 0,
+                  "ricActionType": "report",
+                  "ricActionDefinition": "00010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}[0m
+[0m[36m[*] Selected fuzzing strategy: json[0m
+[0m[36m[DEBUG] Selected JSON fields to mutate: ['id'][0m
+[0m[DEBUG] Processing ID field: id[0m
+[0m[36m[*] Found protocol IE match for Cause in constraints[0m
+[0m[36m[DEBUG] Generated new value for id: 63[0m
+[0m[31m[+] Mutated initiatingMessage.value.protocolIEs[1].id: 3 -> 63[0m
+[0m[32m[*] Successfully mutated 1 JSON fields[0m
+[0m[32m[+] Successfully fuzzed message (241 bytes)[0m
+[0m[32m[+] Encoded again:
+000f0080ec000005003e00020007003f00777b22674e42223a7b22676c6f62616c2d674e422d4944223a7b22706c6d6e2d6964223a22393966393037222c22676e622d6964223a7b22676e622d4944223a7b2276616c7565223a223030303030653030222c226c656e677468223a33327d7d7d2c22674e422d43552d55502d4944223a333538347d7d001d00050000010000000500020002001e005500030803e7000013004b4000004700010480420000003840010004010100000101204452422e50646370536475566f6c756d65444c0120000001204452422e50646370536475566f6c756d65554c012000004003e7[0m
+[0m[96m[DEBUG] Overhead: 27.15 ms[0m
+[0m[33m--------------------------------------------------[0m
+[0m[94m[RX] [xApp <-- RIC][0m
+[0m[96m[DEBUG][39mLength: 0 bytes[0m
+[0m[93m[DEBUG] Response Type: None[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[36m[*] Session ended. Analyzing captured data...[0m
+[0m[33m[*] Generating state machine[0m
+[0m[32m[+] State machine generated successfully.[0m
+[0m[33m[*] Generating diff between current session and baseline Model[0m
+[0m[33m[*] Running wdmapper diff command with baseline State Machine...[0m
+[0m[32m[+] Diff generated successfully.[0m
+[0m[35m==================================================[0m
+[0m[35m            Cost Function Summary            [0m
+[0m[35m==================================================[0m
+[0m[DEBUG] Added states: 11[0m
+[0m[DEBUG] Removed states: 10[0m
+[0m[DEBUG] State changes: 21[0m
+[0m[DEBUG] Number of mutated fields: 1[0m
+[0m[COST] Session cost: 210.54[0m
+[0m[COST] State changes: 21[0m
+[0m[COST] Transitions: 41[0m
+[0m[32m[+] Session ID: 2025-06-06_14-00-26[0m
+[0m[35m==================================================[0m
+[0m[33m[*] Cleaning up xApp connection.[0m
+[0m[32m[+] xApp session cleanup completed[0m
+[0m[33m[*] Waiting for new xApp connection...[0m
+[0m[32m[+] Accepted xApp connection from ('192.168.71.185', 48444)[0m
+[0m[32m[TX] [xApp --> RIC][0m
+[0m[96m[DEBUG][39mLength: 492 bytes[0m
+[0m[*] ProcedureCode: 0xe[0m
+[0m[93m[DEBUG] Message Type: E42setup[0m
+[0m[31m[!] Connection to RIC lost during send. Reconnecting...[0m
+[0m[31m[-] Error during xApp->RIC forwarding: [Errno 32] Broken pipe[0m
+[0m[31m[-] Connection broken: [Errno 32] Broken pipe[0m
+[0m[33m[*] Attempting to reconnect to RIC...
+[0m

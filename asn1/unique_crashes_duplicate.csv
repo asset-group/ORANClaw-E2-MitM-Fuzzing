@@ -1,0 +1,4 @@
+Timestamp,Crash Line,Source File,Total Count
+2025-07-08 11:38:22,"nearRT-RIC: /flexric/src/ric/iApp/map_ric_id.c:227: find_ric_req_map_ric_id: Assertion `it != end && ""Not found xApp RIC ID ""' failed.",oran-orchestration-nearRT-RIC-1_20250708_113822_20250708_113749.log,190
+2025-07-08 11:39:11,"nearRT-RIC: /flexric/src/util/alg_ds/ds/assoc_container/assoc_rb_tree.c:457: assoc_rb_tree_extract: Assertion `z_node != tree->dummy && ""Trying to extract a key not found in the tree""' failed.",oran-orchestration-nearRT-RIC-1_20250708_113911_20250708_113838.log,111
+2025-07-08 12:43:30,"nearRT-RIC: /flexric/src/ric/map_e2_node_sockaddr.c:154: find_map_e2_node_sad: Assertion `it != end && ""E2 Node not found in the tree""' failed.",oran-orchestration-nearRT-RIC-1_20250708_124330_20250708_124305.log,7

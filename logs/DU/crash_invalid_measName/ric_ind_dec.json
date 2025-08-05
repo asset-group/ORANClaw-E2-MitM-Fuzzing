@@ -1,0 +1,28 @@
+{
+   "initiatingMessage":{
+      "procedureCode":16,
+      "criticality":"reject",
+      "value":{
+         "protocolIEs":[
+            {
+               "id":62,
+               "criticality":"reject",
+               "value":7
+            },
+            {
+               "id":29,
+               "criticality":"reject",
+               "value":{
+                  "ricRequestorID":2,
+                  "ricInstanceID":0
+               }
+            },
+            {
+               "id":5,
+               "criticality":"reject",
+               "value":2
+            }
+         ]
+      }
+   }
+}

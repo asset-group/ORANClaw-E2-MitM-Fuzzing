@@ -1,0 +1,62 @@
+include:
+  # Inclusion of core network
+  - core-open5gs.yaml
+  # Inclusion of OAI gNB
+  - gnb-oai.yaml
+
+services:
+  # ----------------- RIC Agent (E2 Interface) -------------------
+  nearRT-RIC: &nearRT-RIC
+    profiles: [gnb, gnb-rfsim]
+    image: registry.gitlab.com/anonymous-org/software/oran-orchestration:flexric
+    restart: unless-stopped
+    tty: true
+    privileged: true
+    command: /bin/bash -c 
+            "cp -r /usr/local/lib/flexric/ /flexric/libs 
+            && ./build/examples/ric/nearRT-RIC -c ./configs/flexric.conf"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: flexric
+      args:
+        KPM_VERSION: KPM_V2_03
+        DE2AP_VERSION: E2AP_V2
+        FLEXRIC_COMMIT: dev
+    security_opt:
+      - seccomp:unconfined #optional
+    volumes:
+      - ./configs:/flexric/configs
+      - ./libs:/flexric/libs
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.184
+  
+  nearRT-RIC-dev:
+    <<: *nearRT-RIC
+    profiles: [dev]
+    command: /bin/bash -c 
+            "cp -r /usr/local/lib/flexric/ /flexric/libs 
+            && sleep infinity"
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.185
+
+  xapp-kpm-monitor:
+    profiles: [xapp]
+    image: registry.gitlab.com/anonymous-org/software/oran-orchestration:flexric
+    restart: unless-stopped
+    tty: true
+    privileged: true
+    command: /bin/bash -c 
+            "./build/examples/xApp/c/monitor/xapp_kpm_moni 
+            -c ./configs/xapp.conf 
+            && sleep infinity"
+    security_opt:
+      - seccomp:unconfined #optional
+    volumes:
+      - ./configs:/flexric/configs
+    networks:
+      core_net:
+        ipv4_address: 192.168.71.185
+
