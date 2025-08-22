@@ -695,7 +695,7 @@ class JsonFuzzer:
                     print(Fore.RED + f"[!] Error details: {type(e).__name__}: {str(e)}")
                     # Optional: print more debug info
                     import traceback
-                    print(Fore.RED + f"[!] Traceback: {traceback.format_exc()}")
+                    #print(Fore.RED + f"[!] Traceback: {traceback.format_exc()}")
         
         return modified_json, mutations
 
@@ -1165,147 +1165,179 @@ class SCTPMITMProxy:
             os.makedirs(self.fuzzing_logs)
             print(Fore.GREEN + f"[+] Created state machines diff folder: {self.state_machines_diff_folder}")
         
-        
-#     def start(self):
-#             try:
-#                 self._start_tshark_capture()
-#                 #print(Fore.LIGHTMAGENTA_EX + f"[Genetic Algorithm] Enabled\nCurrent strategy weights: {self.strategy_optimizer.get_best_weights()}")
-
-#                 # RIC connection is stable
-# # Connect to RIC with retry if disconnected
-#                 while True:
-#                     try:
-#                         costs = []
-#                         for i, individual in enumerate(self.strategy_optimizer.population):
-#                             print(f"[GA] Running session for individual {i+1}/{len(self.strategy_optimizer.population)}")
-#                             cost = self.run_session_with_weights(individual)
-#                             costs.append(cost)
-                        
-#                         # Update population with all costs at once
-#                         self.strategy_optimizer.update(costs)
-#                         #print(f"[GA] Updated population. Best weights: {self.strategy_optimizer.get_best_weights()}")
-#                         self.ric_client = sctp.sctpsocket_tcp(socket.AF_INET)
-#                         self.ric_client.bind((self.mitm, 0))  
-#                         self.ric_client.connect((self.ric_ip, self.port))
-#                         print(Fore.GREEN + f"[+] Connected to RIC at {self.ric_ip}:{self.port}")
-#                         break
-#                     except Exception as e:
-#                         print(Fore.RED + f"[!] Failed to connect to RIC: {e}. Retrying in 3 seconds...")
-#                         time.sleep(2)
-
-#                 # Set up SCTP server to accept xApp connections
-#                 self.server = sctp.sctpsocket_tcp(socket.AF_INET)
-#                 self.server.bind((self.mitm, self.port))
-#                 self.server.listen(1)
-#                 print(Fore.YELLOW + f"[*] Listening for xApp on {self.mitm}:{self.port}...")
-#                 print(Fore.CYAN + f"[*] Fuzzing enabled: {self.fuzz_enabled} (Probability: {self.fuzz_probability*100}%)")
-
-#                 # Loop to accept new xApp connections
-#                 while True:
-#                     print(Fore.YELLOW + "[*] Waiting for new xApp connection...")
-#                     self.conn_from_xapp, addr = self.server.accept()
-#                     print(Fore.GREEN + f"[+] Accepted xApp connection from {addr}")
-                    
-#                     try:
-#                     # Handle the traffic in its own function
-#                         self.proxy_traffic()
-#                     except Exception as e:
-#                         print(Fore.RED + f"[-] Proxy error: {e}")
-#                         import traceback
-                        
-#                     time.sleep(2)
-#                     # Clean up and wait for new xApp connection
-#                     self.cleanup_xapp()
     def start(self):
-            try:
-                self._start_tshark_capture()
-                
-                # Connect to RIC (keep existing connection logic)
-                while True:
-                    try:
-                        self.ric_client = sctp.sctpsocket_tcp(socket.AF_INET)
-                        self.ric_client.bind((self.mitm, 0))  
-                        self.ric_client.connect((self.ric_ip, self.port))
-                        print(Fore.GREEN + f"[+] Connected to RIC at {self.ric_ip}:{self.port}")
-                        break
-                    except Exception as e:
-                        print(Fore.RED + f"[!] Failed to connect to RIC: {e}. Retrying in 3 seconds...")
-                        time.sleep(2)
+        try:
+            # Initial setup
+            self._start_tshark_capture()
+            print(Fore.LIGHTMAGENTA_EX + f"[Genetic Algorithm] Enabled")
 
-                # Set up SCTP server (keep existing server setup)
-                self.server = sctp.sctpsocket_tcp(socket.AF_INET)
-                self.server.bind((self.mitm, self.port))
-                self.server.listen(1)
-                print(Fore.YELLOW + f"[*] Listening for xApp on {self.mitm}:{self.port}...")
-
-                # MAIN ALGORITHM LOOP - Population-based evolution
-                while True:
-                    print(Fore.YELLOW + "[*] Waiting for new xApp connection...")
-                    self.conn_from_xapp, addr = self.server.accept()
-                    print(Fore.GREEN + f"[+] Accepted xApp connection from {addr}")
-                    
-                    # Run session for each individual in population (ALGORITHM REQUIREMENT)
-                    costs = []
-                    for i, individual in enumerate(self.strategy_optimizer.population):
-                        print(Fore.MAGENTA + f"[GA] Running session {i+1}/{len(self.strategy_optimizer.population)} with weights: {[round(w,2) for w in individual]}")
-                        
-                        # Set weights for this session
-                        self.current_session_weights = individual
-                        
-                        try:
-                            # Run session with current individual's weights
-                            self.proxy_traffic()
-                            
-                            # Calculate cost after session ends
-                            if self.session_file and os.path.exists(self.session_file):
-                                self._stop_tshark_capture()
-                                self._generate_state_machine()
-                                self._generate_diff(self.session_file)
-                                
-                                cost_result = self.calculate_fuzzing_cost(
-                                    max_mutations=self.max_mutations,
-                                    timestamp=self.timestamp,
-                                )
-                                costs.append(cost_result["total_cost"])
-                                print(f"[GA] Session {i+1} cost: {cost_result['total_cost']:.2f}")
-                                
-                                # Start new capture for next session
-                                self._start_tshark_capture()
-                            else:
-                                costs.append(0.0)  # Default cost if no session data
-                                
-                        except Exception as e:
-                            print(Fore.RED + f"[-] Session {i+1} error: {e}")
-                            costs.append(0.0)  # Default cost on error
-                    
-                    # Update population with all costs (ALGORITHM REQUIREMENT)
-                    self.strategy_optimizer.update(costs)
-                    print(Fore.CYAN + f"[GA] Updated population. Best weights: {self.strategy_optimizer.get_best_weights()}")
-                    
-                    # Clean up and wait for new xApp connection
-                    self.cleanup_xapp()
-
-
-        
-            except KeyboardInterrupt:
-                print(Fore.RED + "\n[!] KeyboardInterrupt: Shutting down proxy.")
+            # Connect to RIC with retry
+            while True:
                 try:
-                    if self.tshark_process and self.tshark_process.pid:
-                        os.killpg(os.getpgid(self.tshark_process.pid), signal.SIGTERM)
-                        subprocess.run(['pkill', '-9', 'tshark'])
-                        self.tshark_process = None
-
+                    self.ric_client = sctp.sctpsocket_tcp(socket.AF_INET)
+                    self.ric_client.bind((self.mitm, 0))  
+                    self.ric_client.connect((self.ric_ip, self.port))
+                    print(Fore.GREEN + f"[+] Connected to RIC at {self.ric_ip}:{self.port}")
+                    break
                 except Exception as e:
-                    print(Fore.YELLOW + f"[!] Error terminating tshark: {e}")
+                    print(Fore.RED + f"[!] Failed to connect to RIC: {e}. Retrying in 3 seconds...")
+                    time.sleep(2)
 
-                self.print_statistics()
-            except Exception as e:
-                print(Fore.RED + f"[-] Unhandled error in start(): {e}")
+            # Set up SCTP server to accept xApp connections
+            self.server = sctp.sctpsocket_tcp(socket.AF_INET)
+            self.server.bind((self.mitm, self.port))
+            self.server.listen(1)
+            print(Fore.YELLOW + f"[*] Listening for xApp on {self.mitm}:{self.port}...")
+            print(Fore.CYAN + f"[*] Fuzzing enabled: {self.fuzz_enabled} (Probability: {self.fuzz_probability*100}%)")
+
+            # MAIN ALGORITHM LOOP - Sequential individual sessions
+            generation = 1
+            individual_index = 0  # Current individual in population
+            costs = []           # Collect costs for current generation
+            
+            while True:
+                # Display current status
+                current_weights = self.strategy_optimizer.population[individual_index]
+                print(Fore.YELLOW + "[*] Waiting for new xApp connection...")
+                #print(Fore.MAGENTA + f"[GA] Individual {individual_index + 1}/{self.strategy_optimizer.POPULATION_SIZE}")
+                #print(Fore.MAGENTA + f"[GA] Weights: {[round(w,2) for w in current_weights]} (ASN.1, JSON, Both)")
                 
-            finally:
-                self.close_all()
-                sys.exit(0)
+                # Wait for xApp connection
+                self.conn_from_xapp, addr = self.server.accept()
+                print(Fore.GREEN + f"[+] Accepted xApp connection from {addr}")
+                
+                # Set weights for this individual's session
+                self.current_session_weights = current_weights
+                
+                session_cost = 0.0
+                try:
+                    # Run ONE session for this individual
+                    #print(Fore.CYAN + f"[*] Starting session for individual {individual_index + 1}...")
+                    self.proxy_traffic()
+                    #print(Fore.CYAN + f"[*] Session ended for individual {individual_index + 1}")
+                    
+                    # Calculate cost for this session
+                    if self.session_file and os.path.exists(self.session_file):
+                        # Stop current capture
+                        self._stop_tshark_capture()
+                        
+                        # Only analyze if we have actual data
+                        if os.path.getsize(self.session_file) > 0:
+                            #print(Fore.CYAN + f"[*] Analyzing session data for individual {individual_index + 1}...")
+                            #time.sleep(1)
+                            
+                            # Generate the state machine for this session
+                            self._generate_state_machine()
+                            
+                            # Generate the diff between current session and baseline
+                            self._generate_diff(self.session_file)
+                            
+                            # Calculate and store cost
+                            cost_result = self.calculate_fuzzing_cost(
+                                max_mutations=self.max_mutations,
+                                timestamp=self.timestamp,
+                            )
+                            session_cost = cost_result["total_cost"]
+                            self.cost_history.append(cost_result)
+                            
+                            #print(f"[COST] Individual {individual_index + 1} cost: {session_cost:.2f}")
+                            print(f"[COST] Session cost: {session_cost:.2f}")
+                            print(f"[COST] State changes: {cost_result['state_changes']}")
+                            print(f"[COST] Transitions: {cost_result['total_transitions']}")
+                            print(Fore.GREEN + f"[+] Session ID: {self.timestamp}")
+                        else:
+                            print(Fore.YELLOW + "[*] Session file is empty, using default cost")
+                            session_cost = 0.0
+                    else:
+                        print(Fore.YELLOW + "[*] No session file found, using default cost")
+                        session_cost = 0.0
+                        
+                except Exception as e:
+                    print(Fore.RED + f"[-] Session error for individual {individual_index + 1}: {e}")
+                    session_cost = 0.0
+                
+                # Store cost for this individual
+                costs.append(session_cost)
+                #print(Fore.CYAN + f"[GA] Individual {individual_index + 1} final cost: {session_cost:.2f}")
+                
+                # Clean up and prepare for next session
+                self.cleanup_xapp()
+                
+                # Move to next individual
+                individual_index += 1
+                
+                # Check if we've completed all individuals in this generation
+                if individual_index >= self.strategy_optimizer.POPULATION_SIZE:
+                    print(Fore.MAGENTA + "=" * 70)
+                    print(Fore.MAGENTA + f"            GENERATION {generation} COMPLETE            ")
+                    print(Fore.MAGENTA + "=" * 70)
+                    
+                    # Display all costs for this generation
+                    print(Fore.CYAN + f"[GA] Generation {generation} costs:")
+                    for i, cost in enumerate(costs):
+                        weights = self.strategy_optimizer.population[i]
+                        #rint(Fore.CYAN + f"  Individual {i+1}: Cost={cost:.2f}, Weights={[round(w,2) for w in weights]}")
+                    
+                    # Update population with all costs from this generation
+                    #print(Fore.CYAN + f"[GA] Evolving population based on {len(costs)} individual costs...")
+                    self.strategy_optimizer.update(costs)
+                    
+                    # Display new generation info
+                    best_weights = self.strategy_optimizer.get_best_weights()
+                    #print(Fore.GREEN + f"[GA] New population evolved!")
+                    #print(Fore.GREEN + f"[GA] Best weights: {[round(w,2) for w in best_weights]} (ASN.1, JSON, Both)")
+                    
+                    # Display all individuals in new population
+                    #print(Fore.CYAN + f"[GA] New generation {generation + 1} population:")
+                    #for i, individual in enumerate(self.strategy_optimizer.population):
+                        #print(Fore.CYAN + f"  Individual {i+1}: {[round(w,2) for w in individual]}")
+                    
+                    # Reset for next generation
+                    generation += 1
+                    individual_index = 0
+                    costs = []
+                    
+                    #print(Fore.MAGENTA + f"[GA] Starting generation {generation}...")
+                    print(Fore.MAGENTA + "=" * 70)
+                    
+                    # Brief pause before next generation
+                    time.sleep(2)
 
+        except KeyboardInterrupt:
+            print(Fore.RED + "\n[!] KeyboardInterrupt: Shutting down proxy.")
+            try:
+                if self.tshark_process and self.tshark_process.pid:
+                    os.killpg(os.getpgid(self.tshark_process.pid), signal.SIGTERM)
+                    subprocess.run(['pkill', '-9', 'tshark'])
+                    self.tshark_process = None
+            except Exception as e:
+                print(Fore.YELLOW + f"[!] Error terminating tshark: {e}")
+
+            self.print_statistics()
+            
+            # # Print final genetic algorithm stats
+            # if costs:  # If we have some costs from current generation
+            #     print(Fore.MAGENTA + "\n" + "=" * 50)
+            #     print(Fore.MAGENTA + "        GENETIC ALGORITHM FINAL STATS        ")
+            #     print(Fore.MAGENTA + "=" * 50)
+            #     print(f"Completed generations: {generation - 1}")
+            #     print(f"Current generation progress: {len(costs)}/{self.strategy_optimizer.POPULATION_SIZE}")
+            #     if self.cost_history:
+            #         avg_cost = sum(c["total_cost"] for c in self.cost_history) / len(self.cost_history)
+            #         max_cost = max(c["total_cost"] for c in self.cost_history)
+            #         print(f"Average session cost: {avg_cost:.2f}")
+            #         print(f"Best session cost: {max_cost:.2f}")
+            #     print(f"Final best weights: {[round(w,2) for w in self.strategy_optimizer.get_best_weights()]}")
+            #     print(Fore.MAGENTA + "=" * 50)
+                
+        except Exception as e:
+            print(Fore.RED + f"[-] Unhandled error in start(): {e}")
+            #import traceback
+            #print(Fore.RED + f"Traceback: {traceback.format_exc()}")
+            
+        finally:
+            self.close_all()
+            sys.exit(0)
 
     def cleanup_xapp(self):
         try:
@@ -1314,6 +1346,7 @@ class SCTPMITMProxy:
                 
                 # Stop current capture before generating state machine
                 self._stop_tshark_capture()
+                
                 # Only generate state machine and diff if we actually captured data
                 if self.session_file and os.path.exists(self.session_file):
                     # Check if the file has actual content (not just empty)
@@ -1326,37 +1359,18 @@ class SCTPMITMProxy:
                         # Generate the diff between current session and baseline
                         self._generate_diff(self.session_file)
                         
-                        # Calculate and display cost
-                        cost_result = self.calculate_fuzzing_cost(
-                            max_mutations=self.max_mutations,
-                            timestamp=self.timestamp,
-                        )
-                        self.cost_history.append(cost_result)
-                        
-                        ## ENABLE GENETIC OPTIMIZER
-                        self.strategy_optimizer.update(cost_result["total_cost"])
-
-                        print(f"[COST] Session cost: {cost_result['total_cost']:.2f}")
-                        print(f"[COST] State changes: {cost_result['state_changes']}")
-                        print(f"[COST] Transitions: {cost_result['total_transitions']}")
-                        print(Fore.GREEN + f"[+] Session ID: {self.timestamp}")
-                                                ## ENABLE GENETIC OPTIMIZER
-                        print(Fore.CYAN + f"[*] Updating strategy optimizer with cost: {cost_result['total_cost']:.2f}")
-                        #elf.strategy_optimizer.update(cost_result["total_cost"])
-                        print(Fore.CYAN + f"[*] Current best weights: {self.strategy_optimizer.get_best_weights()}")
-                        print(Fore.MAGENTA + "=" * 50)
+                        # DON'T calculate cost here - it will be done in main loop
+                        #print(Fore.GREEN + f"[+] Session analysis complete. Session ID: {self.timestamp}")
                     else:
                         print(Fore.YELLOW + "[*] Session file is empty, skipping analysis")
                 else:
                     print(Fore.YELLOW + "[*] No session file found, skipping analysis")
-                    #         try:
+
                 try:
                     if self.conn_from_xapp:
-                        print(Fore.YELLOW + "[*] Cleaning up xApp connection.")
                         self.conn_from_xapp.close()
                         self.conn_from_xapp = None
-                        # Stop current capture and start new one for next session
-                        self._stop_tshark_capture()
+                        # Start new capture for next session
                         self._start_tshark_capture()
                 except Exception as e:
                     print(Fore.RED + f"[-] Error during xApp cleanup: {e}")
@@ -1377,7 +1391,7 @@ class SCTPMITMProxy:
                     self.conn_from_xapp = None
             except:
                 pass
-
+        
     def close_all(self):
         try:
             self._stop_tshark_capture()
@@ -1568,8 +1582,8 @@ class SCTPMITMProxy:
                                         print(Fore.GREEN + f"[+] Sent packet normally")
                                     
                                         end_time = time.time()
-                                        conversion_time = (end_time - start_time) * 1000  # milliseconds
-                                    print(Fore.LIGHTCYAN_EX + f"[DEBUG] Overhead: {conversion_time:.2f} ms")
+                                        #conversion_time = (end_time - start_time) * 1000  # milliseconds
+                                    #print(Fore.LIGHTCYAN_EX + f"[DEBUG] Overhead: {conversion_time:.2f} ms")
                                 except BrokenPipeError:
                                     print(Fore.RED + f"[!] Connection to RIC lost during send. Reconnecting...")
                                     raise  # Re-raise to trigger the outer exception handler for reconnection
@@ -1902,7 +1916,7 @@ class SCTPMITMProxy:
                 with open(transitions_file, 'r') as f:
                     transitions_data = json.load(f)
                 total_transitions = transitions_data.get("total_transitions", 0)
-                print(f"[DEBUG] Total transitions extracted: {total_transitions}")
+                #print(f"[DEBUG] Total transitions extracted: {total_transitions}")
             except FileNotFoundError:
                 print(f"[WARNING] Transitions file not found: {transitions_file}, using default values")
                 transitions_data = {"total_transitions": 0}
