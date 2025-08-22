@@ -8,7 +8,7 @@ services:
   # ----------------- RIC Agent (E2 Interface) -------------------
   nearRT-RIC: &nearRT-RIC
     profiles: [gnb, gnb-rfsim]
-    image: registry.gitlab.com/anonymous-org/software/oran-orchestration:flexric
+    image: researchanon2025/flexric-components:v1.0
     restart: unless-stopped
     tty: true
     privileged: true
@@ -44,7 +44,7 @@ services:
 
   xapp-kpm-monitor:
     profiles: [xapp]
-    image: registry.gitlab.com/anonymous-org/software/oran-orchestration:flexric
+    image: researchanon2025/flexric-components:v1.0
     restart: unless-stopped
     tty: true
     privileged: true
@@ -59,4 +59,3 @@ services:
     networks:
       core_net:
         ipv4_address: 192.168.71.185
-
