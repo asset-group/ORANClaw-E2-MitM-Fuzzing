@@ -1,7 +1,46 @@
-# O-RANClaw-xApp-Based-E2-MitM-Fuzzing
+# O-RANClaw: Disrupting E2 Nodes via MitM Fuzzing
+![logo](./docs/Logo.png)
 
 
-![oran-containers-logo](./docs/oran-containers.svg)
+**O-RANClaw** is a structure- and semantic-aware, man-in-the-middle (MitM) fuzzing framework that targets the **E2 interface** in O-RAN. Positioned between xApps and the RIC, O-RANClaw mutates, and duplicates E2 messages to explore and disrupt gNB behavior.  
+
+It is specifically designed to:
+- Take into account ASN.1 structural and semantic constraints when mutating packets.
+- Systematically explore state transitions and optimize mutation strategies based on coverage.
+- Evaluate both the RIC and gNB implementations by simulating xApp manipulations.
+
+In our experiments with **FlexRIC**, **OpenAirInterface**, and **ns-3**, O-RANClaw discovered **65 unique bugs** (7 CVEs already assigned):  
+- 28 in FlexRIC  
+- 37 in base station implementations (OpenAirInterface and ns-3 simulator)  
+
+O-RANClaw demonstrates that structure- and semantic-aware fuzzing of the E2 interface is highly effective at revealing vulnerabilities in O-RAN components.
+
+
+
+![oran-containers-logo](./docs/Design.jpg)
+
+## Threat Model
+
+O-RANClaw models the attack scenario where:
+1. A malicious or compromised xApp communicates with the RIC.
+2. O-RANClaw intercepts E2 messages at the RIC–xApp boundary.
+3. Mutated or replayed messages disrupt the gNB’s control or data plane.
+
+---
+
+## Repository Structure
+
+This repository provides am example to deploy :
+1. **O-RANClaw Core** – The MitM interception and mutation engine for E2 messages.
+2. **Containerized Testbed** – A reproducible Docker Compose deployment of the full O-RAN ecosystem for fuzzing experiments:
+   - **5G Core Network** (Open5GS)
+   - **gNB (DU, CU-CP, CU-UP)** via OpenAirInterface
+   - **UE simulator** for RF simulation
+   - **Near-Realtime RIC** (FlexRIC)
+   - Example xApps for monitoring/control
+
+The deployment scripts allow anyone to **reproduce the experiments** described in our paper.
+
 
 This repository provides a containerized deployment solution for Open Radio Access Network (ORAN) using Docker Compose. The `docker-compose.yaml` file orchestrates the deployment of all the necessary software components, including the core network, gNB (DU, CU-CP, CU-UP), UE simulator, and near-realtime RIC agent:
 
@@ -25,6 +64,10 @@ This repository provides a containerized deployment solution for Open Radio Acce
 
 ```python
 ./requirements.sh
+
+# Pull the components for reproduction
+docker pull researchanon2025/oai-components:v1.0
+docker pull researchanon2025/flexric-components:v1.0
 ```
 
 
@@ -137,3 +180,42 @@ xapp-kpm-monitor-1  | RRU.PrbTotDl = 354196 [PRBs]
 xapp-kpm-monitor-1  | RRU.PrbTotUl = 30572 [PRBs]
 ```
 
+
+#### Image Information
+This deployment uses the following Docker images for reproducibility:
+
+- OAI Components: researchanon2025/oai-components:v1.0 (gNB, UE simulation)
+- FlexRIC Components: researchanon2025/flexric-components:v1.0 (Near-RT RIC, xApps)
+- Core Network: Standard Open5GS images from Docker Hub
+
+These images contain all necessary components built from:
+
+* OpenAirInterface (OAI) develop branch
+* FlexRIC framework for O-RAN RIC functionality
+
+
+#### System Requirements
+
+RAM: Minimum 8GB, Recommended 16GB
+CPU: Minimum 4 cores, Recommended 8+ cores
+Storage: At least 20GB free space for images and containers
+OS: Linux (tested on Ubuntu 20.04/22.04)
+
+#### Logs and Debugging
+
+``` bash
+# Check core network logs
+docker compose logs -f amf
+
+# Check gNB logs
+docker compose logs -f oai-cu-cp
+docker compose logs -f oai-cu-up
+docker compose logs -f oai-cu-du
+
+# Check UE logs
+docker compose logs -f oai-ue-rfsimu-1
+
+# Check RIC logs
+docker compose logs -f nearRT-RIC
+
+```
