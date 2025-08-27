@@ -1,6 +1,6 @@
 # O-RANClaw: Disrupting E2 Nodes via MitM Fuzzing
 
-![oran-containers-logo](.//docs/Logo1.jpeg)
+![oran-containers-logo](./docs/Logo1.jpeg)
 
 
 **O-RANClaw** is a structure- and semantic-aware, man-in-the-middle (MitM) fuzzing framework that targets the **E2 interface** in O-RAN. Positioned between xApps and the RIC, O-RANClaw mutates, and duplicates E2 messages to explore and disrupt gNB behavior.  
