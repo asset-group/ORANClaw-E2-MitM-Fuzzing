@@ -135,16 +135,16 @@ int main (int argc, char** argv)
       }
    }
    else {
-      printf ("Encoding failed\n");
+      //printf ("Encoding failed\n");
       encodeBuffer.printErrorInfo ();
       return (-1);
    }
 
    // Write the encoded message out to the output file
    if (encodeBuffer.write (json_output) < 0) {
-      //printf ("Error writing JSON document to file '%s'\n", json_output);
+     // printf ("Error writing JSON document to file '%s'\n", json_output);
       return -1;
-   }
+   } 
 
    return 0;
 }

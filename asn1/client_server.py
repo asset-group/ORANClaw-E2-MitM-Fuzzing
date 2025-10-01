@@ -14,7 +14,7 @@ from scapy.utils import PcapWriter, PcapNgWriter
 init(autoreset=True)
 
 if _sctp.getconstant("IPPROTO_SCTP") != 132:
-	raise(Exception("getconstant failed"))
+    raise(Exception("getconstant failed"))
 MSG_EOF = _sctp.getconstant("MSG_EOF")
 
 # Constants
@@ -125,42 +125,97 @@ def redirect_stdout_to_file(filepath):
             log_file.close()
 
 
-class GeneticFuzzerOptimizer:
-    def __init__(self, population_size=6,
-                 mutation_rate=0.3): # 0.3 Balanced search and stability
+# class GeneticFuzzerOptimizer:
+#     def __init__(self, population_size=50,
+#                  mutation_rate=0.3):
 
+#         self.POPULATION_SIZE = population_size
+#         self.MUTATION_RATE = mutation_rate
+#         self.population = [self._random_individual() for _ in range(self.POPULATION_SIZE)]
+#         self.fitness_scores = [0] * self.POPULATION_SIZE
+
+#     def _random_individual(self):
+#         weights = [random.random() for _ in range(3)] #
+#         total = sum(weights)
+#         return [w / total for w in weights]  # Normalize to sum to 1
+
+#     def _fitness(self, cost):
+#         # Fitness is the cost directly (higher is better)
+#         return cost
+
+#     def _crossover(self, parent1, parent2):
+#         child = [(a + b) / 2 for a, b in zip(parent1, parent2)]
+#         total = sum(child)
+#         return [w / total for w in child]  # Normalize
+
+#     def _mutate(self, individual):
+#         idx = random.randint(0, 2)
+#         change = random.uniform(-0.2, 0.2)
+#         individual[idx] = max(0.01, individual[idx] + change)
+#         total = sum(individual)
+#         return [w / total for w in individual]
+
+#     def update(self, cost):
+#         #self.fitness_scores = [self._fitness(cost) for _ in self.population]
+#         for i, cost in enumerate(cost):
+#             self.fitness_scores[i] = self._fitness(cost)
+#         # Select top 2 individuals
+#         top = sorted(zip(self.population, self.fitness_scores), key=lambda x: x[1], reverse=True)[:2]
+#         best1, best2 = top[0][0], top[1][0]
+
+#         new_population = [best1, best2]
+
+#         # Generate new offspring
+#         while len(new_population) < self.POPULATION_SIZE:
+#             child = self._crossover(best1, best2)
+#             if random.random() < self.MUTATION_RATE:
+#                 child = self._mutate(child)
+#             new_population.append(child)
+
+#         self.population = new_population
+
+#     def get_best_weights(self):
+#         best = self.population[0]
+#         return [round(w, 2) for w in best]
+#         #return self.population[0],2
+
+class GeneticFuzzerOptimizer:
+    def __init__(self, population_size=5,
+                mutation_rate=0.8):  # Increased from 0.3
         self.POPULATION_SIZE = population_size
         self.MUTATION_RATE = mutation_rate
         self.population = [self._random_individual() for _ in range(self.POPULATION_SIZE)]
         self.fitness_scores = [0] * self.POPULATION_SIZE
 
     def _random_individual(self):
-        weights = [random.random() for _ in range(3)] # random weights for 3 fields
+        weights = [random.random() for _ in range(3)]
         total = sum(weights)
-        return [w / total for w in weights]  # Normalize to sum to 1
+        return [w / total for w in weights]
 
     def _fitness(self, cost):
-        # Fitness is the cost directly (higher is better)
         return cost
 
     def _crossover(self, parent1, parent2):
         child = [(a + b) / 2 for a, b in zip(parent1, parent2)]
         total = sum(child)
-        return [w / total for w in child]  # Normalize
+        return [w / total for w in child]
 
     def _mutate(self, individual):
+        # CRITICAL: Create a copy to avoid modifying original
+        mutated = individual.copy()
         idx = random.randint(0, 2)
         change = random.uniform(-0.2, 0.2)
-        individual[idx] = max(0.01, individual[idx] + change)
-        total = sum(individual)
-        return [w / total for w in individual]
+        mutated[idx] = max(0.01, mutated[idx] + change)
+        total = sum(mutated)
+        return [w / total for w in mutated]
 
     def update(self, cost):
-        #self.fitness_scores = [self._fitness(cost) for _ in self.population]
-        for i, cost in enumerate(cost):
-            self.fitness_scores[i] = self._fitness(cost)
+        for i, c in enumerate(cost):
+            self.fitness_scores[i] = self._fitness(c)
+        
         # Select top 2 individuals
-        top = sorted(zip(self.population, self.fitness_scores), key=lambda x: x[1], reverse=True)[:2]
+        top = sorted(zip(self.population, self.fitness_scores), 
+                    key=lambda x: x[1], reverse=True)[:2]
         best1, best2 = top[0][0], top[1][0]
 
         new_population = [best1, best2]
@@ -1061,8 +1116,8 @@ class JsonFuzzer:
                     weights = self.strategy_optimizer.get_best_weights()
 
                 #else:
-                weights = [0.6, 0.3, 0.1]
-                print(Fore.RED + f"[*] Using default weights for fuzzing strategies: {weights}")
+                #weights = [0.6, 0.3, 0.1]
+                #print(Fore.RED + f"[*] Using default weights for fuzzing strategies: {weights}")
                     
                 fuzz_strategy = random.choices(["asn1", "json", "both"], weights=weights, k=1)[0]
                         
@@ -1148,7 +1203,7 @@ class SCTPMITMProxy:
         #Duplication 
         self.duplication_probability = 0.3  # 30% chance to duplicate
         self.max_duplicates = 5
-        self.duplication_enabled = True
+        self.duplication_enabled = False
 
         # Ensure the captures_bridge folder exists
         if not os.path.exists(self.captures_folder):
@@ -1284,20 +1339,20 @@ class SCTPMITMProxy:
                     
                     # Display new generation info
                     best_weights = self.strategy_optimizer.get_best_weights()
-                    #print(Fore.GREEN + f"[GA] New population evolved!")
-                    #print(Fore.GREEN + f"[GA] Best weights: {[round(w,2) for w in best_weights]} (ASN.1, JSON, Both)")
+                    print(Fore.GREEN + f"[GA] New population evolved!")
+                    print(Fore.GREEN + f"[GA] Best weights: {[round(w,2) for w in best_weights]} (ASN.1, JSON, Both)")
                     
-                    # Display all individuals in new population
-                    #print(Fore.CYAN + f"[GA] New generation {generation + 1} population:")
-                    #for i, individual in enumerate(self.strategy_optimizer.population):
-                        #print(Fore.CYAN + f"  Individual {i+1}: {[round(w,2) for w in individual]}")
+                    #Display all individuals in new population
+                    print(Fore.CYAN + f"[GA] New generation {generation + 1} population:")
+                    for i, individual in enumerate(self.strategy_optimizer.population):
+                        print(Fore.CYAN + f"  Individual {i+1}: {[round(w,2) for w in individual]}")
                     
                     # Reset for next generation
                     generation += 1
                     individual_index = 0
                     costs = []
                     
-                    #print(Fore.MAGENTA + f"[GA] Starting generation {generation}...")
+                    print(Fore.MAGENTA + f"[GA] Starting generation {generation}...")
                     print(Fore.MAGENTA + "=" * 70)
                     
                     # Brief pause before next generation
@@ -1579,7 +1634,7 @@ class SCTPMITMProxy:
                                     else:
                                         # Send normally without duplication
                                         self.ric_client.sctp_send(modified_msg, ppid=socket.htonl(0))
-                                        print(Fore.GREEN + f"[+] Sent packet normally")
+                                        #print(Fore.GREEN + f"[+] Sent packet normally")
                                     
                                         end_time = time.time()
                                         #conversion_time = (end_time - start_time) * 1000  # milliseconds
@@ -1977,5 +2032,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-    
