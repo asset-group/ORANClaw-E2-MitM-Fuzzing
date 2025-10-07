@@ -124,64 +124,9 @@ def redirect_stdout_to_file(filepath):
             sys.stderr = original_stderr
             log_file.close()
 
-
-# class GeneticFuzzerOptimizer:
-#     def __init__(self, population_size=50,
-#                  mutation_rate=0.3):
-
-#         self.POPULATION_SIZE = population_size
-#         self.MUTATION_RATE = mutation_rate
-#         self.population = [self._random_individual() for _ in range(self.POPULATION_SIZE)]
-#         self.fitness_scores = [0] * self.POPULATION_SIZE
-
-#     def _random_individual(self):
-#         weights = [random.random() for _ in range(3)] #
-#         total = sum(weights)
-#         return [w / total for w in weights]  # Normalize to sum to 1
-
-#     def _fitness(self, cost):
-#         # Fitness is the cost directly (higher is better)
-#         return cost
-
-#     def _crossover(self, parent1, parent2):
-#         child = [(a + b) / 2 for a, b in zip(parent1, parent2)]
-#         total = sum(child)
-#         return [w / total for w in child]  # Normalize
-
-#     def _mutate(self, individual):
-#         idx = random.randint(0, 2)
-#         change = random.uniform(-0.2, 0.2)
-#         individual[idx] = max(0.01, individual[idx] + change)
-#         total = sum(individual)
-#         return [w / total for w in individual]
-
-#     def update(self, cost):
-#         #self.fitness_scores = [self._fitness(cost) for _ in self.population]
-#         for i, cost in enumerate(cost):
-#             self.fitness_scores[i] = self._fitness(cost)
-#         # Select top 2 individuals
-#         top = sorted(zip(self.population, self.fitness_scores), key=lambda x: x[1], reverse=True)[:2]
-#         best1, best2 = top[0][0], top[1][0]
-
-#         new_population = [best1, best2]
-
-#         # Generate new offspring
-#         while len(new_population) < self.POPULATION_SIZE:
-#             child = self._crossover(best1, best2)
-#             if random.random() < self.MUTATION_RATE:
-#                 child = self._mutate(child)
-#             new_population.append(child)
-
-#         self.population = new_population
-
-#     def get_best_weights(self):
-#         best = self.population[0]
-#         return [round(w, 2) for w in best]
-#         #return self.population[0],2
-
 class GeneticFuzzerOptimizer:
-    def __init__(self, population_size=5,
-                mutation_rate=0.8):  # Increased from 0.3
+    def __init__(self, population_size=6,
+                mutation_rate=0.3):  # Increased from 0.3
         self.POPULATION_SIZE = population_size
         self.MUTATION_RATE = mutation_rate
         self.population = [self._random_individual() for _ in range(self.POPULATION_SIZE)]
