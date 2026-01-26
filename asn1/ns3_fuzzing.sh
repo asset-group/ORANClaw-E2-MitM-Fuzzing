@@ -22,7 +22,7 @@ CURRENT_SESSION_ID=""
 MITM_PID=""
 
 # Directories
-BASE_DIR="/home/asset/ns3"
+BASE_DIR="${HOME}/ns3"
 RIC_DIR="$BASE_DIR/flexric/build/examples/ric"
 GNB_DIR="$BASE_DIR/ns-O-RAN-flexric/ns-3-mmwave-oran/"
 XAPP_DIR="$BASE_DIR/flexric/build/examples/xApp/c/kpm_rc/"
