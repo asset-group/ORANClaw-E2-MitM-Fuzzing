@@ -1,0 +1,5 @@
+{
+  "name": "ORANClaw Reproducibility",
+  "description": "Artifact evaluation and reproducibility instructions for ORANClaw: Shredding E2 Nodes in O-RAN via Structure-aware MiTM Fuzzing.",
+  "requestFramePermissions": []
+}
