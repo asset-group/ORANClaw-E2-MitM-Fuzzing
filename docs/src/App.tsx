@@ -349,7 +349,7 @@ export default function App() {
               {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
             <a 
-              href="https://github.com/asset-group" 
+              href="https://github.com/asset-group/ORANClaw-E2-MitM-Fuzzing" 
               target="_blank" 
               rel="noreferrer"
               className="flex items-center gap-2 rounded-full bg-slate-900 dark:bg-white px-4 py-2 text-sm font-medium text-white dark:text-slate-900 transition-transform hover:scale-105"
@@ -375,7 +375,7 @@ export default function App() {
             </div>
             <h3 className="font-serif text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
               ORANClaw<br className="hidden sm:block" />
-              <span className="text-indigo-600 dark:text-indigo-400">Giving E2-nodes a Bad Day via Structure-Aware MiTM Fuzzing</span>
+              <span className="text-indigo-600 dark:text-indigo-400">Giving E2 nodes a Bad Day via Structure-Aware MiTM Fuzzing</span>
             </h3>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400">
               A structure-aware, man-in-the-middle fuzzing framework that takes full control over the E2 interface between the NearRT-RIC and the gNB (E2 nodes) to systematically mutate packets and disrupt base station behavior.
@@ -1289,7 +1289,7 @@ python3 latency_wisec.py`} />
             © {new Date().getFullYear()} ASSET Research Group. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 dark:text-slate-100">
+            <a href="https://github.com/asset-group/ORANClaw-E2-MitM-Fuzzing" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 dark:text-slate-100">
               <Github className="h-5 w-5" />
             </a>
             <a href="#" className="text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 dark:text-slate-100">
