@@ -15,7 +15,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 import { 
   Github, FileText, Activity, ExternalLink, BookOpen, 
   Terminal, Server, CheckCircle2, PlayCircle, Settings, BarChart,
-  Folder, FileCode, Archive, ChevronRight, Zap, Search, ShieldAlert,
+  Folder, FileCode, Archive, ChevronLeft, ChevronRight, Zap, Search, ShieldAlert,
   Moon, Sun
 } from 'lucide-react';
 
@@ -85,6 +85,104 @@ const logStructure = [
     ]}
   ]}
 ];
+
+interface VulnEntry {
+  impl: string; id: string; cve: string; vuln: string;
+  cause: string; component: string; threat: string; location: string;
+  structural?: boolean; existing?: boolean;
+}
+
+const vulnData: VulnEntry[] = [
+  { impl: 'O-RAN SC RIC', id: 'VulnOSCRIC-01', cve: 'CVE-2025-67398', vuln: 'Unhandled Exception', cause: 'Flooding E2SetupRequest', component: 'E2 Termination', threat: 'DoS', location: 'Not Specified' },
+  { impl: 'VIAVI TeraVM RSG', id: 'VulnVIAVI-01', cve: 'Pending', vuln: 'Heap/Stack Buffer Overflow', cause: 'Malformed RC SM Structure', component: 'gNB', threat: 'Mem. Corrupt', location: 'Not Specified', structural: true },
+  { impl: 'VIAVI TeraVM RSG', id: 'VulnVIAVI-02', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed KPM SM Field', component: 'RIC', threat: 'DoS', location: 'nr-gnb-mac.cc:1136' },
+  { impl: 'VIAVI TeraVM RSG', id: 'VulnVIAVI-03', cve: 'Pending', vuln: 'Unhandled Exception', cause: 'Malformed RICSubscriptionRequest Field', component: 'gNB', threat: 'DoS', location: 'Not Specified' },
+  { impl: 'VIAVI TeraVM RSG', id: 'VulnVIAVI-04', cve: 'Pending', vuln: 'Buffer Over-read', cause: 'Malformed KPM SM Field', component: 'RIC', threat: 'Mem. Corrupt', location: 'Not Specified' },
+  { impl: 'VIAVI TeraVM RSG', id: 'VulnVIAVI-05', cve: 'Pending', vuln: 'Unhandled Exception', cause: 'Malformed KPM SM Structure', component: 'GUI, gNB, RIC', threat: 'DoS', location: 'Not Specified', structural: true },
+  { impl: 'OAI', id: 'VulnOAI-01', cve: 'CVE-2024-48408', vuln: 'Assertion', cause: 'Malformed MAC SM Field', component: 'O-DU', threat: 'DoS', location: 'ran_func_mac.c:126' },
+  { impl: 'OAI', id: 'VulnOAI-02', cve: 'CVE-2025-52142', vuln: 'Assertion', cause: 'Malformed KPM SM Field', component: 'O-DU/CU-UP', threat: 'DoS', location: 'ran_func_kpm_subs.c:226' },
+  { impl: 'OAI', id: 'VulnOAI-03', cve: 'CVE-2025-52146', vuln: 'Assertion', cause: 'Malformed KPM SM Field', component: 'O-DU/CU-UP', threat: 'DoS', location: 'msg_handler_agent.c:136' },
+  { impl: 'OAI', id: 'VulnOAI-04', cve: 'CVE-2025-52150', vuln: 'Assertion', cause: 'Truncated MAC SM Structure', component: 'O-DU', threat: 'DoS', location: 'mac_dec_plain.c:190', structural: true },
+  { impl: 'OAI', id: 'VulnOAI-05', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed KPM SM Field', component: 'O-DU', threat: 'DoS', location: 'ran_func_kpm.c:267/268' },
+  { impl: 'OAI', id: 'VulnOAI-06', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed KPM SM Structure', component: 'O-DU', threat: 'DoS', location: 'ran_func_kpm.c:72', structural: true },
+  { impl: 'OAI', id: 'VulnOAI-07', cve: 'CVE-2025-52148', vuln: 'Assertion', cause: 'Unexpected TC SM Field', component: 'O-CU-UP', threat: 'DoS', location: 'tc_dec_plain.c:1418' },
+  { impl: 'OAI', id: 'VulnOAI-08', cve: 'CVE-2025-52151', vuln: 'Assertion', cause: 'Malformed KPM SM Field', component: 'O-CU-UP', threat: 'DoS', location: 'ran_func_kpm.c:230' },
+  { impl: 'OAI', id: 'VulnOAI-09', cve: 'CVE-2025-52147', vuln: 'Assertion', cause: 'Zero-ed RC SM Field', component: 'O-CU-CP', threat: 'DoS', location: 'rc_dec_asn.c:953' },
+  { impl: 'OAI', id: 'VulnOAI-10', cve: 'Pending', vuln: 'Assertion', cause: 'Unable To Recover', component: 'O-CU-CP (E1)', threat: 'DoS', location: 'cucp_cuup_e1ap.c:31' },
+  { impl: 'OAI', id: 'VulnOAI-11', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed KPM SM Structure', component: 'O-CU-UP', threat: 'DoS', location: 'ran_func_kpm.c:177', structural: true },
+  { impl: 'OAI', id: 'VulnOAI-12', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42RICsubscriptionDeleteRequest Field', component: 'O-CU-CP', threat: 'DoS', location: 'bimap.c:126' },
+  { impl: 'OAI', id: 'VulnOAI-13', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed KPM SM Field', component: 'O-CU-UP', threat: 'DoS', location: 'ran_func_kpm.c:168' },
+  { impl: 'OAI', id: 'VulnOAI-14', cve: 'Pending', vuln: 'Assertion', cause: 'Multiple Malformed KPM Fields', component: 'O-DU/CU-UP', threat: 'DoS', location: 'ran_func_kpm.c:71' },
+  { impl: 'OAI', id: 'VulnOAI-15', cve: 'Pending', vuln: 'Assertion', cause: 'Invalid KPM SM Field', component: 'O-CU-CP/CU-UP', threat: 'DoS', location: 'ran_func_kpm.c:229' },
+  { impl: 'OAI', id: 'VulnOAI-16', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed KPM SM Field', component: 'O-CU-CP/UP', threat: 'DoS', location: 'ran_func_kpm.c:176' },
+  { impl: 'OAI', id: 'VulnOAI-17', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed KPM SM Field', component: 'O-CU-CP/UP', threat: 'DoS', location: 'ran_func_kpm.c:167' },
+  { impl: 'OAI', id: 'VulnOAI-18', cve: 'Pending', vuln: 'Assertion', cause: 'Unable To Recover', component: 'O-CU-UP/CP', threat: 'DoS', location: 'e2_agent.c:242' },
+  { impl: 'OAI', id: 'VulnOAI-19', cve: 'Pending', vuln: 'Assertion', cause: 'Invalid KPM SM Field', component: 'O-CU-UP/CP', threat: 'DoS', location: 'plugin_agent.c:286' },
+  { impl: 'NS-3', id: 'VulnNS-01', cve: 'Pending', vuln: 'Buffer Overflow', cause: 'Malformed RICSubscriptionRequest Field', component: 'gNB', threat: 'Mem. Corrupt', location: 'Not Specified' },
+  { impl: 'NS-3', id: 'VulnNS-02', cve: 'Pending', vuln: 'Heap-based Buffer Overflow', cause: 'Malformed E42SetupRequest Field', component: 'gNB', threat: 'Mem. Corrupt', location: 'Not Specified' },
+  { impl: 'NS-3', id: 'VulnNS-03', cve: 'Pending', vuln: 'Heap-Based Buffer Overflow', cause: 'E42SetupRequest Duplication', component: 'gNB', threat: 'Mem. Corrupt', location: 'Not Specified' },
+  { impl: 'NS-3', id: 'VulnNS-04', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42RICSubscriptionDeleteRequest', component: 'gNB', threat: 'DoS', location: 'ipv4-l3-protocol.cc:972' },
+  { impl: 'NS-3', id: 'VulnNS-05', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed RICSubscriptionRequest Field', component: 'gNB', threat: 'DoS', location: 'ipv4-l3-protocol.cc:580' },
+  { impl: 'NS-3', id: 'VulnNS-06', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed RICSubscriptionRequest Field', component: 'LTE eNB', threat: 'DoS', location: 'lte-spectrum-phy.cc:486' },
+  { impl: 'NS-3', id: 'VulnNS-07', cve: 'Pending', vuln: 'Null pointer dereference', cause: 'Malformed RICSubscriptionRequest Field', component: 'gNB', threat: 'Mem. Corrupt', location: 'ptr.h:638' },
+  { impl: 'NS-3', id: 'VulnNS-08', cve: 'Pending', vuln: 'Out-of-bounds read', cause: 'Malformed RICSubscriptionRequest Field', component: 'gNB', threat: 'Info. Disclosure', location: 'net-device-queue-interface.cc:216' },
+  { impl: 'NS-3', id: 'VulnNS-09', cve: 'Pending', vuln: 'Null pointer dereference', cause: 'Malformed RICSubscriptionRequest Field', component: 'gNB', threat: 'Mem. Corrupt', location: 'ptr.h:630' },
+  { impl: 'NS-3', id: 'VulnNS-10', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed RICSubscriptionRequest Field', component: 'gNB', threat: 'DoS', location: 'object.cc:349' },
+  { impl: 'NS-3', id: 'VulnNS-11', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed RICSubscriptionRequest Field', component: 'gNB', threat: 'DoS', location: 'traffic-control-layer.cc:337' },
+  { impl: 'NS-3', id: 'VulnNS-12', cve: 'Pending', vuln: 'Improper Input Validation', cause: 'Malformed E42RICSubscriptionDeleteRequest Field', component: 'gNB', threat: 'DoS', location: 'point-to-point-net-device.cc:279' },
+  { impl: 'NS-3', id: 'VulnNS-13', cve: 'Pending', vuln: 'Improper Check for Unusual/Exceptional Conditions', cause: 'Malformed E42RICSubscriptionDeleteRequest Field', component: 'gNB', threat: 'Improper File Handling', location: 'mmwave-phy-trace.cc:399' },
+  { impl: 'NS-3', id: 'VulnNS-14', cve: 'Pending', vuln: 'Assertion', cause: 'Invalid KPM RC Field', component: 'gNB', threat: 'DoS', location: 'default-simulator-impl.cc:235' },
+  { impl: 'NS-3', id: 'VulnNS-15', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed RICcontrolRequest Field', component: 'gNB', threat: 'DoS', location: 'buffer.cc:183' },
+  { impl: 'NS-3', id: 'VulnNS-16', cve: 'Pending', vuln: 'Improper Input Validation', cause: 'Malformed E42RICSubscriptionDeleteRequest Field', component: 'gNB', threat: 'DoS', location: 'mmwave-phy-trace.cc:220' },
+  { impl: 'NS-3', id: 'VulnNS-17', cve: 'Pending', vuln: 'Improper Check for Unusual/Exceptional Conditions', cause: 'Malformed E42RICSubscriptionDeleteRequest Field', component: 'gNB', threat: 'Improper File Handling', location: 'mmwave-phy-trace.cc:71' },
+  { impl: 'NS-3', id: 'VulnNS-18', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed RICSubscriptionRequest Field', component: 'LTE eNB', threat: 'DoS', location: 'mmwave-enb-phy.cc:1141' },
+  { impl: 'FlexRIC', id: '—', cve: 'CVE-2024-34034', vuln: 'Assertion', cause: 'Flooding E42SubscriptionRequest', component: 'RIC', threat: 'DoS', location: 'Not Specified', existing: true },
+  { impl: 'FlexRIC', id: 'VulnFlex-01', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed RICSubscriptionRequest Field', component: 'RIC', threat: 'DoS', location: 'msg_handler_iapp.c:343' },
+  { impl: 'FlexRIC', id: 'VulnFlex-02', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42RICsubscriptionDelete Fields', component: 'RIC E2AP(v2.03)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:2534' },
+  { impl: 'FlexRIC', id: 'VulnFlex-03', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SubscriptionRequest Fields', component: 'RIC', threat: 'DoS', location: 'msg_handler_ric.c:117' },
+  { impl: 'FlexRIC', id: 'VulnFlex-04', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SubscriptionRequest Fields', component: 'RIC E2AP(v2.03)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:544' },
+  { impl: 'FlexRIC', id: 'VulnFlex-05', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SubscriptionRequest Field', component: 'RIC E2AP(v2.03)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:487' },
+  { impl: 'FlexRIC', id: 'VulnFlex-06', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed MAC SM Field', component: 'RIC E2AP(v2.03)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:1107' },
+  { impl: 'FlexRIC', id: 'VulnFlex-07', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SubscriptionDelete Field', component: 'RIC E2AP(v2.03)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:2523' },
+  { impl: 'FlexRIC', id: 'VulnFlex-08', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SubscriptionDelete Field', component: 'RIC E2AP(v2.03)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:2540' },
+  { impl: 'FlexRIC', id: 'VulnFlex-09', cve: 'Pending', vuln: 'Assertion', cause: 'Flooding E42SetupRequest', component: 'RIC', threat: 'DoS', location: 'e2ap_msg_enc_asn.c:3165' },
+  { impl: 'FlexRIC', id: 'VulnFlex-10', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SubscriptionRequest Field', component: 'RIC E2AP(v2.03)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:536' },
+  { impl: 'FlexRIC', id: 'VulnFlex-11', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SubscriptionDeleteRequest Field', component: 'RIC E2AP(v2.03)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:2531' },
+  { impl: 'FlexRIC', id: 'VulnFlex-12', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SubscriptionRequest Field', component: 'RIC E2AP(v2.03)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:527' },
+  { impl: 'FlexRIC', id: 'VulnFlex-13', cve: 'Pending', vuln: 'Assertion', cause: 'E42SubscriptionDeleteRequest Field', component: 'RIC E2AP(v2.03)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:2548' },
+  { impl: 'FlexRIC', id: 'VulnFlex-14', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SubscriptionRequest Field', component: 'RIC E2AP(v2.03)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:477' },
+  { impl: 'FlexRIC', id: 'VulnFlex-15', cve: 'Pending', vuln: 'Assertion', cause: 'Unable to Recover', component: 'RIC', threat: 'DoS', location: 'map_e2_node_sockaddr.c:154' },
+  { impl: 'FlexRIC', id: 'VulnFlex-16', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed KPM SM Field', component: 'RIC', threat: 'DoS', location: 'reg_e2_nodes.c:174' },
+  { impl: 'FlexRIC', id: 'VulnFlex-17', cve: 'Pending', vuln: 'Assertion', cause: 'Unable to Recover', component: 'RIC', threat: 'DoS', location: 'map_ric_id.c:227' },
+  { impl: 'FlexRIC', id: 'VulnFlex-18', cve: 'Pending', vuln: 'Assertion', cause: 'Unable to Recover', component: 'RIC', threat: 'DoS', location: 'assoc_rb_tree.c:457' },
+  { impl: 'FlexRIC', id: 'VulnFlex-19', cve: 'Pending', vuln: 'Assertion', cause: 'Flooding E42SubscriptionRequest', component: 'RIC', threat: 'DoS', location: 'msg_handler_iapp.c:342' },
+  { impl: 'FlexRIC', id: 'VulnFlex-20', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SubscriptionRequest Field', component: 'RIC E2AP(v1.01)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:418' },
+  { impl: 'FlexRIC', id: 'VulnFlex-21', cve: 'Pending', vuln: 'Assertion', cause: 'E42SubscriptionDeleteRequest Field', component: 'RIC E2AP(v1.01)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:435' },
+  { impl: 'FlexRIC', id: 'VulnFlex-22', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SubscriptionRequest Field', component: 'RIC E2AP(v1.01)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:378' },
+  { impl: 'FlexRIC', id: 'VulnFlex-23', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SubscriptionRequest Field', component: 'RIC E2AP(v1.01)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:368' },
+  { impl: 'FlexRIC', id: 'VulnFlex-24', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SetupRequest Field', component: 'RIC E2AP(v1.01)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:2113' },
+  { impl: 'FlexRIC', id: 'VulnFlex-25', cve: 'Pending', vuln: 'Assertion', cause: 'Unable To Recover', component: 'RIC E2AP(v1.01)', threat: 'DoS', location: 'e2ap_msg_enc_asn.c:2731' },
+  { impl: 'FlexRIC', id: 'VulnFlex-26', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SubscriptionRequest Field', component: 'RIC E2AP(v1.01)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:427' },
+  { impl: 'FlexRIC', id: 'VulnFlex-27', cve: 'Pending', vuln: 'Assertion', cause: 'Malformed E42SetupRequest Field', component: 'RIC E2AP(v1.01)', threat: 'DoS', location: 'e2ap_msg_dec_asn.c:2101' },
+  { impl: 'FlexRIC', id: 'VulnFlex-28', cve: 'Pending', vuln: 'Assertion', cause: 'Unable To Recover', component: 'RIC', threat: 'DoS', location: 'endpoint_ric.c:64' },
+];
+
+const implGroups = ['O-RAN SC RIC', 'VIAVI TeraVM RSG', 'OAI', 'NS-3', 'FlexRIC'];
+
+const implColors: Record<string, string> = {
+  'O-RAN SC RIC': 'bg-violet-100 text-violet-800 dark:bg-violet-900/30 dark:text-violet-300 border-violet-200 dark:border-violet-800',
+  'VIAVI TeraVM RSG': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300 border-cyan-200 dark:border-cyan-800',
+  'OAI': 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800',
+  'NS-3': 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 border-orange-200 dark:border-orange-800',
+  'FlexRIC': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300 border-indigo-200 dark:border-indigo-800',
+};
+
+const threatColors: Record<string, string> = {
+  'DoS': 'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300',
+  'Mem. Corrupt': 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300',
+  'Info. Disclosure': 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
+  'Improper File Handling': 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300',
+};
 
 // --- Reusable Components ---
 
@@ -204,6 +302,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('setup');
   const [numPages, setNumPages] = useState<number>();
   const [pageNumber, setPageNumber] = useState<number>(1);
+  const [activeImplFilter, setActiveImplFilter] = useState('All');
 
   React.useEffect(() => {
     if (isDark) {
@@ -231,13 +330,14 @@ export default function App() {
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans text-slate-900 dark:text-slate-100 selection:bg-indigo-100 dark:selection:bg-indigo-900/50 selection:text-indigo-900 dark:selection:text-indigo-200">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3 font-bold tracking-tight text-slate-900 dark:text-white text-xl">
             <img src={`${import.meta.env.BASE_URL}Logo.png`} alt="ORANClaw Logo" className="h-16 w-16 object-contain" />
             <span>ORANClaw</span>
           </div>
           <div className="hidden items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400 sm:flex">
             <a href="#overview" className="hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-400 transition-colors">Overview</a>
+            <a href="#vulnerabilities" className="hover:text-red-600 dark:hover:text-red-400 transition-colors">Vulnerabilities</a>
             <a href="#reproducibility" className="hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-400 transition-colors">Reproducibility Guide</a>
           </div>
           <div className="flex items-center gap-3">
@@ -278,13 +378,13 @@ export default function App() {
               <span className="text-indigo-600 dark:text-indigo-400">Giving E2-nodes a Bad Day via Structure-Aware MiTM Fuzzing</span>
             </h3>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400">
-              A structure-aware, man-in-the-middle fuzzing framework that takes full control over the E2 interface between xApps and the RIC to systematically mutate packets and disrupt base station behavior.
+              A structure-aware, man-in-the-middle fuzzing framework that takes full control over the E2 interface between the NearRT-RIC and the gNB (E2 nodes) to systematically mutate packets and disrupt base station behavior.
             </p>
           </motion.div>
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <main className="mx-auto max-w-7xl px-6 py-16 sm:py-24">
         {/* Overview Section */}
         <section id="overview" className="scroll-mt-24 mb-24">
           <div className="mb-12">
@@ -298,7 +398,7 @@ export default function App() {
           <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-10 shadow-sm">
             <div className="prose prose-slate max-w-none">
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
-                By intercepting and mutating E2 Application Protocol (E2AP) messages between the Near-Real-Time RAN Intelligent Controller (Near-RT RIC) and the E2 Nodes (such as O-CU and O-DU), ORANClaw leverages structural awareness of the protocol to generate highly effective test cases. This allows it to uncover deep-seated vulnerabilities, state-machine flaws, and memory corruption bugs that traditional fuzzers might miss.
+                Operating as a Man-in-the-Middle (MiTM) proxy on the E2 interface, ORANClaw intercepts and intelligently mutates live E2 Application Protocol (E2AP) messages exchanged between the Near-Real-Time RAN Intelligent Controller (Near-RT RIC) and E2 Nodes (O-CU, O-DU). By leveraging ASN.1 structural awareness, it dynamically injects malformed yet structurally valid payloads directly into the communication stream. This allows ORANClaw to bypass initial parsing checks and effectively expose deep-seated vulnerabilities and bugs within O-RAN components that traditional, structure-blind fuzzers fail to reach.
               </p>
               
               <div className="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 flex flex-col items-center justify-center p-4">
@@ -365,17 +465,17 @@ export default function App() {
             <p className="mt-4 text-slate-600 dark:text-slate-400 max-w-3xl">Comprehensive instructions to deploy the Dockerized environment, run ORANClaw fuzzing sessions, and reproduce the paper's results across OpenAirInterface and ns-3 simulators.</p>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-8">
-            {/* Sidebar Tabs */}
-            <div className="lg:w-1/4 flex flex-col gap-2 shrink-0">
+          <div className="flex flex-col gap-6">
+            {/* Horizontal Tab Bar */}
+            <div className="flex flex-wrap gap-2 sticky top-24 z-40 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-3 py-2.5 shadow-sm">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-medium transition-all ${
+                  onClick={() => { setActiveTab(tab.id); document.getElementById('reproducibility')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}
+                  className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium transition-all ${
                     activeTab === tab.id
                       ? 'bg-indigo-600 dark:bg-indigo-500 text-white shadow-md shadow-indigo-200 dark:shadow-none'
-                      : 'text-slate-600 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-100 hover:shadow-sm'
+                      : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-100'
                   }`}
                 >
                   {tab.icon}
@@ -385,7 +485,7 @@ export default function App() {
             </div>
 
             {/* Tab Content */}
-            <div className="lg:w-3/4 min-h-[600px] rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-10 shadow-sm">
+            <div className="min-h-[600px] rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-10 shadow-sm">
               
               {/* TAB 1: SETUP & INSTALLATION */}
               {activeTab === 'setup' && (
@@ -1002,10 +1102,166 @@ python3 latency_wisec.py`} />
                 </motion.div>
               )}
 
+              {/* Prev / Next navigation */}
+              {(() => {
+                const currentIndex = tabs.findIndex(t => t.id === activeTab);
+                const prevTab = tabs[currentIndex - 1];
+                const nextTab = tabs[currentIndex + 1];
+                return (
+                  <div className="flex items-center justify-between pt-8 mt-8 border-t border-slate-200 dark:border-slate-800">
+                    {prevTab ? (
+                      <button
+                        onClick={() => { setActiveTab(prevTab.id); document.getElementById('reproducibility')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}
+                        className="flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
+                      >
+                        <ChevronLeft className="h-4 w-4" />
+                        {prevTab.label}
+                      </button>
+                    ) : <div />}
+                    <span className="text-xs text-slate-400 dark:text-slate-600">{currentIndex + 1} / {tabs.length}</span>
+                    {nextTab ? (
+                      <button
+                        onClick={() => { setActiveTab(nextTab.id); document.getElementById('reproducibility')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}
+                        className="flex items-center gap-2 text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
+                      >
+                        {nextTab.label}
+                        <ChevronRight className="h-4 w-4" />
+                      </button>
+                    ) : <div />}
+                  </div>
+                );
+              })()}
             </div>
           </div>
         </section>
         
+        {/* Vulnerabilities Section */}
+        <section id="vulnerabilities" className="scroll-mt-24 mt-24 mb-24">
+          <div className="mb-10">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-red-600 dark:text-red-400">03 / Security Findings</h2>
+            <h3 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Discovered Vulnerabilities</h3>
+            <p className="mt-4 text-slate-600 dark:text-slate-400 max-w-3xl">
+              Complete table of vulnerabilities discovered by ORANClaw across all tested O-RAN implementations.
+              Causes in <strong className="text-slate-800 dark:text-slate-200">bold</strong> indicate structural message mutations rather than single-field modifications.
+              <em> "Unable To Recover"</em> denotes failures to restore normal operation from crashes in previous sessions.
+            </p>
+          </div>
+
+          {/* Summary stats */}
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-8">
+            {implGroups.map(impl => {
+              const count = vulnData.filter(v => v.impl === impl).length;
+              const colors = implColors[impl];
+              return (
+                <button
+                  key={impl}
+                  onClick={() => setActiveImplFilter(activeImplFilter === impl ? 'All' : impl)}
+                  className={`rounded-xl border p-4 text-left transition-all hover:scale-[1.02] ${activeImplFilter === impl ? colors + ' ring-2 ring-offset-2 ring-offset-slate-50 dark:ring-offset-slate-950' : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400'}`}
+                >
+                  <div className="text-2xl font-bold">{count}</div>
+                  <div className="text-xs font-medium mt-1 leading-tight">{impl}</div>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Filter bar */}
+          <div className="flex flex-wrap gap-2 mb-6">
+            {['All', ...implGroups].map(f => (
+              <button
+                key={f}
+                onClick={() => setActiveImplFilter(f)}
+                className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-colors ${activeImplFilter === f ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'}`}
+              >
+                {f} {f !== 'All' && `(${vulnData.filter(v => v.impl === f).length})`}
+                {f === 'All' && `(${vulnData.length})`}
+              </button>
+            ))}
+          </div>
+
+          {/* Table */}
+          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm">
+            <table className="w-full text-xs table-fixed">
+              <colgroup>
+                <col className="w-[13%]" />
+                <col className="w-[11%]" />
+                <col className="w-[15%]" />
+                <col className="w-[22%]" />
+                <col className="w-[11%]" />
+                <col className="w-[10%]" />
+                <col className="w-[18%]" />
+              </colgroup>
+              <thead>
+                <tr className="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 text-left">
+                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">VulnID</th>
+                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">CVE</th>
+                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">Vulnerability</th>
+                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">General Cause</th>
+                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">Component</th>
+                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">Threat</th>
+                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                {(() => {
+                  const filtered = activeImplFilter === 'All' ? vulnData : vulnData.filter(v => v.impl === activeImplFilter);
+                  const rows: React.ReactNode[] = [];
+                  let lastImpl = '';
+                  filtered.forEach((v, i) => {
+                    if (v.impl !== lastImpl) {
+                      lastImpl = v.impl;
+                      const colors = implColors[v.impl] || '';
+                      rows.push(
+                        <tr key={`group-${v.impl}`} className={`border-b border-slate-100 dark:border-slate-800 ${colors.split(' ').filter(c => c.startsWith('bg-') || c.startsWith('dark:bg-')).join(' ')}`}>
+                          <td colSpan={7} className="px-4 py-2">
+                            <span className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider ${colors.split(' ').filter(c => c.startsWith('text-') || c.startsWith('dark:text-')).join(' ')}`}>
+                              <ShieldAlert className="h-3.5 w-3.5" />
+                              {v.impl}
+                            </span>
+                          </td>
+                        </tr>
+                      );
+                    }
+                    rows.push(
+                      <tr key={i} className={`border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors ${v.existing ? 'opacity-60' : ''}`}>
+                        <td className="px-4 py-2.5 align-top font-mono font-medium text-slate-700 dark:text-slate-300 break-all leading-snug">
+                          {v.id}
+                          {v.existing && <span className="ml-1.5 text-[10px] bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 rounded px-1 py-0.5">existing</span>}
+                        </td>
+                        <td className="px-4 py-2.5 align-top leading-snug">
+                          {v.cve.startsWith('CVE-') ? (
+                            <a href={`https://nvd.nist.gov/vuln/detail/${v.cve}`} target="_blank" rel="noopener noreferrer"
+                              className="text-indigo-600 dark:text-indigo-400 hover:underline font-mono font-medium break-all">
+                              {v.cve}
+                            </a>
+                          ) : (
+                            <span className="text-slate-400 dark:text-slate-500 italic">{v.cve}</span>
+                          )}
+                        </td>
+                        <td className="px-4 py-2.5 align-top text-slate-600 dark:text-slate-400 leading-snug">{v.vuln}</td>
+                        <td className="px-4 py-2.5 align-top text-slate-700 dark:text-slate-300 leading-snug">
+                          {v.structural ? <strong>{v.cause}</strong> : v.cause}
+                        </td>
+                        <td className="px-4 py-2.5 align-top font-mono text-slate-600 dark:text-slate-400 leading-snug break-words">{v.component}</td>
+                        <td className="px-4 py-2.5 align-top">
+                          <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold leading-snug ${threatColors[v.threat] || 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300'}`}>
+                            {v.threat}
+                          </span>
+                        </td>
+                        <td className="px-4 py-2.5 align-top font-mono text-[10px] text-slate-500 dark:text-slate-500 break-all leading-snug">{v.location}</td>
+                      </tr>
+                    );
+                  });
+                  return rows;
+                })()}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-slate-400 dark:text-slate-500 mt-3">
+            * CVE links open the NVD entry. "Pending" entries are under coordinated disclosure. Bold causes = structural mutations.
+          </p>
+        </section>
+
         {/* Citation */}
         <section className="mt-24 rounded-2xl bg-slate-900 p-8 text-white sm:p-12">
           <h3 className="text-xl font-semibold mb-6">Citation</h3>
@@ -1024,7 +1280,7 @@ python3 latency_wisec.py`} />
 
       {/* Footer */}
       <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-12">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 sm:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 sm:flex-row">
           <div className="flex items-center gap-3 font-bold text-slate-900 dark:text-slate-100 text-lg">
             <img src={`${import.meta.env.BASE_URL}Logo.png`} alt="ORANClaw Logo" className="h-14 w-14 object-contain" />
             <span>ORANClaw</span>
