@@ -330,9 +330,9 @@ export default function App() {
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans text-slate-900 dark:text-slate-100 selection:bg-indigo-100 dark:selection:bg-indigo-900/50 selection:text-indigo-900 dark:selection:text-indigo-200">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-3 font-bold tracking-tight text-slate-900 dark:text-white text-xl">
-            <img src={`${import.meta.env.BASE_URL}Logo.png`} alt="ORANClaw Logo" className="h-16 w-16 object-contain" />
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 sm:py-4">
+          <div className="flex items-center gap-2 sm:gap-3 font-bold tracking-tight text-slate-900 dark:text-white text-lg sm:text-xl">
+            <img src={`${import.meta.env.BASE_URL}Logo.png`} alt="ORANClaw Logo" className="h-10 w-10 sm:h-16 sm:w-16 object-contain" />
             <span>ORANClaw</span>
           </div>
           <div className="hidden items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400 sm:flex">
@@ -362,7 +362,7 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative overflow-hidden bg-white dark:bg-slate-950 px-6 py-24 sm:py-32">
+      <header className="relative overflow-hidden bg-white dark:bg-slate-950 px-6 py-12 sm:py-24 md:py-32">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         <div className="relative mx-auto max-w-5xl text-center">
           <motion.div
@@ -371,7 +371,7 @@ export default function App() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex justify-center mb-8">
-              <img src={`${import.meta.env.BASE_URL}Logo.png`} alt="ORANClaw Logo" className="h-56 w-auto object-contain drop-shadow-xl dark:drop-shadow-[0_20px_20px_rgba(255,255,255,0.05)]" />
+              <img src={`${import.meta.env.BASE_URL}Logo.png`} alt="ORANClaw Logo" className="h-28 sm:h-44 md:h-56 w-auto object-contain drop-shadow-xl dark:drop-shadow-[0_20px_20px_rgba(255,255,255,0.05)]" />
             </div>
             <h3 className="font-serif text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
               ORANClaw<br className="hidden sm:block" />
@@ -379,7 +379,13 @@ export default function App() {
             </h3>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400">
               A structure-aware, man-in-the-middle fuzzing framework that takes full control over the E2 interface between the NearRT-RIC and the gNB (E2 nodes) to systematically mutate packets and disrupt base station behavior.
+              {' '}Across 5 O-RAN implementations, it uncovered <span className="font-semibold text-slate-800 dark:text-slate-200">71 new vulnerabilities</span> — 1 in O-RAN SC RIC, 5 in VIAVI TeraVM RSG, 19 in OpenAirInterface, 18 in ns-3, and 28 in FlexRIC.
             </p>
+            <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 mt-10">
+              <img src={`${import.meta.env.BASE_URL}artifacts_available.png`} alt="Artifacts Available" className="h-20 sm:h-24 w-auto object-contain drop-shadow-sm" />
+              <img src={`${import.meta.env.BASE_URL}artifacts_evaluated_functional.png`} alt="Artifacts Evaluated – Functional" className="h-20 sm:h-24 w-auto object-contain drop-shadow-sm" />
+              <img src={`${import.meta.env.BASE_URL}results_replicated.png`} alt="Results Replicated" className="h-20 sm:h-24 w-auto object-contain drop-shadow-sm" />
+            </div>
           </motion.div>
         </div>
       </header>
@@ -467,12 +473,12 @@ export default function App() {
 
           <div className="flex flex-col gap-6">
             {/* Horizontal Tab Bar */}
-            <div className="flex flex-wrap gap-2 sticky top-24 z-40 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-3 py-2.5 shadow-sm">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2 sticky top-14 sm:top-20 z-40 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-2 sm:px-3 py-2 sm:py-2.5 shadow-sm">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => { setActiveTab(tab.id); document.getElementById('reproducibility')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}
-                  className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium transition-all ${
+                  className={`flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs sm:text-sm sm:px-4 sm:py-2.5 font-medium transition-all ${
                     activeTab === tab.id
                       ? 'bg-indigo-600 dark:bg-indigo-500 text-white shadow-md shadow-indigo-200 dark:shadow-none'
                       : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-100'
@@ -1136,10 +1142,10 @@ python3 latency_wisec.py`} />
         </section>
         
         {/* Vulnerabilities Section */}
-        <section id="vulnerabilities" className="scroll-mt-24 mt-24 mb-24">
+        <section id="vulnerabilities" className="scroll-mt-24 mt-16 mb-16 sm:mt-24 sm:mb-24">
           <div className="mb-10">
             <h2 className="text-sm font-bold uppercase tracking-widest text-red-600 dark:text-red-400">03 / Security Findings</h2>
-            <h3 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Discovered Vulnerabilities</h3>
+            <h3 className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Discovered Vulnerabilities</h3>
             <p className="mt-4 text-slate-600 dark:text-slate-400 max-w-3xl">
               Complete table of vulnerabilities discovered by ORANClaw across all tested O-RAN implementations.
               Causes in <strong className="text-slate-800 dark:text-slate-200">bold</strong> indicate structural message mutations rather than single-field modifications.
@@ -1148,7 +1154,7 @@ python3 latency_wisec.py`} />
           </div>
 
           {/* Summary stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-8">
+          <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3 mb-8">
             {implGroups.map(impl => {
               const count = vulnData.filter(v => v.impl === impl).length;
               const colors = implColors[impl];
@@ -1181,25 +1187,17 @@ python3 latency_wisec.py`} />
 
           {/* Table */}
           <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm">
-            <table className="w-full text-xs table-fixed">
-              <colgroup>
-                <col className="w-[13%]" />
-                <col className="w-[11%]" />
-                <col className="w-[15%]" />
-                <col className="w-[22%]" />
-                <col className="w-[11%]" />
-                <col className="w-[10%]" />
-                <col className="w-[18%]" />
-              </colgroup>
+            <div className="overflow-x-auto">
+            <table className="text-xs min-w-[640px] w-full">
               <thead>
                 <tr className="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 text-left">
-                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">VulnID</th>
-                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">CVE</th>
-                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">Vulnerability</th>
-                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">General Cause</th>
-                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">Component</th>
-                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">Threat</th>
-                  <th className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">Location</th>
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 whitespace-nowrap">VulnID</th>
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 whitespace-nowrap">CVE</th>
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300">Vulnerability</th>
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300">General Cause</th>
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 whitespace-nowrap">Component</th>
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 whitespace-nowrap">Threat</th>
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300">Location</th>
                 </tr>
               </thead>
               <tbody>
@@ -1224,31 +1222,31 @@ python3 latency_wisec.py`} />
                     }
                     rows.push(
                       <tr key={i} className={`border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors ${v.existing ? 'opacity-60' : ''}`}>
-                        <td className="px-4 py-2.5 align-top font-mono font-medium text-slate-700 dark:text-slate-300 break-all leading-snug">
+                        <td className="px-3 py-2.5 align-top font-mono font-medium text-slate-700 dark:text-slate-300 whitespace-nowrap leading-snug">
                           {v.id}
-                          {v.existing && <span className="ml-1.5 text-[10px] bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 rounded px-1 py-0.5">existing</span>}
+                          {v.existing && <span className="ml-1 text-[10px] bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 rounded px-1 py-0.5">existing</span>}
                         </td>
-                        <td className="px-4 py-2.5 align-top leading-snug">
+                        <td className="px-3 py-2.5 align-top leading-snug whitespace-nowrap">
                           {v.cve.startsWith('CVE-') ? (
                             <a href={`https://nvd.nist.gov/vuln/detail/${v.cve}`} target="_blank" rel="noopener noreferrer"
-                              className="text-indigo-600 dark:text-indigo-400 hover:underline font-mono font-medium break-all">
+                              className="text-indigo-600 dark:text-indigo-400 hover:underline font-mono font-medium">
                               {v.cve}
                             </a>
                           ) : (
                             <span className="text-slate-400 dark:text-slate-500 italic">{v.cve}</span>
                           )}
                         </td>
-                        <td className="px-4 py-2.5 align-top text-slate-600 dark:text-slate-400 leading-snug">{v.vuln}</td>
-                        <td className="px-4 py-2.5 align-top text-slate-700 dark:text-slate-300 leading-snug">
+                        <td className="px-3 py-2.5 align-top text-slate-600 dark:text-slate-400 leading-snug min-w-[140px]">{v.vuln}</td>
+                        <td className="px-3 py-2.5 align-top text-slate-700 dark:text-slate-300 leading-snug min-w-[140px]">
                           {v.structural ? <strong>{v.cause}</strong> : v.cause}
                         </td>
-                        <td className="px-4 py-2.5 align-top font-mono text-slate-600 dark:text-slate-400 leading-snug break-words">{v.component}</td>
-                        <td className="px-4 py-2.5 align-top">
+                        <td className="px-3 py-2.5 align-top font-mono text-slate-600 dark:text-slate-400 leading-snug whitespace-nowrap">{v.component}</td>
+                        <td className="px-3 py-2.5 align-top whitespace-nowrap">
                           <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold leading-snug ${threatColors[v.threat] || 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300'}`}>
                             {v.threat}
                           </span>
                         </td>
-                        <td className="px-4 py-2.5 align-top font-mono text-[10px] text-slate-500 dark:text-slate-500 break-all leading-snug">{v.location}</td>
+                        <td className="px-3 py-2.5 align-top font-mono text-[10px] text-slate-500 dark:text-slate-500 whitespace-nowrap leading-snug">{v.location}</td>
                       </tr>
                     );
                   });
@@ -1256,6 +1254,7 @@ python3 latency_wisec.py`} />
                 })()}
               </tbody>
             </table>
+            </div>
           </div>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-3">
             * CVE links open the NVD entry. "Pending" entries are under coordinated disclosure. Bold causes = structural mutations.
