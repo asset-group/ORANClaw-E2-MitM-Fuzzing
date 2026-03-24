@@ -43,7 +43,7 @@ In our experiments across **5 O-RAN implementations**, O-RANClaw discovered **71
 
 🔍 **Security Assessment**: Systematic evaluation of O-RAN implementation security.
 
-ORANClaw artifacts paper received badges **Available**, **Functional** and **Reproduced** in the 19th ACM WiSec '26. Artifacts PDF available [here](docs/ORANClawArtifacs.pdf)
+ORANClaw artifacts paper received badges **Available**, **Functional** and **Reproduced** in the 19th ACM WiSec '26. Artifacts PDF available [here](docs/ORANclawArtifacts.pdf)
 
 </small>
 
