@@ -1,222 +1,375 @@
-# O-RANClaw: Disrupting E2 Nodes via MitM Fuzzing
+<a href="https://asset-group.github.io/ORANClaw-E2-MitM-Fuzzing/">
+  <img src="https://raw.githubusercontent.com/asset-group/ORANClaw-E2-MitM-Fuzzing/main/docs/public/Logo.png"
+    width="110" align="left" alt="O-RANClaw Logo" />
+</a>
 
-![oran-containers-logo](./docs/Logo1.jpeg)
+# ORANClaw: Shredding E2 Nodes via Structure-aware MiTM Fuzzing
 
 
-**O-RANClaw** is a structure- and semantic-aware, man-in-the-middle (MitM) fuzzing framework that targets the **E2 interface** in O-RAN. Positioned between xApps and the RIC, O-RANClaw mutates, and duplicates E2 messages to explore and disrupt gNB behavior.  
+<p align="center">
+<a href="https://asset-group.github.io/ORANClaw-E2-MitM-Fuzzing/">
+    <img src="https://raw.githubusercontent.com/asset-group/ORANClaw-E2-MitM-Fuzzing/main/docs/public/artifacts_available.png" width="90px" alt="Artifacts Available" />
+    <img src="https://raw.githubusercontent.com/asset-group/ORANClaw-E2-MitM-Fuzzing/main/docs/public/artifacts_evaluated_functional.png" width="90px" alt="Artifacts Evaluated Functional" />
+    <img src="https://raw.githubusercontent.com/asset-group/ORANClaw-E2-MitM-Fuzzing/main/docs/public/results_replicated.png" width="90px" alt="Results Replicated" />
+</a>
+</p>
+
+**ORANClaw** operates as a Man-in-the-Middle (MitM) proxy on the **E2 interface**, intercepting and intelligently mutating live E2 Application Protocol (E2AP) messages exchanged between the Near-Real-Time RAN Intelligent Controller (Near-RT RIC) and E2 Nodes (O-CU, O-DU).
 
 It is specifically designed to:
 - Take into account ASN.1 structural and semantic constraints when mutating packets.
-- Systematically explore state transitions and optimize mutation strategies based on coverage.
-- Evaluate both the RIC and gNB implementations by simulating xApp manipulations.
+- Systematically explore state transitions and optimize mutation strategies.
+- Evaluate both the NearRT-RIC and gNB implementations.
 
-In our experiments with **FlexRIC**, **OpenAirInterface**, and **ns-3**, O-RANClaw discovered **65 unique bugs** (7 CVEs already assigned):  
-- 28 in FlexRIC  
-- 37 in base station implementations (OpenAirInterface and ns-3 simulator)  
-
-O-RANClaw demonstrates that structure- and semantic-aware fuzzing of the E2 interface is highly effective at revealing vulnerabilities in O-RAN components.
-
-
-
-![design](./docs/DesignNoB.png)
-
-## Threat Model
-
-O-RANClaw models the attack scenario where:
-1. A malicious or compromised xApp communicates with the RIC.
-2. O-RANClaw intercepts E2 messages at the RIC–xApp boundary.
-3. Mutated or replayed messages disrupt the gNB’s control or data plane.
+In our experiments across **5 O-RAN implementations**, O-RANClaw discovered **71 new vulnerabilities**:
+- 1 in O-RAN SC RIC
+- 5 in VIAVI TeraVM RSG
+- 19 in OpenAirInterface (OAI)
+- 18 in ns-3
+- 28 in FlexRIC
 
 ---
 
-## Repository Structure
+## 🌐 Overview
 
-This repository provides am example to deploy :
-1. **O-RANClaw Core** – The MitM interception and mutation engine for E2 messages.
-2. **Containerized Testbed** – A reproducible Docker Compose deployment of the full O-RAN ecosystem for fuzzing experiments:
-   - **5G Core Network** (Open5GS)
-   - **gNB (DU, CU-CP, CU-UP)** via OpenAirInterface
-   - **UE simulator** for RF simulation
-   - **Near-Realtime RIC** (FlexRIC)
-   - Example xApps for monitoring/control
+Operating as a Man-in-the-Middle (MiTM) proxy on the E2 interface, O-RANClaw intercepts and intelligently mutates live E2 Application Protocol (E2AP) messages exchanged between the Near-Real-Time RAN Intelligent Controller (Near-RT RIC) and E2 Nodes (O-CU, O-DU). By leveraging ASN.1 structural awareness, it dynamically injects malformed yet structurally valid payloads directly into the communication stream. This allows O-RANClaw to bypass initial parsing checks and effectively expose deep-seated vulnerabilities and bugs within O-RAN components that traditional, structure-blind fuzzers fail to reach.
 
-The deployment scripts allow anyone to **reproduce the experiments** described in our paper.
+![O-RANClaw Design](docs/DesignNoB.png)
 
+---
 
-This repository provides a containerized deployment solution for Open Radio Access Network (ORAN) using Docker Compose. The `docker-compose.yaml` file orchestrates the deployment of all the necessary software components, including the core network, gNB (DU, CU-CP, CU-UP), UE simulator, and near-realtime RIC agent:
+## 📑 Table of Contents
 
-* **5G Core Network:** The core network is implemented using the open5gs software. Open5GS is an open-source project that provides a complete 3GPP-compliant 5G core network solution. It includes various network functions such as AMF, SMF, UPF, NRF, and more. The core network is responsible for handling user authentication, session management, and data forwarding between the gNB and external networks.
+- [ORANClaw: Shredding E2 Nodes via Structure-aware MiTM Fuzzing](#oranclaw-shredding-e2-nodes-via-structure-aware-mitm-fuzzing)
+  - [🌐 Overview](#-overview)
+  - [📑 Table of Contents](#-table-of-contents)
+  - [🚀 Quick Start via Docker](#-quick-start-via-docker)
+    - [📋 Requirements](#-requirements)
+    - [⚙️ Installation](#️-installation)
+    - [🔧 Running O-RANClaw with OpenAirInterface](#-running-o-ranclaw-with-openairinterface)
+    - [🔧 Running O-RANClaw with ns-3](#-running-o-ranclaw-with-ns-3)
+  - [Discovered Vulnerabilities](#discovered-vulnerabilities)
+    - [Summary by Implementation](#summary-by-implementation)
+    - [Complete Vulnerability Table](#complete-vulnerability-table)
+  - [📁 Repository Structure](#-repository-structure)
+    - [🔩 Key Components](#-key-components)
+  - [🔬 Research Questions (RQs)](#-research-questions-rqs)
+  - [📚 Citation](#-citation)
+  - [⚠️ Disclaimer](#️-disclaimer)
 
-* **gNB (DU, CU-CP, CU-UP):** The gNB (Next Generation Node B) is the base station in the ORAN architecture. It is implemented using the OpenAirInterface (OAI) software. OAI is an open-source project that provides a complete software implementation of the 4G/5G radio access network. The gNB is split into three components:
-  - **Distributed Unit (DU):** The DU is responsible for the lower layers of the radio protocol stack, including the physical layer (PHY) and the medium access control (MAC) layer. It handles the baseband processing and communicates with the CU-CP and CU-UP.
-  
-  - **Central Unit - Control Plane (CU-CP):** The CU-CP handles the control plane functions of the gNB. It manages the radio resource control (RRC) protocol and communicates with the core network for signaling purposes.
-  
-  - **Central Unit - User Plane (CU-UP):** The CU-UP handles the user plane functions of the gNB. It processes the user data packets and forwards them between the DU and the core network.
-  
-* **UE Simulator:** The UE (User Equipment) simulator is used to emulate the behavior of mobile devices in the ORAN network. It connects to gNB via RF simulation and core network. You can access the UE simulator container to simulate various scenarios and load conditions (e.g., `iperf3`).
+---
 
-* **Near-Realtime RIC Agent:** The near-realtime RIC agent is implemented using the FlexRIC software. FlexRIC is an open-source platform that provides a flexible and extensible framework for developing and deploying RAN intelligent controllers in an ORAN environment. The near-realtime RIC agent is responsible for managing and orchestrating the xAPPs, as well as providing interfaces for external components to interact with the RIC.
-* **xAPPs:** xAPPs (ORAN Applications) are software applications that run on top of the near-realtime RIC (RAN Intelligent Controller). They provide various functionalities and services to optimize and enhance the performance of the ORAN network. Examples of xAPPs include traffic steering, quality of service (QoS) optimization, and radio resource management.
+## 🚀 Quick Start via Docker
 
+### 📋 Requirements
 
+**Hardware:**
+- **CPU:** Minimum 4 cores (8+ cores recommended for concurrent fuzzing).
+- **RAM:** Minimum 16GB (32GB recommended for stable OAI gNB + UE simulation).
+- **Storage:** At least 20GB free. Up to 500GB if uncompressing logs for RQs.
 
-### 1 - Install latest docker and docker composer
+**Software:**
+- **OS:** Ubuntu 24.04 (Main runtime environment)
+- **Docker:** Latest version for container orchestration.
+- **Python >= 3.12:** Required for the MitM Fuzzing Engine.
+- **TShark >= 4.2.2:** For capturing E2AP/SCTP traffic.
+- **asn1c compiler >= 7.8:** For encoding/decoding ASN.1.
 
-```python
+### ⚙️ Installation
+
+**1. Clone O-RANClaw repository:**
+
+```bash
+cd $HOME
+git clone https://github.com/asset-group/ORANClaw-E2-MitM-Fuzzing.git
+cd $HOME/ORANClaw-E2-MitM-Fuzzing
+```
+
+**2. Install System Requirements:**
+
+```bash
+chmod +x requirements.sh
 ./requirements.sh
-
-# Pull the components for reproduction
-docker pull researchanon2025/oai-components:v1.0
-docker pull researchanon2025/flexric-components:v1.0
+source $HOME/.venvs/oran-env/bin/activate
 ```
 
-
-
-#### 2 - Start Core Network
-
-Run the command below in a separate terminal and wait until you see successful UDR related logs:
+**3. Install wdissector & asn1c:**
 
 ```bash
-docker compose --profile core up # Terminal 1 - Core Network
+cd $HOME/ORANClaw-E2-MitM-Fuzzing
+wget -O vakt-ble-defender.zip https://zenodo.org/records/18368683/files/vakt-ble-defender.zip?download=1
+unzip vakt-ble-defender.zip
+rm -rf vakt-ble-defender.zip
+
+cd $HOME/ORANClaw-E2-MitM-Fuzzing/asn1
+wget https://zenodo.org/records/18368683/files/asn1c.zip?download=1 -O asn1c.zip
+unzip asn1c.zip
+rm -rf asn1c.zip
+chmod +x ./reader
+chmod +x ./reader_json
 ```
 
-Successful UDR logs:
+### 🔧 Running O-RANClaw with OpenAirInterface
+
+**1. Start Core Network (Terminal 1):**
 
 ```bash
-udr-1    | 04/12 07:58:12.304: [sbi] INFO: [6250a1de-f8a2-41ee-bdd9-0f6b7e1be1b5] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:221)
-udm-1    | 04/12 07:58:12.304: [sbi] INFO: (NRF-notify) NF registered [6250a1de-f8a2-41ee-bdd9-0f6b7e1be1b5:1] (../lib/sbi/nnrf-handler.c:924)
-udm-1    | 04/12 07:58:12.304: [sbi] INFO: [UDR] (NRF-notify) NF Profile updated [6250a1de-f8a2-41ee-bdd9-0f6b7e1be1b5:1] (../lib/sbi/nnrf-handler.c:938)
-nrf-1    | 04/12 07:58:12.304: [nrf] INFO: [68e13194-f8a2-41ee-a707-db685e0fa5ce] Subscription created until 2024-04-13T07:58:12.304328+00:00 [validity_duration:86400] (../src/nrf/nnrf-handler.c:445)
-udr-1    | 04/12 07:58:12.304: [sbi] INFO: [68e13194-f8a2-41ee-a707-db685e0fa5ce] Subscription created until 2024-04-13T07:58:12.304328+00:00 [duration:86400,validity:86399.999815,patch:43199.999907] (../lib/sbi/nnrf-handler.c:708)
+cd $HOME/ORANClaw-E2-MitM-Fuzzing
+docker compose --profile core up
 ```
 
-
-
-#### 3 - Add UE Subscribers
-
-Add sample UE subscribers to the core network so tha the UE Simulator can register to the network:
-
-```python
-./scripts/add_subcribers.sh
-```
-
-A successful output is shown below:
+**2. Add UE Subscribers:**
 
 ```bash
-{
-  acknowledged: true,
-  insertedId: ObjectId('6618ec5e2d06d1bb877b2da9')
+cd $HOME/ORANClaw-E2-MitM-Fuzzing/scripts/
+./add_subcribers.sh
+```
+
+**3. Start the O-RAN gNB, UE simulation, and Near-Real-Time RIC (Terminal 2):**
+
+```bash
+cd $HOME/ORANClaw-E2-MitM-Fuzzing/
+docker compose --profile gnb-rfsim up
+```
+
+**4. Start O-RANClaw Fuzzer (Terminal 3):**
+
+```bash
+cd $HOME/ORANClaw-E2-MitM-Fuzzing/asn1
+python3 client_server.py
+```
+
+**5. Start xApp (Terminal 4):**
+
+```bash
+cd $HOME/ORANClaw-E2-MitM-Fuzzing/
+docker compose --profile xapp up
+```
+
+### 🔧 Running O-RANClaw with ns-3
+
+**1. Install ns-3 O-RAN Simulator:**
+
+```bash
+cd $HOME
+git clone https://github.com/Orange-OpenSource/ns-O-RAN-flexric.git
+cd ns-O-RAN-flexric
+git checkout 7936f62f
+```
+
+**2. Configure and run:**
+
+Modify `IP_MITM` in `client_server_ns3.py` to your host IP, then:
+
+```bash
+cd $HOME/ORANClaw-E2-MitM-Fuzzing/asn1
+./ns3_fuzzing.sh
+```
+
+---
+
+## Discovered Vulnerabilities
+
+### Summary by Implementation
+
+| Implementation | Bugs Found | Status |
+|----------------|------------|--------|
+| O-RAN SC RIC | 1 | 1 CVE assigned |
+| VIAVI TeraVM RSG | 5 | Pending disclosure |
+| OpenAirInterface (OAI) | 19 | 7 CVEs assigned |
+| ns-3 | 18 | Pending disclosure |
+| FlexRIC | 28 | 1 existing CVE, 27 pending |
+| **Total** | **71** | **8 CVEs + 63 pending** |
+
+Causes in **bold** indicate structural message mutations rather than single-field modifications. "Unable To Recover" denotes failures to restore normal operation from crashes in previous sessions.
+
+### Complete Vulnerability Table
+
+| VulnID | Implementation | CVE | Vulnerability | General Cause | Component | Threat | Location |
+|--------|----------------|-----|---------------|---------------|-----------|--------|----------|
+| VulnOSCRIC-01 | O-RAN SC RIC | CVE-2025-67398 | Unhandled Exception | Flooding E2SetupRequest | E2 Termination | DoS | Not Specified |
+| VulnVIAVI-01 | VIAVI TeraVM RSG | Pending | Heap/Stack Buffer Overflow | **Malformed RC SM Structure** | gNB | Mem. Corrupt | Not Specified |
+| VulnVIAVI-02 | VIAVI TeraVM RSG | Pending | Assertion | Malformed KPM SM Field | RIC | DoS | nr-gnb-mac.cc:1136 |
+| VulnVIAVI-03 | VIAVI TeraVM RSG | Pending | Unhandled Exception | Malformed RICSubscriptionRequest Field | gNB | DoS | Not Specified |
+| VulnVIAVI-04 | VIAVI TeraVM RSG | Pending | Buffer Over-read | Malformed KPM SM Field | RIC | Mem. Corrupt | Not Specified |
+| VulnVIAVI-05 | VIAVI TeraVM RSG | Pending | Unhandled Exception | **Malformed KPM SM Structure** | GUI, gNB, RIC | DoS | Not Specified |
+| VulnOAI-01 | OAI | CVE-2024-48408 | Assertion | Malformed MAC SM Field | O-DU | DoS | ran_func_mac.c:126 |
+| VulnOAI-02 | OAI | CVE-2025-52142 | Assertion | Malformed KPM SM Field | O-DU/CU-UP | DoS | ran_func_kpm_subs.c:226 |
+| VulnOAI-03 | OAI | CVE-2025-52146 | Assertion | Malformed KPM SM Field | O-DU/CU-UP | DoS | msg_handler_agent.c:136 |
+| VulnOAI-04 | OAI | CVE-2025-52150 | Assertion | **Truncated MAC SM Structure** | O-DU | DoS | mac_dec_plain.c:190 |
+| VulnOAI-05 | OAI | Pending | Assertion | Malformed KPM SM Field | O-DU | DoS | ran_func_kpm.c:267/268 |
+| VulnOAI-06 | OAI | Pending | Assertion | **Malformed KPM SM Structure** | O-DU | DoS | ran_func_kpm.c:72 |
+| VulnOAI-07 | OAI | CVE-2025-52148 | Assertion | Unexpected TC SM Field | O-CU-UP | DoS | tc_dec_plain.c:1418 |
+| VulnOAI-08 | OAI | CVE-2025-52151 | Assertion | Malformed KPM SM Field | O-CU-UP | DoS | ran_func_kpm.c:230 |
+| VulnOAI-09 | OAI | CVE-2025-52147 | Assertion | Zero-ed RC SM Field | O-CU-CP | DoS | rc_dec_asn.c:953 |
+| VulnOAI-10 | OAI | Pending | Assertion | Unable To Recover | O-CU-CP (E1) | DoS | cucp_cuup_e1ap.c:31 |
+| VulnOAI-11 | OAI | Pending | Assertion | **Malformed KPM SM Structure** | O-CU-UP | DoS | ran_func_kpm.c:177 |
+| VulnOAI-12 | OAI | Pending | Assertion | Malformed E42RICsubscriptionDeleteRequest Field | O-CU-CP | DoS | bimap.c:126 |
+| VulnOAI-13 | OAI | Pending | Assertion | Malformed KPM SM Field | O-CU-UP | DoS | ran_func_kpm.c:168 |
+| VulnOAI-14 | OAI | Pending | Assertion | Multiple Malformed KPM Fields | O-DU/CU-UP | DoS | ran_func_kpm.c:71 |
+| VulnOAI-15 | OAI | Pending | Assertion | Invalid KPM SM Field | O-CU-CP/CU-UP | DoS | ran_func_kpm.c:229 |
+| VulnOAI-16 | OAI | Pending | Assertion | Malformed KPM SM Field | O-CU-CP/UP | DoS | ran_func_kpm.c:176 |
+| VulnOAI-17 | OAI | Pending | Assertion | Malformed KPM SM Field | O-CU-CP/UP | DoS | ran_func_kpm.c:167 |
+| VulnOAI-18 | OAI | Pending | Assertion | Unable To Recover | O-CU-UP/CP | DoS | e2_agent.c:242 |
+| VulnOAI-19 | OAI | Pending | Assertion | Unable To Recover | O-CU-UP/CP | DoS | plugin_agent.c:286 |
+| VulnNS-01 | NS-3 | Pending | Buffer Overflow | Malformed RICSubscriptionRequest Field | gNB | Mem. Corrupt | Not Specified |
+| VulnNS-02 | NS-3 | Pending | Heap-based Buffer Overflow | Malformed E42SetupRequest Field | gNB | Mem. Corrupt | Not Specified |
+| VulnNS-03 | NS-3 | Pending | Heap-Based Buffer Overflow | E42SetupRequest Duplication | gNB | Mem. Corrupt | Not Specified |
+| VulnNS-04 | NS-3 | Pending | Assertion | Malformed E42RICsubscriptionDeleteRequest | gNB | DoS | ipv4-l3-protocol.cc:972 |
+| VulnNS-05 | NS-3 | Pending | Assertion | Malformed RICSubscriptionRequest Field | gNB | DoS | ipv4-l3-protocol.cc:580 |
+| VulnNS-06 | NS-3 | Pending | Assertion | Malformed RICSubscriptionRequest Field | LTE eNB | DoS | lte-spectrum-phy.cc:486 |
+| VulnNS-07 | NS-3 | Pending | Null pointer dereference | Malformed RICSubscriptionRequest Field | gNB | Mem. Corrupt | ptr.h:638 |
+| VulnNS-08 | NS-3 | Pending | Out-of-bounds read | Malformed RICSubscriptionRequest Field | gNB | Info. Disclosure | net-device-queue-interface.cc:216 |
+| VulnNS-09 | NS-3 | Pending | Null pointer dereference | Malformed RICSubscriptionRequest Field | gNB | Mem. Corrupt | ptr.h:630 |
+| VulnNS-10 | NS-3 | Pending | Assertion | Malformed RICSubscriptionRequest Field | gNB | DoS | object.cc:349 |
+| VulnNS-11 | NS-3 | Pending | Assertion | Malformed RICSubscriptionRequest Field | gNB | DoS | traffic-control-layer.cc:337 |
+| VulnNS-12 | NS-3 | Pending | Improper Input Validation | Malformed E42RICSubscriptionDeleteRequest Field | gNB | DoS | point-to-point-net-device.cc:279 |
+| VulnNS-13 | NS-3 | Pending | Improper Check for Unusual/Exceptional Conditions | Malformed E42RICSubscriptionDeleteRequest Field | gNB | Improper File Handling | mmwave-phy-trace.cc:399 |
+| VulnNS-14 | NS-3 | Pending | Assertion | Invalid KPM RC Field | gNB | DoS | default-simulator-impl.cc:235 |
+| VulnNS-15 | NS-3 | Pending | Assertion | Malformed RICcontrolRequest Field | gNB | DoS | buffer.cc:183 |
+| VulnNS-16 | NS-3 | Pending | Improper Input Validation | Malformed E42RICSubscriptionDeleteRequest Field | gNB | DoS | mmwave-phy-trace.cc:220 |
+| VulnNS-17 | NS-3 | Pending | Improper Check for Unusual/Exceptional Conditions | Malformed E42RICSubscriptionDeleteRequest Field | gNB | Improper File Handling | mmwave-phy-trace.cc:71 |
+| VulnNS-18 | NS-3 | Pending | Assertion | Malformed RICSubscriptionRequest Field | LTE eNB | DoS | mmwave-enb-phy.cc:1141 |
+| — | FlexRIC | CVE-2024-34034 | Assertion | Flooding E42SubscriptionRequest | RIC | DoS | Not Specified |
+| VulnFlex-01 | FlexRIC | Pending | Assertion | Malformed RICSubscriptionRequest Field | RIC | DoS | msg_handler_iapp.c:343 |
+| VulnFlex-02 | FlexRIC | Pending | Assertion | Malformed E42RICsubscriptionDelete Fields | RIC E2AP(v2.03) | DoS | e2ap_msg_dec_asn.c:2534 |
+| VulnFlex-03 | FlexRIC | Pending | Assertion | Malformed E42SubscriptionRequest Fields | RIC | DoS | msg_handler_ric.c:117 |
+| VulnFlex-04 | FlexRIC | Pending | Assertion | Malformed E42SubscriptionRequest Fields | RIC E2AP(v2.03) | DoS | e2ap_msg_dec_asn.c:544 |
+| VulnFlex-05 | FlexRIC | Pending | Assertion | Malformed E42SubscriptionRequest Field | RIC E2AP(v2.03) | DoS | e2ap_msg_dec_asn.c:487 |
+| VulnFlex-06 | FlexRIC | Pending | Assertion | Malformed MAC SM Field | RIC E2AP(v2.03) | DoS | e2ap_msg_dec_asn.c:1107 |
+| VulnFlex-07 | FlexRIC | Pending | Assertion | Malformed E42SubscriptionDelete Field | RIC E2AP(v2.03) | DoS | e2ap_msg_dec_asn.c:2523 |
+| VulnFlex-08 | FlexRIC | Pending | Assertion | Malformed E42SubscriptionDelete Field | RIC E2AP(v2.03) | DoS | e2ap_msg_dec_asn.c:2540 |
+| VulnFlex-09 | FlexRIC | Pending | Assertion | Flooding E42SetupRequest | RIC | DoS | e2ap_msg_enc_asn.c:3165 |
+| VulnFlex-10 | FlexRIC | Pending | Assertion | Malformed E42SubscriptionRequest Field | RIC E2AP(v2.03) | DoS | e2ap_msg_dec_asn.c:536 |
+| VulnFlex-11 | FlexRIC | Pending | Assertion | Malformed E42SubscriptionDeleteRequest Field | RIC E2AP(v2.03) | DoS | e2ap_msg_dec_asn.c:2531 |
+| VulnFlex-12 | FlexRIC | Pending | Assertion | Malformed E42SubscriptionRequest Field | RIC E2AP(v2.03) | DoS | e2ap_msg_dec_asn.c:527 |
+| VulnFlex-13 | FlexRIC | Pending | Assertion | E42SubscriptionDeleteRequest Field | RIC E2AP(v2.03) | DoS | e2ap_msg_dec_asn.c:2548 |
+| VulnFlex-14 | FlexRIC | Pending | Assertion | Malformed E42SubscriptionRequest Field | RIC E2AP(v2.03) | DoS | e2ap_msg_dec_asn.c:477 |
+| VulnFlex-15 | FlexRIC | Pending | Assertion | Unable to Recover | RIC | DoS | map_e2_node_sockaddr.c:154 |
+| VulnFlex-16 | FlexRIC | Pending | Assertion | Malformed KPM SM Field | RIC | DoS | reg_e2_nodes.c:174 |
+| VulnFlex-17 | FlexRIC | Pending | Assertion | Unable to Recover | RIC | DoS | map_ric_id.c:227 |
+| VulnFlex-18 | FlexRIC | Pending | Assertion | Unable to Recover | RIC | DoS | assoc_rb_tree.c:457 |
+| VulnFlex-19 | FlexRIC | Pending | Assertion | Flooding E42SubscriptionRequest | RIC | DoS | msg_handler_iapp.c:342 |
+| VulnFlex-20 | FlexRIC | Pending | Assertion | Malformed E42SubscriptionRequest Field | RIC E2AP(v1.01) | DoS | e2ap_msg_dec_asn.c:418 |
+| VulnFlex-21 | FlexRIC | Pending | Assertion | E42SubscriptionDeleteRequest Field | RIC E2AP(v1.01) | DoS | e2ap_msg_dec_asn.c:435 |
+| VulnFlex-22 | FlexRIC | Pending | Assertion | Malformed E42SubscriptionRequest Field | RIC E2AP(v1.01) | DoS | e2ap_msg_dec_asn.c:378 |
+| VulnFlex-23 | FlexRIC | Pending | Assertion | Malformed E42SubscriptionRequest Field | RIC E2AP(v1.01) | DoS | e2ap_msg_dec_asn.c:368 |
+| VulnFlex-24 | FlexRIC | Pending | Assertion | Malformed E42SetupRequest Field | RIC E2AP(v1.01) | DoS | e2ap_msg_dec_asn.c:2113 |
+| VulnFlex-25 | FlexRIC | Pending | Assertion | Unable To Recover | RIC E2AP(v1.01) | DoS | e2ap_msg_enc_asn.c:2731 |
+| VulnFlex-26 | FlexRIC | Pending | Assertion | Malformed E42SubscriptionRequest Field | RIC E2AP(v1.01) | DoS | e2ap_msg_dec_asn.c:427 |
+| VulnFlex-27 | FlexRIC | Pending | Assertion | Malformed E42SetupRequest Field | RIC E2AP(v1.01) | DoS | e2ap_msg_dec_asn.c:2101 |
+| VulnFlex-28 | FlexRIC | Pending | Assertion | Unable To Recover | RIC | DoS | endpoint_ric.c:64 |
+
+*Note: CVE links open the NVD entry. "Pending" entries are under coordinated disclosure. Bold causes = structural mutations.*
+
+---
+
+## 📁 Repository Structure
+
+<details>
+<summary>📂 Click to expand full project structure</summary>
+
+```
+.
+├── 📄 core-open5gs.yaml          # Open5GS 5G core configuration
+├── 📄 docker-compose.yaml        # Orchestration of O-RAN, RIC, and core components
+├── 📄 Dockerfile                 # Container image for O-RANClaw experiments
+├── 📄 gnb-oai.yaml               # OAI gNB configuration (CU/DU)
+├── 📄 requirements.sh            # System-level dependency installation
+├── 🐍 mitm.py                    # Core MitM proxy and fuzzing engine
+├── 🐍 ORANClaw_demo.py           # Demo script for O-RANClaw capabilities
+├── 🐍 docker_monitoring.py       # Automated testing and monitoring
+├── 📁 configs/                   # Configuration files
+│   ├── 📄 flexric.conf           # Near-RT RIC configuration
+│   └── 📄 xapp.conf              # xApp configuration redirecting RIC IP to localhost
+├── 📁 asn1/                      # ASN.1 specifications, code generation, and fuzzing logic
+│   ├── 📁 asn1files/             # E2AP and E2SM ASN.1 specifications
+│   ├── 📁 asn1c/                 # ASN.1 compiler and runtime support
+│   ├── 📁 src/                   # Generated E2AP/E2SM encoders and decoders
+│   ├── 🐍 client_server.py       # ASN.1-aware fuzzing engine (OAI version)
+│   ├── 🐍 client_server_ns3.py   # ASN.1-aware fuzzing engine (ns-3 version)
+│   ├── 📁 captures_bridge/       # Capture files during fuzzing sessions
+│   ├── 📁 container_logs/        # OAI docker logs during fuzzing
+│   ├── 📁 fuzzing_logs/          # Fuzzer logs during sessions
+│   ├── 📁 state_machines/        # Learned E2 protocol state machines
+│   └── 📁 state_machines_diff/   # Behavioral diffs between sessions
+├── 📁 captures/                  # PCAP traces from baseline and attack experiments
+├── 📁 libs/                      # Precompiled FlexRIC service models
+├── 📁 scripts/                   # Experiment automation
+│   ├── 📄 add_subscribers.sh     # Registers UEs in Open5GS (MongoDB)
+│   └── 📄 run_ue_iperf.sh        # Traffic generation for evaluation
+└── 📁 docs/                      # Design diagrams and system overview
+```
+
+</details>
+
+### 🔩 Key Components
+
+| Component | File/Directory | Description |
+|-----------|----------------|-------------|
+| **🎯 MitM Engine** | `asn1/client_server.py` | Intercepts E2 messages, applies mutations, and forwards to targets |
+| **📐 ASN.1 Handler** | `asn1/` | Parses E2AP/E2SM messages with PER/JER encoding/decoding |
+| **🧬 Fuzzing Modules** | `asn1/` | Structure-aware mutation strategies for E2 service models |
+| **📊 Monitoring** | `docker_monitoring.py` | Real-time monitoring with automated xApp restart |
+| **🗺️ State Machine Learning** | `asn1/state_machines/` | Extracts protocol state machines from benign traces |
+
+---
+
+## 🔬 Research Questions (RQs)
+
+To replicate the paper results, download pre-collected logs (~530GB uncompressed):
+
+```bash
+cd $HOME
+wget -O Logs_ORANCLAW.zip https://zenodo.org/records/18389642/files/Logs_ORANCLAW.zip?download=1
+unzip -p Logs_ORANCLAW.zip | tar -xvf -
+```
+
+**RQ1 - Bug Finding (Figures 4 & 5):**
+```bash
+# OpenAirInterface
+source $HOME/.venvs/oran-env/bin/activate
+cd $HOME/Logs_ORANCLAW/LogsOAI/RQ1
+python3 average_new_SM.py
+
+# ns-3
+cd $HOME/Logs_ORANCLAW/Logs_NS3/RQ1/
+python3 average.py
+```
+
+**RQ2 - Ablation Study (Figures 6, 7, 8):**
+```bash
+# OpenAirInterface
+cd $HOME/Logs_ORANCLAW/LogsOAI/Ablation/
+python3 plot.py
+python3 sm_completness.py
+
+# ns-3
+cd $HOME/Logs_ORANCLAW/Logs_NS3/Ablation_2/
+python3 plot.py
+```
+
+**RQ3 - Efficiency (Figure 9):**
+```bash
+cd $HOME/Logs_ORANCLAW/LogsOAI/RQ3/
+python3 latency_wisec.py
+```
+
+---
+
+## 📚 Citation
+
+```bibtex
+@inproceedings{benita2026oranclaw,
+  title={ORANClaw: Shredding E2 Nodes in O-RAN via Structure-aware MiTM Fuzzing},
+  author={Benita, Geovani and Garbelini, Matheus E. and Chattopadhyay, Sudipta and Zhou, Jianying},
+  booktitle={Proceedings of the 19th ACM Conference on Security and Privacy in Wireless and Mobile Networks (WiSec '26)},
+  year={2026}
 }
-Done!
 ```
 
-**Note that you can modify the details of UE SIM card (imsi, key, opc, apn) in the files `gnb-oai.yaml` and `scripts/add_subcribers.sh`**
+---
 
+## ⚠️ Disclaimer
 
-
-#### 4 - Start ORAN gNB + UE Simulation + Near Realtime RIC
-
-Run the command below in a separate terminal and wait until you see successful UE related logs:
-
-```bash
-docker compose --profile gnb-rfsim up # Terminal 2 - gNB + UE Simulation + Near Realtime RIC
-```
-
-Successful UE logs:
-
-```bash
-oai-ue-rfsimu-2-1  | [NR_PHY]   ============================================
-oai-ue-rfsimu-2-1  | [NR_PHY]   Harq round stats for Downlink: 2735/1/0
-oai-ue-rfsimu-2-1  | [NR_PHY]   ============================================
-```
-
-Note that two simulated UEs are started (containers `oai-ue-rfsimu-1-1` and `oai-ue-rfsimu-2-1`). You can add or remove UEs from the simulation by modifying file `gnb-oai.yaml`.
-
-
-
-#### 5 - Run commands in the UE (iperf)
-
-###### UE to Core Network
-
-You can test UE Uplink/Downlink transfer speed by running iperf against the core network, which has default IP address of `10.45.0.1`:
-
-```bash
-docker compose exec -it oai-ue-rfsimu-1 iperf3 -c 10.45.0.1 -t0 # Terminal 3 - UE to Core Transfer
-```
-
-If the command is successful and the UE is registered to the core network, iperf should indicate a bitrate of about 100mbits/sec as shown below:
-
-```bash
-[ ID] Interval           Transfer     Bitrate         Retr
-[  5]   0.00-1.65   sec  22.2 MBytes   113 Mbits/sec    0             sender
-```
-
-###### Core Network to UE
-
-Similarly, you can run iperf against UEs, which are usually registered to IP addresses `10.45.0.2` or `10.45.0.3`:
-
-```bash
-docker compose exec -it upf iperf3 -c 10.45.0.3 -t0 # Terminal 3 - Core to UE Transfer
-```
-
-
-
-#### 6 - Start xAPP
-
-Start a [xAPP KPI monitoring](https://gitlab.eurecom.fr/mosaic5g/flexric/-/blob/master/examples/xApp/c/monitor/xapp_kpm_moni.c?ref_type=heads) example by running the command below:
-
-```bash
-docker compose --profile xapp up # Terminal 4 - xAPP
-```
-
-The xAPP informs the downlink and uplink throuput of all connected UEs as shown below:
-
-```bash
-xapp-kpm-monitor-1  | ran_ue_id = 1
-xapp-kpm-monitor-1  | DRB.RlcSduDelayDl = 6014.82 [μs]
-xapp-kpm-monitor-1  | DRB.UEThpDl = 250493.20 [kbps]
-xapp-kpm-monitor-1  | DRB.UEThpUl = 4843.06 [kbps]
-xapp-kpm-monitor-1  | RRU.PrbTotDl = 354196 [PRBs]
-xapp-kpm-monitor-1  | RRU.PrbTotUl = 30572 [PRBs]
-```
-
-
-#### Image Information
-This deployment uses the following Docker images for reproducibility:
-
-- OAI Components: researchanon2025/oai-components:v1.0 (gNB, UE simulation)
-- FlexRIC Components: researchanon2025/flexric-components:v1.0 (Near-RT RIC, xApps)
-- Core Network: Standard Open5GS images from Docker Hub
-
-These images contain all necessary components built from:
-
-* OpenAirInterface (OAI) develop branch
-* FlexRIC framework for O-RAN RIC functionality
-
-
-#### System Requirements
-
-RAM: Minimum 8GB, Recommended 16GB
-CPU: Minimum 4 cores, Recommended 8+ cores
-Storage: At least 20GB free space for images and containers
-OS: Linux (tested on Ubuntu 20.04/22.04)
-
-#### Logs and Debugging
-
-``` bash
-# Check core network logs
-docker compose logs -f amf
-
-# Check gNB logs
-docker compose logs -f oai-cu-cp
-docker compose logs -f oai-cu-up
-docker compose logs -f oai-cu-du
-
-# Check UE logs
-docker compose logs -f oai-ue-rfsimu-1
-
-# Check RIC logs
-docker compose logs -f nearRT-RIC
-
-```
+This framework is for research and educational purposes only. Unauthorized use of O-RANClaw on live production networks or devices without explicit consent may violate local laws and regulations. The authors and contributors are not responsible for any misuse of this tool.
