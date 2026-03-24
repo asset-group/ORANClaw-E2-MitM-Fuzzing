@@ -7,11 +7,9 @@
 
 
 <p align="center">
-<a href="https://asset-group.github.io/ORANClaw-E2-MitM-Fuzzing/">
-    <img src="https://raw.githubusercontent.com/asset-group/ORANClaw-E2-MitM-Fuzzing/main/docs/public/artifacts_available.png" width="90px" alt="Artifacts Available" />
-    <img src="https://raw.githubusercontent.com/asset-group/ORANClaw-E2-MitM-Fuzzing/main/docs/public/artifacts_evaluated_functional.png" width="90px" alt="Artifacts Evaluated Functional" />
-    <img src="https://raw.githubusercontent.com/asset-group/ORANClaw-E2-MitM-Fuzzing/main/docs/public/results_replicated.png" width="90px" alt="Results Replicated" />
-</a>
+    <img src="docs/public/artifacts_available.png" width="90px" alt="Artifacts Available" />
+    <img src="docs/public/artifacts_evaluated_functional.png" width="90px" alt="Artifacts Evaluated Functional" />
+    <img src="docs/public/results_replicated.png" width="90px" alt="Results Replicated" />
 </p>
 
 **ORANClaw** operates as a Man-in-the-Middle (MitM) proxy on the **E2 interface**, intercepting and intelligently mutating live E2 Application Protocol (E2AP) messages exchanged between the Near-Real-Time RAN Intelligent Controller (Near-RT RIC) and E2 Nodes (O-CU, O-DU).
@@ -32,9 +30,9 @@ In our experiments across **5 O-RAN implementations**, O-RANClaw discovered **71
 
 ## 🌐 Overview
 
-Operating as a Man-in-the-Middle (MiTM) proxy on the E2 interface, O-RANClaw intercepts and intelligently mutates live E2 Application Protocol (E2AP) messages exchanged between the Near-Real-Time RAN Intelligent Controller (Near-RT RIC) and E2 Nodes (O-CU, O-DU). By leveraging ASN.1 structural awareness, it dynamically injects malformed yet structurally valid payloads directly into the communication stream. This allows O-RANClaw to bypass initial parsing checks and effectively expose deep-seated vulnerabilities and bugs within O-RAN components that traditional, structure-blind fuzzers fail to reach.
+The following diagram illustrates O-RANClaw's architecture and operational flow within the O-RAN ecosystem:
 
-![O-RANClaw Design](docs/DesignNoB.png)
+![O-RANClaw Design](docs/public/DesignBetter-1.jpg)
 
 ---
 
