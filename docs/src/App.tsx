@@ -340,8 +340,8 @@ export default function App() {
           </div>
           <div className="hidden items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400 sm:flex">
             <a href="#overview" className="hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-400 transition-colors">Overview</a>
-            <a href="#vulnerabilities" className="hover:text-red-600 dark:hover:text-red-400 transition-colors">Vulnerabilities</a>
             <a href="#reproducibility" className="hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-400 transition-colors">Reproducibility Guide</a>
+            <a href="#vulnerabilities" className="hover:text-red-600 dark:hover:text-red-400 transition-colors">Vulnerabilities</a>
           </div>
           <div className="flex items-center gap-3">
             <button
@@ -1190,14 +1190,14 @@ python3 latency_wisec.py`} />
             <div className="overflow-x-auto">
             <table className="text-xs min-w-[640px] w-full">
               <thead>
-                <tr className="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 text-left">
-                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 whitespace-nowrap">VulnID</th>
-                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 whitespace-nowrap">CVE</th>
-                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300">Vulnerability</th>
-                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300">General Cause</th>
-                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 whitespace-nowrap">Component</th>
-                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 whitespace-nowrap">Threat</th>
-                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300">Location</th>
+                <tr className="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 text-center">
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 whitespace-nowrap text-center">VulnID</th>
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 whitespace-nowrap text-center">CVE</th>
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 text-center">Vulnerability</th>
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 text-center">General Cause</th>
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 whitespace-nowrap text-center">Component</th>
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 whitespace-nowrap text-center">Threat</th>
+                  <th className="px-3 py-3 font-semibold text-slate-700 dark:text-slate-300 text-center">Location</th>
                 </tr>
               </thead>
               <tbody>
@@ -1211,7 +1211,7 @@ python3 latency_wisec.py`} />
                       const colors = implColors[v.impl] || '';
                       rows.push(
                         <tr key={`group-${v.impl}`} className={`border-b border-slate-100 dark:border-slate-800 ${colors.split(' ').filter(c => c.startsWith('bg-') || c.startsWith('dark:bg-')).join(' ')}`}>
-                          <td colSpan={7} className="px-4 py-2">
+                          <td colSpan={7} className="px-4 py-2 text-center">
                             <span className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider ${colors.split(' ').filter(c => c.startsWith('text-') || c.startsWith('dark:text-')).join(' ')}`}>
                               <ShieldAlert className="h-3.5 w-3.5" />
                               {v.impl}
@@ -1222,11 +1222,11 @@ python3 latency_wisec.py`} />
                     }
                     rows.push(
                       <tr key={i} className={`border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors ${v.existing ? 'opacity-60' : ''}`}>
-                        <td className="px-3 py-2.5 align-top font-mono font-medium text-slate-700 dark:text-slate-300 whitespace-nowrap leading-snug">
+                        <td className="px-3 py-2.5 text-center font-mono font-medium text-slate-700 dark:text-slate-300 whitespace-nowrap leading-snug">
                           {v.id}
                           {v.existing && <span className="ml-1 text-[10px] bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 rounded px-1 py-0.5">existing</span>}
                         </td>
-                        <td className="px-3 py-2.5 align-top leading-snug whitespace-nowrap">
+                        <td className="px-3 py-2.5 text-center leading-snug whitespace-nowrap">
                           {v.cve.startsWith('CVE-') ? (
                             <a href={`https://nvd.nist.gov/vuln/detail/${v.cve}`} target="_blank" rel="noopener noreferrer"
                               className="text-indigo-600 dark:text-indigo-400 hover:underline font-mono font-medium">
@@ -1236,17 +1236,17 @@ python3 latency_wisec.py`} />
                             <span className="text-slate-400 dark:text-slate-500 italic">{v.cve}</span>
                           )}
                         </td>
-                        <td className="px-3 py-2.5 align-top text-slate-600 dark:text-slate-400 leading-snug min-w-[140px]">{v.vuln}</td>
-                        <td className="px-3 py-2.5 align-top text-slate-700 dark:text-slate-300 leading-snug min-w-[140px]">
+                        <td className="px-3 py-2.5 text-center text-slate-600 dark:text-slate-400 leading-snug min-w-[140px]">{v.vuln}</td>
+                        <td className="px-3 py-2.5 text-center text-slate-700 dark:text-slate-300 leading-snug min-w-[140px]">
                           {v.structural ? <strong>{v.cause}</strong> : v.cause}
                         </td>
-                        <td className="px-3 py-2.5 align-top font-mono text-slate-600 dark:text-slate-400 leading-snug whitespace-nowrap">{v.component}</td>
-                        <td className="px-3 py-2.5 align-top whitespace-nowrap">
+                        <td className="px-3 py-2.5 text-center font-mono text-slate-600 dark:text-slate-400 leading-snug whitespace-nowrap">{v.component}</td>
+                        <td className="px-3 py-2.5 text-center whitespace-nowrap">
                           <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold leading-snug ${threatColors[v.threat] || 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300'}`}>
                             {v.threat}
                           </span>
                         </td>
-                        <td className="px-3 py-2.5 align-top font-mono text-[10px] text-slate-500 dark:text-slate-500 whitespace-nowrap leading-snug">{v.location}</td>
+                        <td className="px-3 py-2.5 text-center font-mono text-[10px] text-slate-500 dark:text-slate-500 whitespace-nowrap leading-snug">{v.location}</td>
                       </tr>
                     );
                   });
