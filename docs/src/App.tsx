@@ -234,7 +234,7 @@ const CodeBlock = ({ code, language = 'bash', title, isLog = false, collapsible 
       'python3', 'echo', 'sudo', 'apt', 'apt-key', 'tee', 'git', 'cp', 
       'tar', 'ls', 'mv', 'npm', 'npx', 'yarn', 'pnpm', 'compose', 'up', 
       'exec', 'install', 'update', 'clone', 'checkout', 'add', 'commit', 
-      'push', 'iperf3'
+      'push', 'iperf3',
     ];
     const cmdRegex = new RegExp(`\\b(${commands.join('|')})\\b`, 'g');
     
@@ -551,11 +551,8 @@ export default function App() {
                           Clone ORANClaw repository
                         </h5>
                         <CodeBlock code={`cd $HOME
-wget https://zenodo.org/records/18580510/files/ORANClaw-E2-MitM-Fuzzing.zip?download=1 -O ORANClaw-E2-MitM-Fuzzing-AFFC.zip
-mkdir ORANClaw-E2-MitM-Fuzzing-AFFC
-unzip ORANClaw-E2-MitM-Fuzzing-AFFC.zip -d ORANClaw-E2-MitM-Fuzzing-AFFC
-rm -rf ORANClaw-E2-MitM-Fuzzing-AFFC.zip
-cd $HOME/ORANClaw-E2-MitM-Fuzzing-AFFC`} />
+git clone https://github.com/asset-group/ORANClaw-E2-MitM-Fuzzing.git
+cd $HOME/ORANClaw-E2-MitM-Fuzzing`} />
                       </div>
 
                       <div>
@@ -574,12 +571,12 @@ source $HOME/.venvs/oran-env/bin/activate # activate virtual env`} />
                           Install wdissector & asn1c
                         </h5>
                         <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">Pre-compiled binaries are provided for convenience.</p>
-                        <CodeBlock code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing-AFFC
+                        <CodeBlock code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing
 wget -O vakt-ble-defender.zip https://zenodo.org/records/18368683/files/vakt-ble-defender.zip?download=1
 unzip vakt-ble-defender
 rm -rf vakt-ble-defender.zip
 
-cd $HOME/ORANClaw-E2-MitM-Fuzzing-AFFC/asn1
+cd $HOME/ORANClaw-E2-MitM-Fuzzing/asn1
 wget https://zenodo.org/records/18368683/files/asn1c.zip?download=1 -O asn1c.zip
 unzip asn1c.zip
 rm -rf asn1c.zip
@@ -620,7 +617,7 @@ asn1files/asn_flexric/e42ap_v2_03.asn -genTest \\ ##Add your file name here
                           <span className="flex h-6 w-6 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs">1</span>
                           Start Core Network
                         </h5>
-                        <CodeBlock code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing-AFFC
+                        <CodeBlock code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing
 docker compose --profile core up # Terminal 1 - Core Network`} />
                         <CodeBlock isLog collapsible title="Core Network example output" code={`udr-1 | 04/12 07:58:12.304: [sbi] INFO: [6250a1de-f8a2-41ee-bdd9-0f6b7e1be1b5] NF registered [\\
 Heartbeat:10s] (../lib/sbi/nf-sm.c:221)
@@ -635,7 +632,7 @@ udm-1 | 04/12 07:58:12.304: [sbi] INFO: [UDR] (NRF-notify) NF Profile updated [6
                           <span className="flex h-6 w-6 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs">2</span>
                           Add UE Subscribers
                         </h5>
-                        <CodeBlock code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing-AFFC/scripts/
+                        <CodeBlock code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing/scripts/
 ./add_subcribers.sh`} />
                         <CodeBlock isLog title="UE Registration output example" code={`{
   acknowledged: true,
@@ -649,7 +646,7 @@ Done!`} />
                           <span className="flex h-6 w-6 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs">3</span>
                           Start the O-RAN gNB, UE simulation, and Near-Real-Time RIC
                         </h5>
-                        <CodeBlock code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing-AFFC/
+                        <CodeBlock code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing/
 docker compose --profile gnb-rfsim up # Terminal 2 - gNB + UE Simulation + Near Realtime RIC`} />
                         <CodeBlock isLog title="UE Logs example" code={`oai-ue-rfsimu-2-1 | [NR_PHY] ============================================
 oai-ue-rfsimu-2-1 | [NR_PHY] Harq round stats for Downlink: 2735/1/0
@@ -661,7 +658,7 @@ oai-ue-rfsimu-2-1 | [NR_PHY] ============================================`} />
                           <span className="flex h-6 w-6 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs">4</span>
                           Run commands in the UE (iperf)
                         </h5>
-                        <CodeBlock title="UE to Core Network" code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing-AFFC/
+                        <CodeBlock title="UE to Core Network" code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing/
 docker compose exec -it oai-ue-rfsimu-1 iperf3 -c 10.45.0.1 -t0 # Terminal 3 - UE to Core Transfer`} />
                         <CodeBlock isLog title="UE Uplink/Downlink output example" code={`[ ID] Interval       Transfer     Bitrate       Retr
 [  5] 0.00-1.65 sec  22.2 MBytes  113 Mbits/sec 0       sender`} />
@@ -683,7 +680,7 @@ docker compose exec -it oai-ue-rfsimu-1 iperf3 -c 10.45.0.1 -t0 # Terminal 3 - U
                         <CodeBlock title="client_server.py script" code={`IP_MITM = "192.168.71.129"
 IP_XAPP = "192.168.71.185"
 IP_RIC  = "192.168.71.184"`} />
-                        <CodeBlock title="Launch the fuzzer" code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing-AFFC/asn1
+                        <CodeBlock title="Launch the fuzzer" code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing/asn1
 python3 client_server.py`} />
                         <CodeBlock isLog title="ORANClaw SCTP MITM Proxy Output" code={`==================================================
 SCTP MITM Proxy - Starting
@@ -713,7 +710,7 @@ Capturing on '5g-oran'`} />
 - -c ./configs/flexric.conf
 + -c ./configs/xapp.conf # overrides RIC IP to localhost
            && sleep infinity"`} />
-                        <CodeBlock title="Start xApp KPI monitoring" code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing-AFFC/
+                        <CodeBlock title="Start xApp KPI monitoring" code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing/
 docker compose --profile xapp up # Terminal 4 - xAPP`} />
                         <CodeBlock isLog title="xApp Output" code={`xapp-kpm-monitor-1 | ran_ue_id = 1
 xapp-kpm-monitor-1 | DRB.RlcSduDelayDl = 6014.82 [µs]
@@ -729,7 +726,7 @@ xapp-kpm-monitor-1 | RRU.PrbTotUl = 30572 [PRBs]`} />
                           Automated testing
                         </h5>
                         <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">This script launches an infinite fuzzing session, periodically restarting the xApp every 15 seconds to create multiple independent sessions.</p>
-                        <CodeBlock code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing-AFFC/
+                        <CodeBlock code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing/
 python3 docker_monitoring.py`} />
                         <CodeBlock isLog collapsible title="docker_monitoring.py output" code={`2026-01-25 15:51:37,686 - INFO -
 === 5G O-RAN Synchronized Monitor Started ===
@@ -824,7 +821,7 @@ IP_RIC  = "127.0.0.1"`} />
 -per -json -w32 -server -depends -events -genPrtToStr \\
 -list -reader -trace -c++ -print -prtfmt details \\
 -srcdir src -make Makefile -w32 -table-unions -stream -pdu all`} />
-                        <CodeBlock title="Regenerate encoder and decoder" code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing-AFFC/
+                        <CodeBlock title="Regenerate encoder and decoder" code={`cd $HOME/ORANClaw-E2-MitM-Fuzzing/
 ./gen-code.sh`} />
                       </div>
 
