@@ -12,12 +12,7 @@
     <img src="docs/public/results_replicated.png" width="90px" alt="Results Replicated" />
 </p>
 
-**ORANClaw** operates as a Man-in-the-Middle (MitM) proxy on the **E2 interface**, intercepting and intelligently mutating live E2 Application Protocol (E2AP) messages exchanged between the Near-Real-Time RAN Intelligent Controller (Near-RT RIC) and E2 Nodes (O-CU, O-DU).
-
-It is specifically designed to:
-- Take into account ASN.1 structural and semantic constraints when mutating packets.
-- Systematically explore state transitions and optimize mutation strategies.
-- Evaluate both the NearRT-RIC and gNB implementations.
+**ORANClaw** operates as a Man-in-the-Middle (MitM) proxy on the **E2 interface**, intercepting and mutating E2AP messages between Near-RT RIC and E2 Nodes.
 
 In our experiments across **5 O-RAN implementations**, O-RANClaw discovered **71 new vulnerabilities**:
 - 1 in O-RAN SC RIC
@@ -25,6 +20,32 @@ In our experiments across **5 O-RAN implementations**, O-RANClaw discovered **71
 - 19 in OpenAirInterface (OAI)
 - 18 in ns-3
 - 28 in FlexRIC
+
+---
+
+<small>
+
+#### Core Features
+
+🔍 **Intercept**: Man-in-the-Middle proxy (SCTP) on E2 interface between NearRT-RIC and E2 Nodes (gNB/O-CU/O-DU).
+
+⚡  **ASN.1-Aware Mutation**: Respects structural and semantic constraints of E2AP messages.
+
+🧬 **Genetic Algorithm Optimization**: Optimizes state transition exploration and mutation strategies.
+
+🎯 **Dual-Target Evaluation**: Comprehensive testing of both NearRT-RIC and gNB implementations.
+
+#### Example Use Cases
+
+💥 **Crash Base Stations**: Trigger DoS vulnerabilities in O-RAN components.
+
+🔐 **Service Model Attacks**: Target any O-RAN Service Models (SMs).
+
+🔍 **Security Assessment**: Systematic evaluation of O-RAN implementation security.
+
+ORANClaw artifacts paper received badges **Available**, **Functional** and **Reproduced** in the 19th ACM WiSec '26. Artifacts PDF available [here](docs/ORANClawArtifacs.pdf)
+
+</small>
 
 ---
 
@@ -39,6 +60,8 @@ The following diagram illustrates O-RANClaw's architecture and operational flow 
 ## 📑 Table of Contents
 
 - [ORANClaw: Shredding E2 Nodes via Structure-aware MiTM Fuzzing](#oranclaw-shredding-e2-nodes-via-structure-aware-mitm-fuzzing)
+      - [Core Features](#core-features)
+      - [Example Use Cases](#example-use-cases)
   - [🌐 Overview](#-overview)
   - [📑 Table of Contents](#-table-of-contents)
   - [🚀 Quick Start via Docker](#-quick-start-via-docker)
