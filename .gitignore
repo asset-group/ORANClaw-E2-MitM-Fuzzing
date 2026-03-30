@@ -5,3 +5,6 @@ venv/
 vakt-ble-defender
 /asn1/*.o
 *.pcapng
+__pycache__/
+*.pyc
+.DS_Store
