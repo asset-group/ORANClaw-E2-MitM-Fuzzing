@@ -416,13 +416,13 @@ export default function App() {
                   onLoadSuccess={onDocumentLoadSuccess}
                   className="w-full flex justify-center"
                   loading={
-                    <div className="flex items-center justify-center h-[600px] text-slate-500 dark:text-slate-400">
+                    <div className="flex items-center justify-center min-h-[320px] sm:min-h-[480px] md:min-h-[600px] text-slate-500 dark:text-slate-400">
                       <Activity className="w-6 h-6 animate-spin mr-2" />
                       Loading PDF...
                     </div>
                   }
                   error={
-                    <div className="flex flex-col items-center justify-center h-[600px] text-slate-500 dark:text-slate-400">
+                    <div className="flex flex-col items-center justify-center min-h-[320px] sm:min-h-[480px] md:min-h-[600px] text-slate-500 dark:text-slate-400">
                       <ShieldAlert className="w-8 h-8 text-red-500 mb-2" />
                       <p>Failed to load PDF.</p>
                       <a href={`${import.meta.env.BASE_URL}DesignBetter-1.pdf`} target="_blank" rel="noopener noreferrer" className="text-indigo-600 dark:text-indigo-400 hover:underline mt-2">
@@ -431,12 +431,12 @@ export default function App() {
                     </div>
                   }
                 >
-                  <Page 
-                    pageNumber={pageNumber} 
+                  <Page
+                    pageNumber={pageNumber}
                     renderTextLayer={false}
                     renderAnnotationLayer={false}
                     className="max-w-full"
-                    width={Math.min(window.innerWidth - 80, 800)}
+                    width={800}
                   />
                 </Document>
                 {numPages && (
